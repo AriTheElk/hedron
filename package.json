@@ -1,0 +1,56 @@
+{
+  "name": "hedron",
+  "version": "0.1.0",
+  "description": "A no-frills flex-box grid system for React.",
+  "main": "dist/hedron.js",
+  "scripts": {
+    "build": "npm run build:lib && npm run build:dist",
+    "build:lib": "babel src --out-dir lib",
+    "build:dist": "rollup -c && rollup -c --environment PRODUCTION",
+    "clean": "rm -rf dist/*",
+    "lint": "eslint src",
+    "lint:fix": "eslint --fix src"
+  },
+  "bugs": {
+    "url": "https://garetmckinley.github.io/hedron/issues"
+  },
+  "homepage": "https://garetmckinley.github.io/hedron",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/garetmckinley/hedron.git"
+  },
+  "author": "Garet McKinley",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.18.2",
+    "babel-eslint": "^7.1.0",
+    "babel-loader": "^6.2.7",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-external-helpers": "^6.18.0",
+    "babel-preset-es2015-rollup": "^1.2.0",
+    "babel-preset-latest": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-2": "^6.18.0",
+    "eslint": "^3.9.1",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-plugin-flowtype-errors": "^1.5.0",
+    "eslint-plugin-import": "^2.1.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.5.0",
+    "react": "^15.3.2",
+    "rollup": "^0.36.3",
+    "rollup-plugin-babel": "^2.6.1",
+    "rollup-plugin-commonjs": "^5.0.5",
+    "rollup-plugin-inject": "^2.0.0",
+    "rollup-plugin-json": "^2.0.2",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-replace": "^1.1.1",
+    "rollup-plugin-uglify": "^1.0.1",
+    "styled-components": "^1.0.10"
+  },
+  "dependencies": {
+    "react": "^15.3.2",
+    "styled-components": "^1.0.10"
+  }
+}
