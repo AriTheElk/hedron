@@ -5,7 +5,7 @@ import { divvy, media } from '../utils';
 
 
 function ColumnContainer(props) {
-  const { xs, sm, md, lg,
+  const { divisions, fluid, xs, sm, md, lg,
           smShift, mdShift, lgShift, ...rest } = props;
   return <div {...rest} />;
 }
@@ -14,6 +14,7 @@ ColumnContainer.propTypes = {
   className: React.PropTypes.string,
   debug: React.PropTypes.bool,
   divisions: React.PropTypes.number,
+  fluid: React.PropTypes.bool,
   xs: React.PropTypes.number,
   sm: React.PropTypes.number,
   md: React.PropTypes.number,
@@ -30,7 +31,7 @@ ColumnContainer.defaultProps = {
 const Column = styled(ColumnContainer)`
   display: block;
   box-sizing: border-box;
-  padding: 20px;
+  ${props => props.fluid ? 'padding: 0;' : 'padding: 20px;'}
   width: 100%;
   ${props => props.xsShift ? `
     margin-left: ${divvy(props.divisions) * props.xsShift}%;

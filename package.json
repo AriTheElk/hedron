@@ -1,6 +1,6 @@
 {
   "name": "hedron",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A no-frills flex-box grid system for React.",
   "main": "dist/hedron.js",
   "scripts": {
@@ -12,7 +12,7 @@
     "lint:fix": "eslint --fix src"
   },
   "bugs": {
-    "url": "https://garetmckinley.github.io/hedron/issues"
+    "url": "https://github.com/garetmckinley/hedron/issues"
   },
   "homepage": "https://garetmckinley.github.io/hedron",
   "repository": {
@@ -20,7 +20,7 @@
     "url": "git+https://github.com/garetmckinley/hedron.git"
   },
   "author": "Garet McKinley",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-core": "^6.18.2",

@@ -21,7 +21,7 @@ RowContainer.defaultProps = {
 const Row = styled(RowContainer)`
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;;
+  flex-wrap: wrap;
 `;
 
 
