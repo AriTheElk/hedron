@@ -30,30 +30,34 @@ import { Row, Column, utils } from 'hedron';
 
 class App extends Component {
   render() {
-    <Row>
-      <Column sm={8} smShift={2} lg={6} lgShift={3}>
-        <h1>This is a column that's centered using the shift props</h1>
-      </Column>
-    </Row>
-    <Row>
-      <Column fluid sm={4}>
-        <h1>Fluid Columns</h1>
-      </Column>
-      <Column fluid sm={4}>
-        <p>It's a 12 column layout by default.</p>
-      </Column>
-      <Column fluid sm={4}>
-        <Row divisions={24}>
-          <Column sm={24}>
-            <p>
-              But you can change the amount of columns by adding the
-              `divisions` property to a Row.
-            </p>
-            <p>It's fully embeddable as well!</p>
+    return (
+      <div className="App">
+        <Row>
+          <Column sm={8} smShift={2} lg={6} lgShift={3}>
+            <h1>This is a column that's centered using the shift props</h1>
           </Column>
         </Row>
-      </Column>
-    </Row>
+        <Row>
+          <Column fluid sm={4}>
+            <h1>Fluid Columns</h1>
+          </Column>
+          <Column fluid sm={4}>
+            <p>It's a 12 column layout by default.</p>
+          </Column>
+          <Column fluid sm={4}>
+            <Row divisions={24}>
+              <Column sm={24}>
+                <p>
+                  But you can change the amount of columns by adding the
+                  `divisions` property to a Row.
+                </p>
+                <p>It's fully embeddable as well!</p>
+              </Column>
+            </Row>
+          </Column>
+        </Row>
+      </div>
+    );
   };
 }
 ```
