@@ -5,8 +5,13 @@ import { divvy } from '../utils';
 
 
 function RowContainer(props) {
-  const { divisions, ...rest } = props;
-  return <section {...rest} />;
+  const { children, divisions, ...rest } = props;
+  const scaledChildren = React.Children.map(children,
+    child => React.cloneElement(child, {
+      divisions: divisions
+    })
+  );
+  return <section {...rest} children={scaledChildren} />;
 }
 
 RowContainer.propTypes = {
