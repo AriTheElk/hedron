@@ -35,6 +35,21 @@ class App extends Component {
         <h1>This is a column that's centered using the shift props</h1>
       </Column>
     </Row>
+    <Row>
+      <Column fluid sm={4}>
+        <h1>Fluid Columns</h1>
+      </Column>
+      <Column fluid sm={4}>
+        <p>It's a 12 column layout.</p>
+      </Column>
+      <Column fluid sm={4}>
+        <Row>
+          <Column sm={12}>
+            <p>It's fully embeddable as well!</p>
+          </Column>
+        </Row>
+      </Column>
+    </Row>
   };
 }
 ```
