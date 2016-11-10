@@ -1,6 +1,6 @@
 {
   "name": "hedron",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A no-frills flex-box grid system for React.",
   "main": "dist/hedron.js",
   "scripts": {
