@@ -40,11 +40,15 @@ class App extends Component {
         <h1>Fluid Columns</h1>
       </Column>
       <Column fluid sm={4}>
-        <p>It's a 12 column layout.</p>
+        <p>It's a 12 column layout by default.</p>
       </Column>
       <Column fluid sm={4}>
-        <Row>
-          <Column sm={12}>
+        <Row divisions={24}>
+          <Column sm={24}>
+            <p>
+              But you can change the amount of columns by adding the
+              `divisions` property to a Row.
+            </p>
             <p>It's fully embeddable as well!</p>
           </Column>
         </Row>
