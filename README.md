@@ -11,7 +11,7 @@ $$ |  $$ |\$$$$$$$\ \$$$$$$$ |$$ |      \$$$$$$  |$$ |  $$ |
 ```
 
 
-[View the original CodePen that started it](http://codepen.io/garetmckinley/pen/qqWrYP/).
+[View a landing page built with Hedron](https://jsbros.github.io/uigradients/).
 
 
 ## Installation
