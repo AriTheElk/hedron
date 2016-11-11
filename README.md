@@ -64,7 +64,7 @@ class App extends Component {
 
 ## Contributing
 
-First of all, thanks for your interest in contributing to hedron. If you're wanting to make a contribution and not sure what to do, take a look at the [issue tracker](/JSBros/hedron/issues) and look at the tasks labeled with `help wanted`.
+First of all, thanks for your interest in contributing to hedron. If you're wanting to make a contribution and not sure what to do, take a look at the [issue tracker](https://github.com/JSBros/hedron/issues) and look at the tasks labeled with `help wanted`.
 
 ### Building the module from source
 
