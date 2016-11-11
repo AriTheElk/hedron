@@ -8,13 +8,14 @@ function RowContainer(props) {
   const { children, divisions, ...rest } = props;
   const scaledChildren = React.Children.map(children,
     child => React.cloneElement(child, {
-      divisions: divisions
+      divisions
     })
   );
-  return <section {...rest} children={scaledChildren} />;
+  return <section {...rest}>{scaledChildren}</section>;
 }
 
 RowContainer.propTypes = {
+  children: React.PropTypes.element,
   className: React.PropTypes.string,
   divisions: React.PropTypes.number
 };
