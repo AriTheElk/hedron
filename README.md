@@ -92,3 +92,11 @@ Before you submit a pull request, you must first make sure that the code base is
 
 If all goes well, nothing spectacular should happen. If there are any errors, you'll get a lot of red output in your terminal and it will list exactly what needs to be fixed.
 
+## Authors
+
+- :robot: Garet McKinley [[GitHub](https://github.com/garetmckinley)|[Twitter](https://twitter.com/garetmckinley)]
+
+## License
+
+Hedron is under the [MIT](LICENSE) License.
+
