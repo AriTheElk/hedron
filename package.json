@@ -1,8 +1,13 @@
 {
   "name": "hedron",
-  "version": "0.1.2",
-  "description": "A no-frills flex-box grid system for React.",
+  "version": "0.1.3",
+  "description": "A no-frills flexbox grid system for React.",
   "main": "dist/hedron.js",
+  "author": {
+    "name": "Garet McKinley",
+    "email": "gem@jsb.ro",
+    "url": "https://github.com/garetmckinley"
+  },
   "scripts": {
     "build": "npm run build:lib && npm run build:dist",
     "build:lib": "babel src --out-dir lib",
@@ -14,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/garetmckinley/hedron/issues"
   },
-  "homepage": "https://garetmckinley.github.io/hedron",
+  "homepage": "http://jsb.ro/hedron",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/garetmckinley/hedron.git"
