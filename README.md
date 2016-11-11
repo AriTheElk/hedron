@@ -61,3 +61,34 @@ class App extends Component {
   };
 }
 ```
+
+## Contributing
+
+First of all, thanks for your interest in contributing to hedron. If you're wanting to make a contribution and not sure what to do, take a look at the [issue tracker](/JSBros/hedron/issues) and look at the tasks labeled with `help wanted`.
+
+### Building the module from source
+
+    $ git clone https://github.com/JSBros/hedron
+
+To install all dependencies, you can use either npm or yarn. I personally prefer [and recommend] using [yarn](https://yarnpkg.com/en/docs/install).
+
+#### npm
+
+    $ npm install
+
+#### yarn
+
+    $ yarn install
+
+#### Building
+
+To build hedron from the source code, please run the following command inside the hedron directory
+
+    $ npm run build
+
+Before you submit a pull request, you must first make sure that the code base is passing eslint inspections. To do that, please run the following
+
+    $ npm run lint
+
+If all goes well, nothing spectacular should happen. If there are any errors, you'll get a lot of red output in your terminal and it will list exactly what needs to be fixed.
+
