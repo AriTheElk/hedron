@@ -22,9 +22,11 @@ or better yet
 
 ## Documentation
 
-[#### View the Documentation →](https://github.com/JSBros/hedron/wiki/Grid-System)
+#### [View the Documentation →](https://github.com/JSBros/hedron/wiki/Grid-System)
 
 ## Example Usage
+
+[View interactive example on webpackbin](http://www.webpackbin.com/V1zqQ_gZf)
 
 ``` jsx
 import React, { Component } from 'react';
