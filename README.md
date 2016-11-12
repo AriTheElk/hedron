@@ -8,14 +8,12 @@ $$ |  $$ |$$   ____|$$ |  $$ |$$ |      $$ |  $$ |$$ |  $$ |
 $$ |  $$ |\$$$$$$$\ \$$$$$$$ |$$ |      \$$$$$$  |$$ |  $$ |
 \__|  \__| \_______| \_______|\__|       \______/ \__|  \__|                                                                                                                                
 ```
-![travis-ci build status](https://travis-ci.org/JSBros/hedron.svg?branch=master)
+[![Travis](https://img.shields.io/travis/JSBros/hedron.svg?style=flat-square)](https://travis-ci.org/JSBros/hedron) [![npm](https://img.shields.io/npm/dt/hedron.svg?style=flat-square)](https://www.npmjs.com/package/hedron) [![David](https://img.shields.io/david/jsbros/hedron.svg?style=flat-square)](https://github.com/JSBros/hedron/issues) [![Gitter](https://img.shields.io/gitter/room/JSBros/hedron.svg?style=flat-square)](https://gitter.im/JSBros/hedron?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 [View a landing page built with Hedron](https://jsbros.github.io/uigradients/).
 
 
 ## Installation
-
-[![Join the chat at https://gitter.im/JSBros/hedron](https://badges.gitter.im/JSBros/hedron.svg)](https://gitter.im/JSBros/hedron?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
     npm install --save hedron
 or better yet
