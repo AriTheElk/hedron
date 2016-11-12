@@ -1,5 +1,6 @@
 import Column from './components/Column';
 import Row from './components/Row';
+import Page from './components/Page';
 import { divvy, media } from './utils';
 
 const utils = {
@@ -7,5 +8,5 @@ const utils = {
   media
 };
 
-export { Column, Row, utils };
+export { Column, Page, Row, utils };
 
