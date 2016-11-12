@@ -15,6 +15,8 @@ $$ |  $$ |\$$$$$$$\ \$$$$$$$ |$$ |      \$$$$$$  |$$ |  $$ |
 
 ## Installation
 
+[![Join the chat at https://gitter.im/JSBros/hedron](https://badges.gitter.im/JSBros/hedron.svg)](https://gitter.im/JSBros/hedron?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
     npm install --save hedron
 or better yet
 
