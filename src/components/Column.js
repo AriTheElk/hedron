@@ -35,38 +35,56 @@ const Column = styled(ColumnContainer)`
   ${props => props.debug ? `background-color: rgba(50, 50, 255, .1);
   border: 1px solid #fff;` : ''}
   box-sizing: border-box;
-  ${props => props.fluid ? 'padding: 0;' : 'padding: 20px;'}
+  ${props =>
+    props.fluid ? 'padding: 0;' : 'padding: 20px;'
+  }
   width: 100%;
-  ${props => props.xsShift ? `
-    margin-left: ${divvy(props.divisions) * props.xsShift}%;
-  ` : ''}
-
+  ${props =>
+    props.xs
+      ? `width: ${divvy(props.divisions) * props.xs}%;`
+      : null
+  }
+  ${props =>
+    props.xsShift
+      ? `margin-left: ${divvy(props.divisions) * props.xsShift}%;`
+      : null
+  }
   ${media.sm`
-    ${props => props.sm ? `
-      width: ${divvy(props.divisions) * props.sm}%;
-    ` : ''}
-    ${props => props.smShift ? `
-      margin-left: ${divvy(props.divisions) * props.smShift}%;
-    ` : ''}
+    ${props =>
+      props.sm
+        ? `width: ${divvy(props.divisions) * props.sm}%;`
+        : null
+    }
+    ${props => props.smShift
+        ? `margin-left: ${divvy(props.divisions) * props.smShift}%;`
+        : null
+    }
   `}
   ${media.md`
-    ${props => props.md ? `
-      width: ${divvy(props.divisions) * props.md}%;
-    ` : ''}
-    ${props => props.mdShift ? `
-      margin-left: ${divvy(props.divisions) * props.mdShift}%;
-    ` : ''}
+    ${props =>
+      props.md
+        ? `width: ${divvy(props.divisions) * props.md}%;`
+        : null
+    }
+    ${props =>
+      props.mdShift
+        ? `margin-left: ${divvy(props.divisions) * props.mdShift}%;`
+        : null
+    }
   `}
   ${media.lg`
-    ${props => props.lg ? `
-      width: ${divvy(props.divisions) * props.lg}%;
-    ` : ''}
-    ${props => props.lgShift ? `
-      margin-left: ${divvy(props.divisions) * props.lgShift}%;
-    ` : ''}
+    ${props =>
+      props.lg
+        ? `width: ${divvy(props.divisions) * props.lg}%;`
+        : null
+    }
+    ${props =>
+      props.lgShift
+        ? `margin-left: ${divvy(props.divisions) * props.lgShift}%;`
+        : null
+    }
   `}
 `;
-
 
 export default Column;
 
