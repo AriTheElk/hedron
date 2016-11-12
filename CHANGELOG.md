@@ -12,6 +12,20 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ### Changed
 
+## [v0.2.0] - 2016-11-12
+
+### Added
+
+- New `Page` component! Use this as a top-level wrapper.
+- Added a new debug mode! Add the `debug` property to any `Row` component to try it out.
+- Added `xs` property to `Column`
+- Added `xsShift` property to `Column`
+
+### Changed
+
+- Switched the `children` property of the `Row` component to be a `node` instead of an `element`.
+- Refactored media utility.
+
 ## [v0.1.3] - 2016-11-11
 
 ### Added
@@ -44,7 +58,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - Made progress on code comments
 - Various linting
 
-[Unreleased]: https://github.com/JSBros/hedron/compare/v0.1.3...master
+[Unreleased]: https://github.com/JSBros/hedron/compare/v0.2.0...master
+[v0.2.0]: https://github.com/JSBros/hedron/compare/v0.1.3...v0.2.0
 [v0.1.3]: https://github.com/JSBros/hedron/compare/v0.1.2...v0.1.3
 [v0.1.2]: https://github.com/JSBros/hedron/compare/v0.1.1...v0.1.2
 [v0.1.1]: https://github.com/JSBros/hedron/compare/v0.1.0...v0.1.1
