@@ -5,8 +5,9 @@ import { divvy, media } from '../utils';
 
 
 function ColumnContainer(props) {
-  const { divisions, fluid, xs, sm, md, lg,
-          smShift, mdShift, lgShift, ...rest } = props;
+  const { debug, divisions, fluid, xs, sm, md, lg,
+    xsShift, smShift, mdShift, lgShift,
+    ...rest } = props;
   return <div {...rest} />;
 }
 
@@ -19,6 +20,7 @@ ColumnContainer.propTypes = {
   sm: React.PropTypes.number,
   md: React.PropTypes.number,
   lg: React.PropTypes.number,
+  xsShift: React.PropTypes.number,
   smShift: React.PropTypes.number,
   mdShift: React.PropTypes.number,
   lgShift: React.PropTypes.number
@@ -30,6 +32,8 @@ ColumnContainer.defaultProps = {
 
 const Column = styled(ColumnContainer)`
   display: block;
+  ${props => props.debug ? `background-color: rgba(50, 50, 255, .1);
+  border: 1px solid #fff;` : ''}
   box-sizing: border-box;
   ${props => props.fluid ? 'padding: 0;' : 'padding: 20px;'}
   width: 100%;
