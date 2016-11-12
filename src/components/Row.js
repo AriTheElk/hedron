@@ -16,7 +16,7 @@ function RowContainer(props) {
 }
 
 RowContainer.propTypes = {
-  children: React.PropTypes.element,
+  children: React.PropTypes.node,
   className: React.PropTypes.string,
   debug: React.PropTypes.bool,
   divisions: React.PropTypes.number
