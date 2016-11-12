@@ -16,6 +16,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ### Added
 
+- New `Page` component! Use this as a top-level wrapper.
 - Added a new debug mode! Add the `debug` property to any `Row` component to try it out.
 - Added `xs` property to `Column`
 - Added `xsShift` property to `Column`
@@ -23,6 +24,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 ### Changed
 
 - Switched the `children` property of the `Row` component to be a `node` instead of an `element`.
+- Refactored media utility.
 
 ## [v0.1.3] - 2016-11-11
 
