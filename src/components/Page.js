@@ -9,9 +9,7 @@ const Page = styled.div`
       margin: 0 auto;
       max-width: 100%;
       ${props.width
-        ? `
-          width: ${props.width};
-        `
+        ? `width: ${props.width};`
         : 'width: 960px;'
       }
     `
