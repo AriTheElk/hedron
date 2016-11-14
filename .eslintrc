@@ -7,6 +7,7 @@
     "node": true
   },
   "rules": {
+    "arrow-body-style": ["error", "as-needed", { requireReturnForObjectLiteral: true }],
     "comma-dangle": 0,
     "consistent-return": 0,
     "import/extensions": 0,
