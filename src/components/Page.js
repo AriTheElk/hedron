@@ -6,7 +6,11 @@ import { passOn } from '../utils';
 
 function PageContainer(props) {
   const { children, debug, ...rest } = props;
-  const newChildren = passOn(children, [Row, Column], { debug });
+  const newChildren = passOn(children, [Row], child => {
+    return {
+      debug: typeof child.props.debug == 'undefined' ? debug : child.props.debug
+    }
+  });
   return <div {...rest}>{newChildren}</div>;
 }
 
@@ -16,9 +20,6 @@ PageContainer.propTypes = {
   debug: React.PropTypes.bool
 };
 
-PageContainer.defaultProps = {
-  debug: false
-};
 
 const Page = styled(PageContainer)`
   ${props =>
