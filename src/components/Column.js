@@ -10,11 +10,12 @@ function ColumnContainer(props) {
     xsShift, smShift, mdShift, lgShift,
     ...rest } = props;
   // Pass the debug prop on to the children.
-  const newChildren = passOn(children, [Row, Column], { debug: debug });
+  const newChildren = passOn(children, [Row], { debug });
   return <div {...rest}>{newChildren}</div>;
 }
 
 ColumnContainer.propTypes = {
+  children: React.PropTypes.node,
   className: React.PropTypes.string,
   debug: React.PropTypes.bool,
   divisions: React.PropTypes.number,
