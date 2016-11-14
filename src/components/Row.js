@@ -1,18 +1,15 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import styled from 'styled-components';
-import { divvy } from '../utils';
+import { Column } from '../';
+import { divvy, passOn } from '../utils';
 
 
 function RowContainer(props) {
   const { children, debug, divisions, ...rest } = props;
-  const scaledChildren = React.Children.map(children,
-    child => React.cloneElement(child, {
-      debug,
-      divisions
-    })
-  );
-  return <section {...rest}>{scaledChildren}</section>;
+  const newChildren = passOn(children, [Row, Column],
+    { debug: debug, divisions: divisions });  
+  return <section {...rest}>{newChildren}</section>;
 }
 
 RowContainer.propTypes = {
@@ -23,6 +20,7 @@ RowContainer.propTypes = {
 };
 
 RowContainer.defaultProps = {
+  debug: false,
   divisions: 12
 };
 
