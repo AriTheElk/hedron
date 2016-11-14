@@ -12,6 +12,17 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ### Changed
 
+## [v0.3.0] - 2016-11-14
+
+### Added
+
+* Added `debug` parameter to `Page` component
+* Added `passOn` utility for custom property inheritance
+
+### Changed
+
+* Made the debug system inheritable.
+
 ## [v0.2.0] - 2016-11-12
 
 ### Added
@@ -58,7 +69,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - Made progress on code comments
 - Various linting
 
-[Unreleased]: https://github.com/JSBros/hedron/compare/v0.2.0...master
+[Unreleased]: https://github.com/JSBros/hedron/compare/v0.3.0...master
+[v0.3.0]: https://github.com/JSBros/hedron/compare/v0.2.0...v0.3.0
 [v0.2.0]: https://github.com/JSBros/hedron/compare/v0.1.3...v0.2.0
 [v0.1.3]: https://github.com/JSBros/hedron/compare/v0.1.2...v0.1.3
 [v0.1.2]: https://github.com/JSBros/hedron/compare/v0.1.1...v0.1.2

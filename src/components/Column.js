@@ -1,17 +1,26 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import styled from 'styled-components';
-import { divvy, media } from '../utils';
+import { Row } from '../';
+import { divvy, media, passOn } from '../utils';
 
 
 function ColumnContainer(props) {
-  const { debug, divisions, fluid, xs, sm, md, lg,
+  const { children, debug, divisions, fluid, xs, sm, md, lg,
     xsShift, smShift, mdShift, lgShift,
     ...rest } = props;
-  return <div {...rest} />;
+  const newChildren = passOn(children, [Row], (child) => {
+    return {
+      debug: typeof child.props.debug === 'undefined'
+        ? debug
+        : child.props.debug
+    };
+  });
+  return <div {...rest}>{newChildren}</div>;
 }
 
 ColumnContainer.propTypes = {
+  children: React.PropTypes.node,
   className: React.PropTypes.string,
   debug: React.PropTypes.bool,
   divisions: React.PropTypes.number,
