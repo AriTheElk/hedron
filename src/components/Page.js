@@ -11,6 +11,7 @@ function PageContainer(props) {
 }
 
 PageContainer.propTypes = {
+  children: React.PropTypes.node,
   className: React.PropTypes.string,
   debug: React.PropTypes.bool
 }
