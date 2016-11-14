@@ -7,8 +7,8 @@ import { divvy, passOn } from '../utils';
 
 function RowContainer(props) {
   const { children, debug, divisions, ...rest } = props;
-  const newChildren = passOn(children, [Row, Column],
-    { debug: debug, divisions: divisions });  
+  const newChildren = passOn(children, [Column],
+    { debug, divisions });
   return <section {...rest}>{newChildren}</section>;
 }
 
