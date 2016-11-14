@@ -1,14 +1,17 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import styled from 'styled-components';
-import { divvy, media } from '../utils';
+import { Row } from '../';
+import { divvy, media, passOn } from '../utils';
 
 
 function ColumnContainer(props) {
-  const { debug, divisions, fluid, xs, sm, md, lg,
+  const { children, debug, divisions, fluid, xs, sm, md, lg,
     xsShift, smShift, mdShift, lgShift,
     ...rest } = props;
-  return <div {...rest} />;
+  // Pass the debug prop on to the children.
+  const newChildren = passOn(children, [Row, Column], { debug: debug });
+  return <div {...rest}>{newChildren}</div>;
 }
 
 ColumnContainer.propTypes = {
@@ -27,6 +30,7 @@ ColumnContainer.propTypes = {
 };
 
 ColumnContainer.defaultProps = {
+  debug: false,
   divisions: 12
 };
 
