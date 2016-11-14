@@ -9,8 +9,11 @@ function ColumnContainer(props) {
   const { children, debug, divisions, fluid, xs, sm, md, lg,
     xsShift, smShift, mdShift, lgShift,
     ...rest } = props;
-  // Pass the debug prop on to the children.
-  const newChildren = passOn(children, [Row], { debug });
+  const newChildren = passOn(children, [Row], child => {
+    return {
+      debug: typeof child.props.debug == 'undefined' ? debug : child.props.debug
+    }
+  });
   return <div {...rest}>{newChildren}</div>;
 }
 
@@ -31,7 +34,7 @@ ColumnContainer.propTypes = {
 };
 
 ColumnContainer.defaultProps = {
-  debug: false,
+  debug: undefined,
   divisions: 12
 };
 
