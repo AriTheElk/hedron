@@ -41,46 +41,46 @@ const Column = styled(ColumnContainer)`
   width: 100%;
   ${props =>
     props.xs
-      ? `width: ${divvy(props.divisions) * props.xs}%;`
+      ? `width: ${divvy(props.divisions, props.xs)}%;`
       : null
   }
   ${props =>
     props.xsShift
-      ? `margin-left: ${divvy(props.divisions) * props.xsShift}%;`
+      ? `margin-left: ${divvy(props.divisions, props.xsShift)}%;`
       : null
   }
   ${media.sm`
     ${props =>
       props.sm
-        ? `width: ${divvy(props.divisions) * props.sm}%;`
+        ? `width: ${divvy(props.divisions, props.sm)}%;`
         : null
     }
     ${props => props.smShift
-        ? `margin-left: ${divvy(props.divisions) * props.smShift}%;`
+        ? `margin-left: ${divvy(props.divisions, props.smShift)}%;`
         : null
     }
   `}
   ${media.md`
     ${props =>
       props.md
-        ? `width: ${divvy(props.divisions) * props.md}%;`
+        ? `width: ${divvy(props.divisions, props.md)}%;`
         : null
     }
     ${props =>
       props.mdShift
-        ? `margin-left: ${divvy(props.divisions) * props.mdShift}%;`
+        ? `margin-left: ${divvy(props.divisions, props.mdShift)}%;`
         : null
     }
   `}
   ${media.lg`
     ${props =>
       props.lg
-        ? `width: ${divvy(props.divisions) * props.lg}%;`
+        ? `width: ${divvy(props.divisions, props.lg)}%;`
         : null
     }
     ${props =>
       props.lgShift
-        ? `margin-left: ${divvy(props.divisions) * props.lgShift}%;`
+        ? `margin-left: ${divvy(props.divisions, props.lgShift)}%;`
         : null
     }
   `}
