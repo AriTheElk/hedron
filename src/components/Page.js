@@ -1,7 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Row, Column } from '../';
+import { passOn } from '../utils';
 
-const Page = styled.div`
+
+function PageContainer(props) {
+  const { children, debug, ...rest } = props;
+  const newChildren = passOn(children, [Row, Column], { debug: debug });
+  return <div {...rest}>{newChildren}</div>;
+}
+
+PageContainer.propTypes = {
+  className: React.PropTypes.string,
+  debug: React.PropTypes.bool
+}
+
+PageContainer.defaultProps = {
+  debug: false
+}
+
+const Page = styled(PageContainer)`
   ${props =>
     props.fluid
     ? 'width: 100%;'
