@@ -7,11 +7,13 @@ import { divvy, passOn } from '../utils';
 
 function RowContainer(props) {
   const { children, debug, divisions, ...rest } = props;
-  const newChildren = passOn(children, [Column], child => {
+  const newChildren = passOn(children, [Column], (child) => {
     return {
-      debug: typeof child.props.debug == 'undefined' ? debug : child.props.debug,
+      debug: typeof child.props.debug === 'undefined'
+        ? debug
+        : child.props.debug,
       divisions
-    }
+    };
   });
   return <section {...rest}>{newChildren}</section>;
 }
@@ -24,7 +26,6 @@ RowContainer.propTypes = {
 };
 
 RowContainer.defaultProps = {
-  debug: undefined,
   divisions: 12
 };
 
