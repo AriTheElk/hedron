@@ -30,12 +30,12 @@ or better yet
 
 ``` jsx
 import React, { Component } from 'react';
-import { Row, Column, utils } from 'hedron';
+import { Page, Row, Column } from 'hedron';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <Page>
         <Row>
           <Column sm={8} smShift={2} lg={6} lgShift={3}>
             <h1>This is a column that's centered using the shift props</h1>
@@ -60,7 +60,7 @@ class App extends Component {
             </Row>
           </Column>
         </Row>
-      </div>
+      </Page>
     );
   };
 }
