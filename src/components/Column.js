@@ -6,7 +6,7 @@ import { divvy, media, passOn } from '../utils';
 
 
 function ColumnContainer(props) {
-  const { children, debug, divisions, fluid, xs, sm, md, lg,
+  const { children, tagName, debug, divisions, fluid, xs, sm, md, lg,
     xsShift, smShift, mdShift, lgShift,
     ...rest } = props;
   const newChildren = passOn(children, [Row], (child) => {
@@ -16,11 +16,12 @@ function ColumnContainer(props) {
         : child.props.debug
     };
   });
-  return <div {...rest}>{newChildren}</div>;
+  return React.createElement(tagName || 'div', rest, newChildren);
 }
 
 ColumnContainer.propTypes = {
   children: React.PropTypes.node,
+  tagName: React.PropTypes.string,
   className: React.PropTypes.string,
   debug: React.PropTypes.bool,
   divisions: React.PropTypes.number,
