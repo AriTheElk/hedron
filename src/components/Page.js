@@ -5,7 +5,7 @@ import { passOn } from '../utils';
 
 
 function PageContainer(props) {
-  const { children, debug, ...rest } = props;
+  const { children, tagName, debug, ...rest } = props;
   const newChildren = passOn(children, [Row], (child) => {
     return {
       debug: typeof child.props.debug === 'undefined'
@@ -13,11 +13,12 @@ function PageContainer(props) {
         : child.props.debug
     };
   });
-  return <div {...rest}>{newChildren}</div>;
+  return React.createElement(tagName || 'div', rest, newChildren);
 }
 
 PageContainer.propTypes = {
   children: React.PropTypes.node,
+  tagName: React.PropTypes.string,
   className: React.PropTypes.string,
   debug: React.PropTypes.bool
 };

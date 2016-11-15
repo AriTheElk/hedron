@@ -6,7 +6,7 @@ import { divvy, passOn } from '../utils';
 
 
 function RowContainer(props) {
-  const { children, debug, divisions, ...rest } = props;
+  const { children, tagName, debug, divisions, ...rest } = props;
   const newChildren = passOn(children, [Column], (child) => {
     return {
       debug: typeof child.props.debug === 'undefined'
@@ -15,11 +15,12 @@ function RowContainer(props) {
       divisions
     };
   });
-  return <section {...rest}>{newChildren}</section>;
+  return React.createElement(tagName || 'section', rest, newChildren);
 }
 
 RowContainer.propTypes = {
   children: React.PropTypes.node,
+  tagName: React.PropTypes.string,
   className: React.PropTypes.string,
   debug: React.PropTypes.bool,
   divisions: React.PropTypes.number
