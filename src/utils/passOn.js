@@ -8,11 +8,11 @@ import React from 'react';
 // to a component type that exists in the ofTypes array.
 export default function(children, ofTypes, process = r => r) {
   const response = React.Children.map(children,
-    child => React.cloneElement(child,
-      // Check to see if the child's component type is whitelisted,
-      // and then process it.
-      ofTypes.includes(child.type) ? process(child) : { }
-    )
+    // Check to see if the child's component type is whitelisted,
+    // and then process it.
+    child => React.isValidElement(child) && ofTypes.includes(child.type)
+      ? React.cloneElement(child, process(child))
+      : child
   );
   return response;
 }
