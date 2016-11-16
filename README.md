@@ -98,7 +98,7 @@ If all goes well, nothing spectacular should happen. If there are any errors, yo
 
 ## Authors
 
-- :robot: Garet McKinley [[GitHub](https://github.com/garetmckinley)|[Twitter](https://twitter.com/garetmckinley)]
+[Author List →](AUTHORS)
 
 ## License
 
