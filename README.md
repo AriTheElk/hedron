@@ -96,6 +96,13 @@ Before you submit a pull request, you must first make sure that the code base is
 
 If all goes well, nothing spectacular should happen. If there are any errors, you'll get a lot of red output in your terminal and it will list exactly what needs to be fixed.
 
+### Committing
+
+In an effort to keep the git history clean, since `0.3.0` I'm enforcing an emoji based semantic commit message style. This allows for easy visual grepping of the git log.
+
+[View the gitmoji guidelines →](https://gitmoji.carloscuesta.me)
+
+
 ## Authors
 
 [Author List →](AUTHORS)
