@@ -7,7 +7,6 @@ import React from 'react';
 // to the children components. It will only apply the props
 // to a component type that exists in the ofTypes array.
 export default function(children, ofTypes, process = r => r) {
-  if (typeof children === 'string') return children;
   const response = React.Children.map(children,
     // Check to see if the child's component type is whitelisted,
     // and then process it.
