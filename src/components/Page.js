@@ -1,11 +1,12 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import styled from 'styled-components';
-import { Row } from '../';
+import Row from './Row';
 import { passOn } from '../utils';
 
 
 function PageContainer(props) {
-  const { children, tagName, debug, ...rest } = props;
+  const { children, tagName, debug, fluid, ...rest } = props;
   const newChildren = passOn(children, [Row], (child) => {
     return {
       debug: typeof child.props.debug === 'undefined'
@@ -20,7 +21,9 @@ PageContainer.propTypes = {
   children: React.PropTypes.node,
   tagName: React.PropTypes.string,
   className: React.PropTypes.string,
-  debug: React.PropTypes.bool
+  debug: React.PropTypes.bool,
+  fluid: React.PropTypes.bool,
+  width: React.PropTypes.string
 };
 
 
@@ -38,11 +41,6 @@ const Page = styled(PageContainer)`
     `
   }
 `;
-
-Page.propTypes = {
-  fluid: React.PropTypes.bool,
-  width: React.PropTypes.string
-};
 
 export default Page;
 
