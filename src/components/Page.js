@@ -5,7 +5,7 @@ import { passOn } from '../utils';
 
 
 function PageContainer(props) {
-  const { children, tagName, debug, ...rest } = props;
+  const { children, tagName, debug, fluid, ...rest } = props;
   const newChildren = passOn(children, [Row], (child) => {
     return {
       debug: typeof child.props.debug === 'undefined'
