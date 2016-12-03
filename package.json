@@ -24,7 +24,6 @@
     "type": "git",
     "url": "git+https://github.com/garetmckinley/hedron.git"
   },
-  "author": "Garet McKinley",
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.18.0",
