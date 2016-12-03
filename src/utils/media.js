@@ -3,7 +3,7 @@ import { css } from 'styled-components';
 const sizes = {
   sm: 500,
   md: 768,
-  lg: 1100
+  lg: 1100,
 };
 
 export default Object.keys(sizes).reduce((acc, label) => {

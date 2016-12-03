@@ -13,7 +13,7 @@ function ColumnContainer(props) {
     return {
       debug: typeof child.props.debug === 'undefined'
         ? debug
-        : child.props.debug
+        : child.props.debug,
     };
   });
   return React.createElement(tagName || 'div', rest, newChildren);
@@ -33,11 +33,11 @@ ColumnContainer.propTypes = {
   xsShift: React.PropTypes.number,
   smShift: React.PropTypes.number,
   mdShift: React.PropTypes.number,
-  lgShift: React.PropTypes.number
+  lgShift: React.PropTypes.number,
 };
 
 ColumnContainer.defaultProps = {
-  divisions: 12
+  divisions: 12,
 };
 
 const Column = styled(ColumnContainer)`
