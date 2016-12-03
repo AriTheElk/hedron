@@ -8,7 +8,7 @@
   },
   "rules": {
     "arrow-body-style": ["error", "as-needed", { requireReturnForObjectLiteral: true }],
-    "comma-dangle": 0,
+    "comma-dangle": ["error", "always-multiline"],
     "consistent-return": 0,
     "import/extensions": 0,
     "import/no-unresolved": 0,

@@ -12,7 +12,7 @@ function RowContainer(props) {
       debug: typeof child.props.debug === 'undefined'
         ? debug
         : child.props.debug,
-      divisions
+      divisions,
     };
   });
   return React.createElement(tagName || 'section', rest, newChildren);
@@ -23,11 +23,11 @@ RowContainer.propTypes = {
   tagName: React.PropTypes.string,
   className: React.PropTypes.string,
   debug: React.PropTypes.bool,
-  divisions: React.PropTypes.number
+  divisions: React.PropTypes.number,
 };
 
 RowContainer.defaultProps = {
-  divisions: 12
+  divisions: 12,
 };
 
 const Row = styled(RowContainer)`

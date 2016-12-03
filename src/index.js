@@ -6,7 +6,7 @@ import { divvy, media, passOn } from './utils';
 const utils = {
   divvy,
   media,
-  passOn
+  passOn,
 };
 
 export { Column, Page, Row, utils };

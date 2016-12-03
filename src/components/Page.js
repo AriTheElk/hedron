@@ -11,7 +11,7 @@ function PageContainer(props) {
     return {
       debug: typeof child.props.debug === 'undefined'
         ? debug
-        : child.props.debug
+        : child.props.debug,
     };
   });
   return React.createElement(tagName || 'div', rest, newChildren);
@@ -23,7 +23,7 @@ PageContainer.propTypes = {
   className: React.PropTypes.string,
   debug: React.PropTypes.bool,
   fluid: React.PropTypes.bool,
-  width: React.PropTypes.string
+  width: React.PropTypes.string,
 };
 
 
