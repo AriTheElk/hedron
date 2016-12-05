@@ -6,7 +6,9 @@ import { divvy, passOn } from '../utils';
 
 
 function RowContainer(props) {
-  const { children, tagName, debug, divisions, ...rest } = props;
+  const { children, tagName, debug, divisions,
+    alignContent, alignItems, alignSelf, justifyContent, order,
+    ...rest } = props;
   const newChildren = passOn(children, [Column], (child) => {
     return {
       debug: typeof child.props.debug === 'undefined'
