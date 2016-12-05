@@ -20,10 +20,17 @@ function RowContainer(props) {
 
 RowContainer.propTypes = {
   children: React.PropTypes.node,
-  tagName: React.PropTypes.string,
   className: React.PropTypes.string,
   debug: React.PropTypes.bool,
+  tagName: React.PropTypes.string,
+  // grid props
   divisions: React.PropTypes.number,
+  // flex props
+  alignContent: React.PropTypes.string,
+  alignItems: React.PropTypes.string,
+  alignSelf: React.PropTypes.string,
+  justifyContent: React.PropTypes.string,
+  order: React.PropTypes.string,
 };
 
 RowContainer.defaultProps = {
@@ -34,6 +41,26 @@ const Row = styled(RowContainer)`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  ${props => props.alignContent
+    ? `align-content: ${props.alignContent};`
+    : null
+  }
+  ${props => props.alignItems
+    ? `align-items: ${props.alignItems};`
+    : null
+  }
+  ${props => props.alignSelf
+    ? `align-self: ${props.alignSelf};`
+    : null
+  }
+  ${props => props.justifyContent
+    ? `justify-content: ${props.justifyContent};`
+    : null
+  }
+  ${props => props.order
+    ? `order: ${props.order};`
+    : null
+  }
 `;
 
 
