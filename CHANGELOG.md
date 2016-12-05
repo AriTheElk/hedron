@@ -12,6 +12,19 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ### Changed
 
+## [v0.4.0] - 2016-12-05
+
+### Added
+
+Added Support for the following CSS flex props on the `Row` component:
+- alignContent
+- alignItems
+- alignSelf
+- justifyContent
+- order
+
+### Changed
+
 ## [v0.3.0] - 2016-11-14
 
 ### Added
@@ -69,7 +82,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - Made progress on code comments
 - Various linting
 
-[Unreleased]: https://github.com/JSBros/hedron/compare/v0.3.0...master
+[Unreleased]: https://github.com/JSBros/hedron/compare/v0.4.0...master
+[v0.4.0]: https://github.com/JSBros/hedron/compare/v0.3.0...v0.4.0
 [v0.3.0]: https://github.com/JSBros/hedron/compare/v0.2.0...v0.3.0
 [v0.2.0]: https://github.com/JSBros/hedron/compare/v0.1.3...v0.2.0
 [v0.1.3]: https://github.com/JSBros/hedron/compare/v0.1.2...v0.1.3
