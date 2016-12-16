@@ -1,3 +1,5 @@
+// @flow
+
 import { css } from 'styled-components';
 
 const sizes = {
@@ -15,4 +17,3 @@ export default Object.keys(sizes).reduce((acc, label) => {
   `;
   return accumulator;
 }, {});
-
