@@ -10,7 +10,7 @@ import React from 'react';
 // to a component type that exists in the ofTypes array.
 export default function(
   children: React.Children,
-  ofTypes: Array<React.Component<*, *, *>>,
+  ofTypes: Array<React.Component<>>,
   process: (r: React.Children) => Object = r => r) {
   const response = React.Children.map(children,
     // Check to see if the child's component type is whitelisted,

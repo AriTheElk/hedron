@@ -6,8 +6,23 @@ import styled from 'styled-components';
 import Row from './Row';
 import { divvy, media, passOn } from '../utils';
 
+type Props = {
+  children: React.Children,
+  tagName: ?string,
+  debug: ?boolean,
+  divisions: ?number,
+  fluid: ?boolean,
+  xs: ?number,
+  sm: ?number,
+  md: ?number,
+  lg: ?number,
+  xsShift: ?number,
+  smShift: ?number,
+  mdShift: ?number,
+  lgShift: ?number
+}
 
-function ColumnContainer(props) {
+function ColumnContainer(props: Props) {
   const { children, tagName, debug, divisions, fluid, xs, sm, md, lg,
     xsShift, smShift, mdShift, lgShift,
     ...rest } = props;
@@ -24,7 +39,6 @@ function ColumnContainer(props) {
 ColumnContainer.propTypes = {
   children: React.PropTypes.node,
   tagName: React.PropTypes.string,
-  className: React.PropTypes.string,
   debug: React.PropTypes.bool,
   divisions: React.PropTypes.number,
   fluid: React.PropTypes.bool,

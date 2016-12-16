@@ -6,8 +6,19 @@ import styled from 'styled-components';
 import Column from './Column';
 import { divvy, passOn } from '../utils';
 
+type Props = {
+  children: React.Children,
+  debug: ?boolean,
+  tagName: ?string,
+  divisions: ?number,
+  alignContent: ?string,
+  alignItems: ?string,
+  alignSelf: ?string,
+  justifyContent: ?string,
+  order: ?string
+}
 
-function RowContainer(props) {
+function RowContainer(props: Props) {
   const { children, tagName, debug, divisions,
     alignContent, alignItems, alignSelf, justifyContent, order,
     ...rest } = props;
@@ -24,7 +35,6 @@ function RowContainer(props) {
 
 RowContainer.propTypes = {
   children: React.PropTypes.node,
-  className: React.PropTypes.string,
   debug: React.PropTypes.bool,
   tagName: React.PropTypes.string,
   // grid props
