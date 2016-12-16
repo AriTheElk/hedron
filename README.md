@@ -98,9 +98,9 @@ If all goes well, nothing spectacular should happen. If there are any errors, yo
 
 ### Committing
 
-In an effort to keep the git history clean, since `0.3.0` I'm enforcing an emoji based semantic commit message style. This allows for easy visual grepping of the git log.
+In an effort to keep the git history clean, since `0.4.0` I'm enforcing a semantic commit message style.
 
-[View the gitmoji guidelines →](https://gitmoji.carloscuesta.me)
+[View the semantic commit message guidelines →](https://seesparkbox.com/foundry/semantic_commit_messages)
 
 
 ## Authors
