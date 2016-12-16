@@ -14,7 +14,8 @@
     "build:dist": "rollup -c && rollup -c --environment PRODUCTION",
     "clean": "rm -rf dist/*",
     "lint": "eslint src",
-    "lint:fix": "eslint --fix src"
+    "lint:fix": "eslint --fix src",
+    "flow": "flow"
   },
   "bugs": {
     "url": "https://github.com/garetmckinley/hedron/issues"
@@ -42,6 +43,7 @@
     "eslint-plugin-import": "^2.1.0",
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.5.0",
+    "flow-bin": "^0.37.0",
     "rollup": "^0.36.3",
     "rollup-plugin-babel": "^2.6.1",
     "rollup-plugin-commonjs": "^5.0.5",
