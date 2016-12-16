@@ -26,14 +26,6 @@ function PageContainer(props: Props) {
   return React.createElement(tagName || 'div', rest, newChildren);
 }
 
-PageContainer.propTypes = {
-  children: React.PropTypes.node,
-  tagName: React.PropTypes.string,
-  debug: React.PropTypes.bool,
-  fluid: React.PropTypes.bool,
-  width: React.PropTypes.string,
-};
-
 const Page = styled(PageContainer)`
   ${props =>
     props.fluid

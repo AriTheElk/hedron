@@ -44,6 +44,7 @@ const plugins = [
     ],
     plugins: [
       'external-helpers',
+      'flow-react-proptypes'
     ],
   }),
   commonjs(),

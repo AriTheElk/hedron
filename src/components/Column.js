@@ -36,22 +36,6 @@ function ColumnContainer(props: Props) {
   return React.createElement(tagName || 'div', rest, newChildren);
 }
 
-ColumnContainer.propTypes = {
-  children: React.PropTypes.node,
-  tagName: React.PropTypes.string,
-  debug: React.PropTypes.bool,
-  divisions: React.PropTypes.number,
-  fluid: React.PropTypes.bool,
-  xs: React.PropTypes.number,
-  sm: React.PropTypes.number,
-  md: React.PropTypes.number,
-  lg: React.PropTypes.number,
-  xsShift: React.PropTypes.number,
-  smShift: React.PropTypes.number,
-  mdShift: React.PropTypes.number,
-  lgShift: React.PropTypes.number,
-};
-
 ColumnContainer.defaultProps = {
   divisions: 12,
 };
