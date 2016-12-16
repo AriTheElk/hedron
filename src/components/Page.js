@@ -6,8 +6,15 @@ import styled from 'styled-components';
 import Row from './Row';
 import { passOn } from '../utils';
 
+type Props = {
+  children: React.Children,
+  tagName: ?string,
+  debug: ?boolean,
+  fluid: ?boolean,
+  width: ?string
+}
 
-function PageContainer(props) {
+function PageContainer(props: Props) {
   const { children, tagName, debug, fluid, ...rest } = props;
   const newChildren = passOn(children, [Row], (child) => {
     return {
@@ -22,18 +29,16 @@ function PageContainer(props) {
 PageContainer.propTypes = {
   children: React.PropTypes.node,
   tagName: React.PropTypes.string,
-  className: React.PropTypes.string,
   debug: React.PropTypes.bool,
   fluid: React.PropTypes.bool,
   width: React.PropTypes.string,
 };
 
-
 const Page = styled(PageContainer)`
   ${props =>
     props.fluid
     ? 'width: 100%;'
-      : `
+    : `
       margin: 0 auto;
       max-width: 100%;
       ${props.width
@@ -45,4 +50,3 @@ const Page = styled(PageContainer)`
 `;
 
 export default Page;
-
