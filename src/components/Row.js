@@ -10,7 +10,9 @@ type Props = {
   children: React.Children,
   debug: ?boolean,
   tagName: ?string,
+  // grid props
   divisions: ?number,
+  // flex props
   alignContent: ?string,
   alignItems: ?string,
   alignSelf: ?string,
@@ -32,20 +34,6 @@ function RowContainer(props: Props) {
   });
   return React.createElement(tagName || 'section', rest, newChildren);
 }
-
-RowContainer.propTypes = {
-  children: React.PropTypes.node,
-  debug: React.PropTypes.bool,
-  tagName: React.PropTypes.string,
-  // grid props
-  divisions: React.PropTypes.number,
-  // flex props
-  alignContent: React.PropTypes.string,
-  alignItems: React.PropTypes.string,
-  alignSelf: React.PropTypes.string,
-  justifyContent: React.PropTypes.string,
-  order: React.PropTypes.string,
-};
 
 RowContainer.defaultProps = {
   divisions: 12,

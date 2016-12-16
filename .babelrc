@@ -3,6 +3,8 @@
     "es2015-rollup",
     "react",
     "stage-2"
+  ],
+  "plugins": [
+    "flow-react-proptypes"
   ]
 }
-
