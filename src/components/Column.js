@@ -7,6 +7,7 @@ import { divvy, media, passOn } from '../utils';
 
 type Props = {
   children?: Array<React.Element<>>,
+  className?: string,
   tagName?: string,
   debug?: boolean,
   divisions?: number,

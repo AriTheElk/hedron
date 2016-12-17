@@ -7,6 +7,7 @@ import { divvy, passOn } from '../utils';
 
 type Props = {
   children?: Array<React.Element<>>,
+  className?: string,
   debug?: boolean,
   tagName?: string,
   // grid props
