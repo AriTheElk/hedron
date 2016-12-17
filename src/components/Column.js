@@ -7,19 +7,19 @@ import Row from './Row';
 import { divvy, media, passOn } from '../utils';
 
 type Props = {
-  children: React.Children,
-  tagName: ?string,
-  debug: ?boolean,
-  divisions: ?number,
-  fluid: ?boolean,
-  xs: ?number,
-  sm: ?number,
-  md: ?number,
-  lg: ?number,
-  xsShift: ?number,
-  smShift: ?number,
-  mdShift: ?number,
-  lgShift: ?number
+  children?: Array<React.Element<>>,
+  tagName?: string,
+  debug?: boolean,
+  divisions?: number,
+  fluid?: boolean,
+  xs?: number,
+  sm?: number,
+  md?: number,
+  lg?: number,
+  xsShift?: number,
+  smShift?: number,
+  mdShift?: number,
+  lgShift?: number
 }
 
 function ColumnContainer(props: Props) {
