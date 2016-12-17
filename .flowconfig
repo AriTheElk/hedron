@@ -29,3 +29,4 @@ node_modules/styled-components/flow-typed/inline-style-prefixer_vx.x.x.js
 # Yeah, we use this to ignore errors...
 # Just add it, if you have a different suppress_comment notation
 suppress_comment=.*\\$FlowIssue
+suppress_comment= \\(.\\|\n\\)*\\$FlowFixMe
