@@ -1,4 +1,8 @@
 [ignore]
+
+# Based on the configuration recommended for styled-components
+# https://github.com/styled-components/styled-components/blob/master/docs/flow-support.md
+
 # We vendor our src directory, which is not needed for type-checking
 .*/styled-components/src/.*
 
