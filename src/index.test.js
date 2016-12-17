@@ -4,7 +4,6 @@ import React from 'react';
 import ReactTestRenderer from 'react-test-renderer';
 import { Page, Row, Column } from '.';
 
-declare var jest: any;
 declare var it: any;
 declare var expect: any;
 
