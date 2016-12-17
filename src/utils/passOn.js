@@ -1,5 +1,4 @@
 // @flow
-
 import React from 'react';
 // This is an undocumented utility that is subject to change.
 // Please do not use this externally. Eventually I will likely
