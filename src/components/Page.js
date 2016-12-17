@@ -7,11 +7,11 @@ import Row from './Row';
 import { passOn } from '../utils';
 
 type Props = {
-  children: React.Children,
-  tagName: ?string,
-  debug: ?boolean,
-  fluid: ?boolean,
-  width: ?string
+  children?: Array<React.Element<>>,
+  tagName?: string,
+  debug?: boolean,
+  fluid?: boolean,
+  width?: string
 }
 
 function PageContainer(props: Props) {

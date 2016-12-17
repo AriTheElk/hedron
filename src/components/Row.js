@@ -7,17 +7,17 @@ import Column from './Column';
 import { divvy, passOn } from '../utils';
 
 type Props = {
-  children: React.Children,
-  debug: ?boolean,
-  tagName: ?string,
+  children?: Array<React.Element<>>,
+  debug?: boolean,
+  tagName?: string,
   // grid props
-  divisions: ?number,
+  divisions?: number,
   // flex props
-  alignContent: ?string,
-  alignItems: ?string,
-  alignSelf: ?string,
-  justifyContent: ?string,
-  order: ?string
+  alignContent?: string,
+  alignItems?: string,
+  alignSelf?: string,
+  justifyContent?: string,
+  order?: string
 }
 
 function RowContainer(props: Props) {
