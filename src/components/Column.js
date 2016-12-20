@@ -1,11 +1,28 @@
+// @flow
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import styled from 'styled-components';
 import Row from './Row';
 import { divvy, media, passOn } from '../utils';
 
+type Props = {
+  children?: Array<React.Element<>>,
+  className?: string,
+  tagName?: string,
+  debug?: boolean,
+  divisions?: number,
+  fluid?: boolean,
+  xs?: number,
+  sm?: number,
+  md?: number,
+  lg?: number,
+  xsShift?: number,
+  smShift?: number,
+  mdShift?: number,
+  lgShift?: number
+}
 
-function ColumnContainer(props) {
+function ColumnContainer(props: Props) {
   const { children, tagName, debug, divisions, fluid, xs, sm, md, lg,
     xsShift, smShift, mdShift, lgShift,
     ...rest } = props;
@@ -18,23 +35,6 @@ function ColumnContainer(props) {
   });
   return React.createElement(tagName || 'div', rest, newChildren);
 }
-
-ColumnContainer.propTypes = {
-  children: React.PropTypes.node,
-  tagName: React.PropTypes.string,
-  className: React.PropTypes.string,
-  debug: React.PropTypes.bool,
-  divisions: React.PropTypes.number,
-  fluid: React.PropTypes.bool,
-  xs: React.PropTypes.number,
-  sm: React.PropTypes.number,
-  md: React.PropTypes.number,
-  lg: React.PropTypes.number,
-  xsShift: React.PropTypes.number,
-  smShift: React.PropTypes.number,
-  mdShift: React.PropTypes.number,
-  lgShift: React.PropTypes.number,
-};
 
 ColumnContainer.defaultProps = {
   divisions: 12,
@@ -97,4 +97,3 @@ const Column = styled(ColumnContainer)`
 `;
 
 export default Column;
-
