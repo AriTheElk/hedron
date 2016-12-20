@@ -1,3 +1,4 @@
+// @flow
 import Column from './components/Column';
 import Row from './components/Row';
 import Page from './components/Page';
@@ -10,4 +11,3 @@ const utils = {
 };
 
 export { Column, Page, Row, utils };
-

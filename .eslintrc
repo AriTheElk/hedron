@@ -4,13 +4,17 @@
   "env": {
     "browser": true,
     "mocha": true,
-    "node": true
+    "node": true,
+    "jest": true
   },
   "rules": {
-    "arrow-body-style": ["error", "as-needed", { requireReturnForObjectLiteral: true }],
+    "arrow-body-style": ["error", "as-needed", { "requireReturnForObjectLiteral": true }],
     "comma-dangle": ["error", "always-multiline"],
     "consistent-return": 0,
     "import/extensions": 0,
+    "import/no-extraneous-dependencies": ["error", {
+      "devDependencies": ["**/*.test.js", "**/*.spec.js"]
+    }],
     "import/no-unresolved": 0,
     "max-len": [2, 80, 4, {"ignoreUrls": true, "ignoreComments": true}],
     "no-case-declarations": 0,
@@ -18,7 +22,7 @@
     "no-return-assign": 0,
     "no-shadow": 0,
     "no-throw-literal": 0,
-    "one-var": [0, { uninitialized: "always", initialized: "never" }],
+    "one-var": [0, { "uninitialized": "always", "initialized": "never" }],
     "one-var-declaration-per-line": 0,
     "prefer-const": 1,
     "react/jsx-filename-extension": 0,
@@ -35,4 +39,3 @@
     "sourceType": "module"
   }
 }
-

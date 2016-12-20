@@ -1,11 +1,26 @@
+// @flow
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import styled from 'styled-components';
 import Column from './Column';
 import { divvy, passOn } from '../utils';
 
+type Props = {
+  children?: Array<React.Element<>>,
+  className?: string,
+  debug?: boolean,
+  tagName?: string,
+  // grid props
+  divisions?: number,
+  // flex props
+  alignContent?: string,
+  alignItems?: string,
+  alignSelf?: string,
+  justifyContent?: string,
+  order?: string
+}
 
-function RowContainer(props) {
+function RowContainer(props: Props) {
   const { children, tagName, debug, divisions,
     alignContent, alignItems, alignSelf, justifyContent, order,
     ...rest } = props;
@@ -19,21 +34,6 @@ function RowContainer(props) {
   });
   return React.createElement(tagName || 'section', rest, newChildren);
 }
-
-RowContainer.propTypes = {
-  children: React.PropTypes.node,
-  className: React.PropTypes.string,
-  debug: React.PropTypes.bool,
-  tagName: React.PropTypes.string,
-  // grid props
-  divisions: React.PropTypes.number,
-  // flex props
-  alignContent: React.PropTypes.string,
-  alignItems: React.PropTypes.string,
-  alignSelf: React.PropTypes.string,
-  justifyContent: React.PropTypes.string,
-  order: React.PropTypes.string,
-};
 
 RowContainer.defaultProps = {
   divisions: 12,

@@ -14,7 +14,10 @@
     "build:dist": "rollup -c && rollup -c --environment PRODUCTION",
     "clean": "rm -rf dist/*",
     "lint": "eslint src",
-    "lint:fix": "eslint --fix src"
+    "lint:fix": "eslint --fix src",
+    "flow": "flow",
+    "pretest": "npm run lint && npm run flow",
+    "test": "jest"
   },
   "bugs": {
     "url": "https://github.com/garetmckinley/hedron/issues"
@@ -29,20 +32,25 @@
     "babel-cli": "^6.18.0",
     "babel-core": "^6.18.2",
     "babel-eslint": "^7.1.0",
+    "babel-jest": "^18.0.0",
     "babel-loader": "^6.2.7",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-external-helpers": "^6.18.0",
-    "babel-preset-es2015-rollup": "^1.2.0",
+    "babel-plugin-flow-react-proptypes": "^0.18.2",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-es2015-rollup": "^3.0.0",
     "babel-preset-latest": "^6.16.0",
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-2": "^6.18.0",
     "eslint": "^3.9.1",
     "eslint-config-airbnb": "^12.0.0",
     "eslint-plugin-flowtype-errors": "^1.5.0",
-    "eslint-plugin-import": "^2.1.0",
+    "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.5.0",
-    "react": "^15.3.2",
+    "flow-bin": "^0.37.0",
+    "jest": "^18.0.0",
+    "react-test-renderer": "^15.4.1",
     "rollup": "^0.36.3",
     "rollup-plugin-babel": "^2.6.1",
     "rollup-plugin-commonjs": "^5.0.5",
@@ -50,11 +58,15 @@
     "rollup-plugin-json": "^2.0.2",
     "rollup-plugin-node-resolve": "^2.0.0",
     "rollup-plugin-replace": "^1.1.1",
-    "rollup-plugin-uglify": "^1.0.1",
-    "styled-components": "^1.0.10"
+    "rollup-plugin-uglify": "^1.0.1"
   },
   "dependencies": {
     "react": "^15.3.2",
     "styled-components": "^1.0.10"
+  },
+  "jest": {
+    "testPathDirs": [
+      "src"
+    ]
   }
 }
