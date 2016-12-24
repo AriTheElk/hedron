@@ -43,6 +43,7 @@ const plugins = [
       'stage-2'
     ],
     plugins: [
+      'array-includes',
       'external-helpers',
       'flow-react-proptypes'
     ],
