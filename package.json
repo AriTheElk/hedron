@@ -17,7 +17,9 @@
     "lint:fix": "eslint --fix src",
     "flow": "flow",
     "pretest": "npm run lint && npm run flow",
-    "test": "jest"
+    "test": "jest",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "bugs": {
     "url": "https://github.com/garetmckinley/hedron/issues"
@@ -29,6 +31,7 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@kadira/storybook": "^2.21.0",
     "babel-cli": "^6.18.0",
     "babel-core": "^6.18.2",
     "babel-eslint": "^7.1.0",
@@ -51,6 +54,7 @@
     "eslint-plugin-react": "^6.5.0",
     "flow-bin": "^0.37.0",
     "jest": "^18.0.0",
+    "react-dom": "^15.4.1",
     "react-test-renderer": "^15.4.1",
     "rollup": "^0.36.3",
     "rollup-plugin-babel": "^2.6.1",
