@@ -1,5 +1,7 @@
 .babelrc
 .eslintignore
 .eslintrc
+.storybook
 rollup.config.js
+stories
 yarn.lock
