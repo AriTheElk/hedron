@@ -3,6 +3,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Column from './Column';
+import Hidden from './Hidden';
 import { divvy, passOn } from '../utils';
 
 type Props = {
@@ -24,7 +25,7 @@ function RowContainer(props: Props) {
   const { children, tagName, debug, divisions,
     alignContent, alignItems, alignSelf, justifyContent, order,
     ...rest } = props;
-  const newChildren = passOn(children, [Column], (child) => {
+  const newChildren = passOn(children, [Column, Hidden], (child) => {
     return {
       debug: typeof child.props.debug === 'undefined'
         ? debug

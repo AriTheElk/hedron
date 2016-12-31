@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@kadira/storybook';
-import { Page, Row, Column } from '../src';
+import { Page, Row, Column, Hidden } from '../src';
 
 storiesOf('Layouts', module)
   .add('Column Sizes (xs)', () => (
@@ -157,5 +157,39 @@ storiesOf('Layouts', module)
       <Row><Column lgShift={9} /></Row>
       <Row><Column lgShift={10} /></Row>
       <Row><Column lgShift={11} /></Row>
+    </Page>
+  ));
+
+storiesOf('Hidden', module)
+  .add('xs', () => (
+    <Page debug>
+      <p>
+        This row is hidden on xs
+      </p>
+      <Hidden xs><Row><Column /></Row></Hidden>
+    </Page>
+  ))
+  .add('sm', () => (
+    <Page debug>
+      <p>
+        This row is hidden on sm
+      </p>
+      <Hidden sm><Row><Column /></Row></Hidden>
+    </Page>
+  ))
+  .add('md', () => (
+    <Page debug>
+      <p>
+        This row is hidden on md
+      </p>
+      <Hidden md><Row><Column /></Row></Hidden>
+    </Page>
+  ))
+  .add('lg', () => (
+    <Page debug>
+      <p>
+        This row is hidden on lg
+      </p>
+      <Hidden lg><Row><Column /></Row></Hidden>
     </Page>
   ));
