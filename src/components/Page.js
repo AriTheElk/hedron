@@ -3,6 +3,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Row from './Row';
+import Hidden from './Hidden';
 import { passOn } from '../utils';
 
 type Props = {
@@ -16,7 +17,7 @@ type Props = {
 
 function PageContainer(props: Props) {
   const { children, tagName, debug, fluid, ...rest } = props;
-  const newChildren = passOn(children, [Row], (child) => {
+  const newChildren = passOn(children, [Row, Hidden], (child) => {
     return {
       debug: typeof child.props.debug === 'undefined'
         ? debug
