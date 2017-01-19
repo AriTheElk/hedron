@@ -9,6 +9,9 @@ import BreakpointProvider, {
 import * as utils from './utils';
 
 export {
-  Column, Page, Row, Hidden,
-  BreakpointProvider, withBreakpoints, utils,
+  Column,
+  Hidden,
+  Page,
+  Row,
+  utils,
 };
