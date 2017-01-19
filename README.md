@@ -1,21 +1,22 @@
 ```
-$$\   $$\                 $$\                               
-$$ |  $$ |                $$ |                              
-$$ |  $$ | $$$$$$\   $$$$$$$ | $$$$$$\   $$$$$$\  $$$$$$$\  
+$$\   $$\                 $$\
+$$ |  $$ |                $$ |
+$$ |  $$ | $$$$$$\   $$$$$$$ | $$$$$$\   $$$$$$\  $$$$$$$\
 $$$$$$$$ |$$  __$$\ $$  __$$ |$$  __$$\ $$  __$$\ $$  __$$\
 $$  __$$ |$$$$$$$$ |$$ /  $$ |$$ |  \__|$$ /  $$ |$$ |  $$ |
 $$ |  $$ |$$   ____|$$ |  $$ |$$ |      $$ |  $$ |$$ |  $$ |
 $$ |  $$ |\$$$$$$$\ \$$$$$$$ |$$ |      \$$$$$$  |$$ |  $$ |
-\__|  \__| \_______| \_______|\__|       \______/ \__|  \__|                                                                                                                                
+\__|  \__| \_______| \_______|\__|       \______/ \__|  \__|
 ```
+
 [![Backers on Open Collective](https://opencollective.com/hedron/backers/badge.svg)](#backers) [![Sponsors on Open Collective](https://opencollective.com/hedron/sponsors/badge.svg)](#sponsors) [![Travis](https://img.shields.io/travis/JSBros/hedron.svg?style=flat-square)](https://travis-ci.org/JSBros/hedron) [![npm](https://img.shields.io/npm/dt/hedron.svg?style=flat-square)](https://www.npmjs.com/package/hedron) [![David](https://img.shields.io/david/jsbros/hedron.svg?style=flat-square)](https://github.com/JSBros/hedron/issues) [![Slack Status](https://slackin-xtuseyimsc.now.sh/badge.svg)](https://slackin-xtuseyimsc.now.sh/)
 
 [View a landing page built with Hedron](https://jsbros.github.io/uigradients/).
 
-
 ## Installation
 
     npm install --save hedron
+
 or better yet
 
     yarn add hedron
@@ -26,9 +27,9 @@ or better yet
 
 ## Example Usage
 
-``` jsx
-import React, { Component } from 'react';
-import { Page, Row, Column } from 'hedron';
+```jsx
+import React, { Component } from "react";
+import { Page, Row, Column } from "hedron";
 
 class App extends Component {
   render() {
@@ -60,7 +61,7 @@ class App extends Component {
         </Row>
       </Page>
     );
-  };
+  }
 }
 ```
 
@@ -105,13 +106,15 @@ In an effort to keep the git history clean, since `0.4.0` I'm enforcing a semant
 Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#-all-contributors-)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+
 | [<img src="https://avatars.githubusercontent.com/u/1624279?v=3" width="100px;"/><br /><sub>Garet McKinley</sub>](https://github.com/garetmckinley)<br />[💻](https://github.com/JSBros/hedron/commits?author=garetmckinley) 💡 ⚠️ 👀 | [<img src="https://avatars.githubusercontent.com/u/11802078?v=3" width="100px;"/><br /><sub>Matt Hamil</sub>](https://github.com/matthamil)<br /> 💬 | [<img src="https://avatars.githubusercontent.com/u/77391?v=3" width="100px;"/><br /><sub>Mikko Matilainen</sub>](https://github.com/mikkom)<br />[💻](https://github.com/JSBros/hedron/commits?author=mikkom) | [<img src="https://avatars.githubusercontent.com/u/16616772?v=3" width="100px;"/><br /><sub>Nathaniel Piché</sub>](https://github.com/nathanielpiche)<br />[💻](https://github.com/JSBros/hedron/commits?author=nathanielpiche) 📖 | [<img src="https://avatars.githubusercontent.com/u/233396?v=3" width="100px;"/><br /><sub>Brian Stanback</sub>](https://github.com/Stanback)<br />[💻](https://github.com/JSBros/hedron/commits?author=Stanback) | [<img src="https://avatars.githubusercontent.com/u/571265?v=3" width="100px;"/><br /><sub>Stephen Mathieson</sub>](https://github.com/stephenmathieson)<br />[💻](https://github.com/JSBros/hedron/commits?author=stephenmathieson) |
-| :---: | :---: | :---: | :---: | :---: | :---: |
+| :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification.
 Contributions of any kind are welcome!
-
 
 ## Backers
 
@@ -148,7 +151,6 @@ Support us with a monthly donation and help us continue our activities. [[Become
 <a href="https://opencollective.com/hedron/backer/28/website" target="_blank"><img src="https://opencollective.com/hedron/backer/28/avatar.svg"></a>
 <a href="https://opencollective.com/hedron/backer/29/website" target="_blank"><img src="https://opencollective.com/hedron/backer/29/avatar.svg"></a>
 
-
 ## Sponsors
 
 Become a sponsor and get your logo on our README on Github with a link to your site. [[Become a sponsor](https://opencollective.com/hedron#sponsor)]
@@ -164,8 +166,6 @@ Become a sponsor and get your logo on our README on Github with a link to your s
 <a href="https://opencollective.com/hedron/sponsor/7/website" target="_blank"><img src="https://opencollective.com/hedron/sponsor/7/avatar.svg"></a>
 <a href="https://opencollective.com/hedron/sponsor/8/website" target="_blank"><img src="https://opencollective.com/hedron/sponsor/8/avatar.svg"></a>
 <a href="https://opencollective.com/hedron/sponsor/9/website" target="_blank"><img src="https://opencollective.com/hedron/sponsor/9/avatar.svg"></a>
-
-
 
 ## License
 
