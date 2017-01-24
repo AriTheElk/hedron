@@ -11,6 +11,7 @@ type Props = {
   className?: string,
   debug?: boolean,
   tagName?: string,
+  theme?: Object,
   // grid props
   divisions?: number,
   // flex props
@@ -22,7 +23,7 @@ type Props = {
 }
 
 function RowContainer(props: Props) {
-  const { children, tagName, debug, divisions,
+  const { children, tagName, debug, divisions, theme,
     alignContent, alignItems, alignSelf, justifyContent, order,
     ...rest } = props;
   const newChildren = passOn(children, [Column, Hidden], (child) => {
