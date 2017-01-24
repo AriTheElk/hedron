@@ -9,6 +9,7 @@ type Props = {
   children?: Array<React.Element<>>,
   className?: string,
   tagName?: string,
+  theme?: Object,
   debug?: boolean,
   divisions?: number,
   fluid?: boolean,
@@ -23,7 +24,7 @@ type Props = {
 }
 
 function ColumnContainer(props: Props) {
-  const { children, tagName, debug, divisions, fluid, xs, sm, md, lg,
+  const { children, tagName, debug, divisions, fluid, xs, sm, md, lg, theme,
     xsShift, smShift, mdShift, lgShift,
     ...rest } = props;
   const newChildren = passOn(children, [Row], (child) => {
