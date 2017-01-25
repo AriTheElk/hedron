@@ -1,4 +1,3 @@
-// @flow
 import React, { Component, PropTypes, Children } from 'react';
 
 const breakpointsShape = PropTypes.shape({
@@ -28,14 +27,16 @@ export default class BreakpointProvider extends Component {
   }
 }
 
-export const withBreakpoints = (WrappedComponent) => class Breakpoints extends Component {
-  static contextTypes = {
-    breakpoints: breakpointsShape,
-  };
+export const withBreakpoints = WrappedComponent =>
+  // eslint-disable-next-line react/no-multi-comp
+  class Breakpoints extends Component { // eslint-disable-line  react/prefer-stateless-function
+    static contextTypes = {
+      breakpoints: breakpointsShape,
+    };
 
-  render() {
-    const { breakpoints } = this.context;
+    render() {
+      const { breakpoints } = this.context;
 
-    return <WrappedComponent {...this.props} breakpoints={breakpoints} />;
+      return <WrappedComponent {...this.props} breakpoints={breakpoints} />;
+    }
   };
-};

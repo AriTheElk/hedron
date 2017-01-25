@@ -14,6 +14,6 @@ const query = (size, breakpoints = sizes) => (...args) => css`
 
 export default Object.keys(sizes).reduce((acc, label) => {
   const accumulator = acc;
-  accumulator[label] = (breakpoints) => query(label, breakpoints);
+  accumulator[label] = breakpoints => query(label, breakpoints);
   return accumulator;
 }, {});
