@@ -28,14 +28,12 @@ export default class BreakpointProvider extends Component {
   }
 }
 
-export const withBreakpoints = (WrappedComponent) => class Breakpoints extends Component {
-  static contextTypes = {
-    breakpoints: breakpointsShape,
-  };
+export const withBreakpoints = (WrappedComponent) => {
+  const { breakpoints } = this.context;
 
-  render() {
-    const { breakpoints } = this.context;
+  return <WrappedComponent {...this.props} breakpoints={breakpoints} />;
+};
 
-    return <WrappedComponent {...this.props} breakpoints={breakpoints} />;
-  };
+withBreakpoints.contextTypes = {
+  breakpoints: breakpointsShape,
 };
