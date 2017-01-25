@@ -1,4 +1,3 @@
-// @flow
 import React, { Component, PropTypes, Children } from 'react';
 
 const breakpointsShape = PropTypes.shape({
