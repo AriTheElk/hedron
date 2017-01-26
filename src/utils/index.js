@@ -1,6 +1,6 @@
 // @flow
 import divvy from './divvy';
-import media from './media';
+import media, { defaultBreakpoints } from './media';
 import passOn from './passOn';
 
-export { divvy, media, passOn };
+export { divvy, media, defaultBreakpoints, passOn };
