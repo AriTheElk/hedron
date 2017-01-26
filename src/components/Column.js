@@ -3,6 +3,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Row from './Row';
+import { withBreakpoints } from './BreakpointProvider';
 import { divvy, media, passOn } from '../utils';
 
 type Props = {
@@ -20,12 +21,13 @@ type Props = {
   xsShift?: number,
   smShift?: number,
   mdShift?: number,
-  lgShift?: number
+  lgShift?: number,
+  breakpoints?: Object,
 }
 
 function ColumnContainer(props: Props) {
   const { children, tagName, debug, divisions, fluid, xs, sm, md, lg, theme,
-    xsShift, smShift, mdShift, lgShift,
+    xsShift, smShift, mdShift, lgShift, breakpoints,
     ...rest } = props;
   const newChildren = passOn(children, [Row], (child) => {
     return {
@@ -60,7 +62,7 @@ const Column = styled(ColumnContainer)`
       ? `margin-left: ${divvy(props.divisions, props.xsShift)}%;`
       : null
   }
-  ${media.sm`
+  ${({ breakpoints }) => media.sm(breakpoints)`
     ${props =>
       props.sm
         ? `width: ${divvy(props.divisions, props.sm)}%;`
@@ -71,7 +73,7 @@ const Column = styled(ColumnContainer)`
         : null
     }
   `}
-  ${media.md`
+  ${({ breakpoints }) => media.md(breakpoints)`
     ${props =>
       props.md
         ? `width: ${divvy(props.divisions, props.md)}%;`
@@ -83,7 +85,7 @@ const Column = styled(ColumnContainer)`
         : null
     }
   `}
-  ${media.lg`
+  ${({ breakpoints }) => media.lg(breakpoints)`
     ${props =>
       props.lg
         ? `width: ${divvy(props.divisions, props.lg)}%;`
@@ -97,4 +99,4 @@ const Column = styled(ColumnContainer)`
   `}
 `;
 
-export default Column;
+export default withBreakpoints(Column);
