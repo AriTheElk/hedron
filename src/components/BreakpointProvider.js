@@ -1,4 +1,5 @@
 import React, { Component, PropTypes, Children } from 'react';
+import { defaultBreakpoints } from '../utils';
 
 const breakpointsShape = PropTypes.shape({
   sm: PropTypes.number,
@@ -12,14 +13,23 @@ export default class BreakpointProvider extends Component {
     breakpoints: breakpointsShape,
   };
 
+  static contextTypes = {
+    breakpoints: breakpointsShape,
+  };
+
   static childContextTypes = {
     breakpoints: breakpointsShape,
   };
 
   getChildContext() {
-    const { breakpoints } = this.props;
+    const { breakpoints: propsBreakpoints = {} } = this.props;
+    const { breakpoints: contextBreakpoints = {} } = this.context;
 
-    return { breakpoints };
+    return {
+      breakpoints: {
+        ...defaultBreakpoints, ...contextBreakpoints, ...propsBreakpoints,
+      },
+    };
   }
 
   render() {
