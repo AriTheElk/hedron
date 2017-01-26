@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@kadira/storybook';
-import { Page, Row, Column, Hidden } from '../src';
+import { Page, Row, Column, Hidden, BreakpointProvider } from '../src';
 
 storiesOf('Layouts', module)
   .add('Column Sizes (xs)', () => (
@@ -192,4 +192,98 @@ storiesOf('Hidden', module)
       </p>
       <Hidden lg><Row><Column /></Row></Hidden>
     </Page>
+  ));
+
+storiesOf('BreakpointProvider', module)
+  .add('Default breakpoints', () => (
+    <BreakpointProvider>
+      <Page debug>
+        <p>
+          This layout is using the default breakpoints:
+          500, 768, and 1100.
+        </p>
+        <Row>
+          <Column>Header</Column>
+        </Row>
+        <Row>
+          <Column sm={3}>Sidebar</Column>
+          <Column sm={9} fluid>
+            <Row>
+              <Column md={6} lg={4}>A blog post</Column>
+              <Column md={6} lg={4}>Another blog post</Column>
+              <Column md={6} lg={4}>Yet another blog post</Column>
+            </Row>
+          </Column>
+        </Row>
+        <Row>
+          <Column>Footer</Column>
+        </Row>
+      </Page>
+    </BreakpointProvider>
+  ))
+  .add('Bootstrap 3', () => (
+    <BreakpointProvider breakpoints={{ sm: 576, md: 768, lg: 1200 }}>
+      <Page debug>
+        <p>
+          This layout utilizes similar breakpoints as bootstrap 3:
+          576, 768, and 1200.
+        </p>
+        <Row>
+          <Column>Header</Column>
+        </Row>
+        <Row>
+          <Column sm={3}>Sidebar</Column>
+          <Column sm={9} fluid>
+            <Row>
+              <Column md={6} lg={4}>A blog post</Column>
+              <Column md={6} lg={4}>Another blog post</Column>
+              <Column md={6} lg={4}>Yet another blog post</Column>
+            </Row>
+          </Column>
+        </Row>
+        <Row>
+          <Column>Footer</Column>
+        </Row>
+      </Page>
+    </BreakpointProvider>
+  ))
+  .add('Nested Breakpoints', () => (
+    <BreakpointProvider breakpoints={{ sm: 576, md: 768, lg: 1200 }}>
+      <Page debug>
+        <p>
+          This layout has multiple nested breakpoints.
+          When specific sizes are omitted from the breakpoints object,
+          it will inherit the missing sizes from the parent BreakpointProvider.
+          If there is no parent BreakpointProvider, it will inherit from the
+          default breakpoints.
+        </p>
+        <p>
+          Both of the below "blog post" sections have the exact same code,
+          but the first one has a custom BreakpointProvider on the lg size.
+        </p>
+        <Row>
+          <Column>Header</Column>
+        </Row>
+        <Row>
+          <Column sm={3}>Sidebar</Column>
+          <Column sm={9} fluid>
+            <BreakpointProvider breakpoints={{ lg: 850 }}>
+              <Row>
+                <Column md={6} lg={4}>A blog post</Column>
+                <Column md={6} lg={4}>Another blog post</Column>
+                <Column md={6} lg={4}>Yet another blog post</Column>
+              </Row>
+            </BreakpointProvider>
+            <Row>
+              <Column md={6} lg={4}>A blog post</Column>
+              <Column md={6} lg={4}>Another blog post</Column>
+              <Column md={6} lg={4}>Yet another blog post</Column>
+            </Row>
+          </Column>
+        </Row>
+        <Row>
+          <Column>Footer</Column>
+        </Row>
+      </Page>
+    </BreakpointProvider>
   ));
