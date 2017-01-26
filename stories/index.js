@@ -199,8 +199,8 @@ storiesOf('BreakpointProvider', module)
     <BreakpointProvider>
       <Page debug>
         <p>
-          This layout utilizes similar breakpoints as bootstrap 3:
-          576, 768, and 1200.
+          This layout is using the default breakpoints:
+          500, 768, and 1100.
         </p>
         <Row>
           <Column>Header</Column>
