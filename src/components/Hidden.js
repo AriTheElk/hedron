@@ -29,33 +29,17 @@ function HiddenContainer(props: Props) {
   return <div {...rest}>{ newChildren }</div>;
 }
 
+const compute = name =>
+  props => `display:${props[name] ? 'none' : 'inherit'};`;
+
+const breakpoint = name =>
+  ({ breakpoints }) => media[name](breakpoints)`${compute(name)}`;
+
 const Hidden = styled(HiddenContainer)`
-  ${props =>
-    props.xs
-      ? 'display: none;'
-      : 'display: inherit;'
-  }
-  ${({ breakpoints }) => media.sm(breakpoints)`
-    ${props =>
-      props.sm
-        ? 'display: none;'
-        : 'display: inherit;'
-    }
-  `}
-  ${({ breakpoints }) => media.md(breakpoints)`
-    ${props =>
-      props.md
-        ? 'display: none;'
-        : 'display: inherit;'
-    }
-  `}
-  ${({ breakpoints }) => media.lg(breakpoints)`
-    ${props =>
-      props.lg
-        ? 'display: none;'
-        : 'display: inherit;'
-    }
-  `}
+  ${compute('xs')}
+  ${breakpoint('sm')}
+  ${breakpoint('md')}
+  ${breakpoint('lg')}
 `;
 
 export default withBreakpoints(Hidden);

@@ -43,60 +43,29 @@ ColumnContainer.defaultProps = {
   divisions: 12,
 };
 
+const compute = name => props =>
+  ((divisions, size, shift) => `
+    ${size ? `width: ${divvy(divisions, size)}%;` : ''}
+    ${shift ? `margin-left: ${divvy(divisions, shift)}%;` : ''}
+  `)(props.divisions, props[name], props[`${name}Shift`]);
+
+const breakpoint = name =>
+  ({ breakpoints }) => media[name](breakpoints)`${compute(name)}`;
+
 const Column = styled(ColumnContainer)`
   display: block;
-  ${props => props.debug ? `background-color: rgba(50, 50, 255, .1);
-  border: 1px solid #fff;` : ''}
+  ${props => props.debug
+    ? `background-color: rgba(50, 50, 255, .1);
+       border: 1px solid #fff;`
+    : ''
+  }
   box-sizing: border-box;
-  ${props =>
-    props.fluid ? 'padding: 0;' : 'padding: 20px;'
-  }
+  padding: ${props => props.fluid ? '0' : '20px'};
   width: 100%;
-  ${props =>
-    props.xs
-      ? `width: ${divvy(props.divisions, props.xs)}%;`
-      : null
-  }
-  ${props =>
-    props.xsShift
-      ? `margin-left: ${divvy(props.divisions, props.xsShift)}%;`
-      : null
-  }
-  ${({ breakpoints }) => media.sm(breakpoints)`
-    ${props =>
-      props.sm
-        ? `width: ${divvy(props.divisions, props.sm)}%;`
-        : null
-    }
-    ${props => props.smShift
-        ? `margin-left: ${divvy(props.divisions, props.smShift)}%;`
-        : null
-    }
-  `}
-  ${({ breakpoints }) => media.md(breakpoints)`
-    ${props =>
-      props.md
-        ? `width: ${divvy(props.divisions, props.md)}%;`
-        : null
-    }
-    ${props =>
-      props.mdShift
-        ? `margin-left: ${divvy(props.divisions, props.mdShift)}%;`
-        : null
-    }
-  `}
-  ${({ breakpoints }) => media.lg(breakpoints)`
-    ${props =>
-      props.lg
-        ? `width: ${divvy(props.divisions, props.lg)}%;`
-        : null
-    }
-    ${props =>
-      props.lgShift
-        ? `margin-left: ${divvy(props.divisions, props.lgShift)}%;`
-        : null
-    }
-  `}
+  ${compute('xs')}
+  ${breakpoint('sm')}
+  ${breakpoint('md')}
+  ${breakpoint('lg')}
 `;
 
 export default withBreakpoints(Column);
