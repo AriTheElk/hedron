@@ -1,4 +1,5 @@
 // @flow
+/* globals ReactClass */
 import React from 'react';
 // This is an undocumented utility that is subject to change.
 // Please do not use this externally. Eventually I will likely
@@ -9,7 +10,7 @@ import React from 'react';
 // to a component type that exists in the ofTypes array.
 export default function(
   children: React.Children,
-  ofTypes: Array<React.Component<>>,
+  ofTypes: Array<ReactClass<*>>,
   process: (r: React.Children) => Object = r => r) {
   const response = React.Children.map(children,
     // Check to see if the child's component type is whitelisted,
