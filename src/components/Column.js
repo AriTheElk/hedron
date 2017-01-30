@@ -4,7 +4,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Row from './Row';
 import { withBreakpoints } from './BreakpointProvider';
-import { divvy, media, passOn } from '../utils';
+import { divvy, breakpoint, passOn } from '../utils';
 
 type Props = {
   children?: Array<React.Element<>>,
@@ -43,14 +43,12 @@ ColumnContainer.defaultProps = {
   divisions: 12,
 };
 
-const compute = name => props =>
-  ((divisions, size, shift) => `
-    ${size ? `width: ${divvy(divisions, size)}%;` : ''}
-    ${shift ? `margin-left: ${divvy(divisions, shift)}%;` : ''}
-  `)(props.divisions, props[name], props[`${name}Shift`]);
-
-const breakpoint = name =>
-  ({ breakpoints }) => media[name](breakpoints)`${compute(name)}`;
+const compute = name =>
+  breakpoint(name, (props, name) =>
+    ((divisions, size, shift) => `
+      ${size ? `width: ${divvy(divisions, size)}%;` : ''}
+      ${shift ? `margin-left: ${divvy(divisions, shift)}%;` : ''}
+    `)(props.divisions, props[name], props[`${name}Shift`]));
 
 const Column = styled(ColumnContainer)`
   display: block;
@@ -63,9 +61,9 @@ const Column = styled(ColumnContainer)`
   padding: ${props => props.fluid ? '0' : '20px'};
   width: 100%;
   ${compute('xs')}
-  ${breakpoint('sm')}
-  ${breakpoint('md')}
-  ${breakpoint('lg')}
+  ${compute('sm')}
+  ${compute('md')}
+  ${compute('lg')}
 `;
 
 export default withBreakpoints(Column);

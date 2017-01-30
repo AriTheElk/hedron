@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import Row from './Row';
 import Column from './Column';
 import { withBreakpoints } from './BreakpointProvider';
-import { divvy, media, passOn } from '../utils';
+import { divvy, breakpoint, passOn } from '../utils';
 
 type Props = {
   children?: Array<React.Element<>>,
@@ -30,16 +30,14 @@ function HiddenContainer(props: Props) {
 }
 
 const compute = name =>
-  props => `display:${props[name] ? 'none' : 'inherit'};`;
-
-const breakpoint = name =>
-  ({ breakpoints }) => media[name](breakpoints)`${compute(name)}`;
+  breakpoint(name, (props, name) =>
+    `display:${props[name] ? 'none' : 'inherit'};`);
 
 const Hidden = styled(HiddenContainer)`
   ${compute('xs')}
-  ${breakpoint('sm')}
-  ${breakpoint('md')}
-  ${breakpoint('lg')}
+  ${compute('sm')}
+  ${compute('md')}
+  ${compute('lg')}
 `;
 
 export default withBreakpoints(Hidden);

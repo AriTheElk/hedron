@@ -6,14 +6,7 @@ import Hidden from './components/Hidden';
 import BreakpointProvider, {
   withBreakpoints,
 } from './components/BreakpointProvider';
-import { divvy, media, defaultBreakpoints, passOn } from './utils';
-
-const utils = {
-  divvy,
-  media,
-  defaultBreakpoints,
-  passOn,
-};
+import * as utils from './utils';
 
 export {
   Column, Page, Row, Hidden,
