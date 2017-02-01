@@ -41,30 +41,18 @@ RowContainer.defaultProps = {
   divisions: 12,
 };
 
+const ifDefined = (prop, css = prop) =>
+  props => props[prop] ? `${css}: ${props[prop]}` : '';
+
 const Row = styled(RowContainer)`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  ${props => props.alignContent
-    ? `align-content: ${props.alignContent};`
-    : null
-  }
-  ${props => props.alignItems
-    ? `align-items: ${props.alignItems};`
-    : null
-  }
-  ${props => props.alignSelf
-    ? `align-self: ${props.alignSelf};`
-    : null
-  }
-  ${props => props.justifyContent
-    ? `justify-content: ${props.justifyContent};`
-    : null
-  }
-  ${props => props.order
-    ? `order: ${props.order};`
-    : null
-  }
+  ${ifDefined('alignContent', 'align-content')}
+  ${ifDefined('alignItems', 'align-items')}
+  ${ifDefined('alignSelf', 'align-self')}
+  ${ifDefined('justifyContent', 'justify-content')}
+  ${ifDefined('order')}
 `;
 
 
