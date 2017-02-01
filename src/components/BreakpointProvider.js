@@ -1,3 +1,5 @@
+// @flow
+/* globals ReactClass */
 import React, { Component, PropTypes, Children } from 'react';
 import { defaultBreakpoints } from '../utils';
 
@@ -37,7 +39,7 @@ export default class BreakpointProvider extends Component {
   }
 }
 
-export const withBreakpoints = WrappedComponent =>
+export const withBreakpoints = (WrappedComponent: ReactClass<mixed>) =>
   // eslint-disable-next-line react/no-multi-comp
   class Breakpoints extends Component { // eslint-disable-line  react/prefer-stateless-function
     static contextTypes = {
