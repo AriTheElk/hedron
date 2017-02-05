@@ -54,7 +54,7 @@ const Column = styled(ColumnContainer)`
   display: block;
   ${props => props.debug
     ? `background-color: rgba(50, 50, 255, .1);
-       border: 1px solid #fff;`
+       outline: 1px solid #fff;`
     : ''
   }
   box-sizing: border-box;
