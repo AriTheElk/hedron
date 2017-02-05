@@ -54,8 +54,9 @@
     "eslint-plugin-react": "^6.5.0",
     "flow-bin": "^0.37.0",
     "jest": "^18.0.0",
-    "react-dom": "^15.4.1",
-    "react-test-renderer": "^15.4.1",
+    "react": "^15.0.0",
+    "react-dom": "^15.0.0",
+    "react-test-renderer": "^15.0.0",
     "rollup": "^0.36.3",
     "rollup-plugin-babel": "^2.6.1",
     "rollup-plugin-commonjs": "^5.0.5",
@@ -66,8 +67,10 @@
     "rollup-plugin-uglify": "^1.0.1"
   },
   "dependencies": {
-    "react": "^15.3.2",
     "styled-components": "^1.0.10"
+  },
+  "peerDependencies": {
+    "react": "^15.0.0"
   },
   "jest": {
     "testPathDirs": [
