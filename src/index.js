@@ -1,17 +1,21 @@
 // @flow
-import Column from './components/Column';
-import Row from './components/Row';
-import Page from './components/Page';
+import Section from './components/Section';
+import Container from './components/Container';
+import Box from './components/Box';
 import Hidden from './components/Hidden';
 import BreakpointProvider, {
   withBreakpoints,
 } from './components/BreakpointProvider';
+import LayoutProvider from './components/LayoutProvider';
 import * as utils from './utils';
 
 export {
-  Column,
+  Section,
+  Container,
+  Box,
   Hidden,
-  Page,
-  Row,
+  LayoutProvider,
+  BreakpointProvider,
+  withBreakpoints,
   utils,
 };
