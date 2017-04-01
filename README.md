@@ -34,32 +34,32 @@ import { Page, Row, Column } from "hedron";
 class App extends Component {
   render() {
     return (
-      <Page>
-        <Row>
-          <Column sm={8} smShift={2} lg={6} lgShift={3}>
-            <h1>This is a column that's centered using the shift props</h1>
-          </Column>
-        </Row>
-        <Row>
-          <Column fluid sm={4}>
-            <h1>Fluid Columns</h1>
-          </Column>
-          <Column fluid sm={4}>
-            <p>It's a 12 column layout by default.</p>
-          </Column>
-          <Column fluid sm={4}>
-            <Row divisions={24}>
-              <Column sm={24}>
+      <Section>
+        <Container>
+          <Box sm={8} smShift={2} lg={6} lgShift={3}>
+            <h1>This is a Box that's centered using the shift props</h1>
+          </Box>
+        </Container>
+        <Container>
+          <Box fluid sm={4}>
+            <h1>Fluid Boxs</h1>
+          </Box>
+          <Box fluid sm={4}>
+            <p>It's a 12 Box layout by default.</p>
+          </Box>
+          <Box fluid sm={4}>
+            <Container divisions={24}>
+              <Box sm={24}>
                 <p>
-                  But you can change the amount of columns by adding the
-                  `divisions` property to a Row.
+                  But you can change the amount of Boxes by adding the
+                  `divisions` property to a Container.
                 </p>
                 <p>It's fully embeddable as well!</p>
-              </Column>
-            </Row>
-          </Column>
-        </Row>
-      </Page>
+              </Box>
+            </Container>
+          </Box>
+        </Container>
+      </Section>
     );
   }
 }

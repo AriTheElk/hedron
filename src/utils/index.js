@@ -2,6 +2,6 @@
 import divvy from './divvy';
 import media, { defaultBreakpoints } from './media';
 import breakpoint from './breakpoint';
-import passOn from './passOn';
+import * as flex from './flex';
 
-export { divvy, media, defaultBreakpoints, breakpoint, passOn };
+export { divvy, media, defaultBreakpoints, breakpoint, flex };
