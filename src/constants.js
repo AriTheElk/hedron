@@ -2,7 +2,7 @@
 
 // this is the object that holds the css translation
 // rules for hedron's 1.0.0 API
-export const flexss = {
+export const flexCSS = {
   align: {
     rules: {
       horizontal: "justify-content",

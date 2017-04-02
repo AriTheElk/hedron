@@ -25,7 +25,6 @@ const Box = styled.div`
     &:last-child {
       padding-right: ${props.gutter}px;
     }*/` : ""}
-  width: 100%;
   ${compute("xs")}
   ${compute("sm")}
   ${compute("md")}
