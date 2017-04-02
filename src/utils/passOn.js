@@ -11,12 +11,12 @@ import React from 'react';
 export default function(
   children: React.Children,
   process: (r: React.Children) => Object = r => r) {
-  const response = React.Children.map(children,
+  const response = React.isValidElement(children)
+    ? React.cloneElement(children, process(children))
+    : React.Children.map(children,
     // Check to see if the child's component type is whitelisted,
     // and then process it.
-    child => React.isValidElement(child)
-      ? React.cloneElement(child, process(children))
-      : children.map(child => React.cloneElement(child, process(child)))
+    child => React.cloneElement(child, process(child))
   );
   return response;
 }
