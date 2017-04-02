@@ -38,22 +38,10 @@ storiesOf('Vertical Boxes', module)
   .add('Box Sizes (xs)', () => (
     <LayoutProvider debug={{ enabled: true }} gutter={10}>
       <Section>
-        <p>
-          These boxes have only have the xs property set.
-      </p>
         <Container direction="vertical">
-          <Box xs={1} />
-          <Box xs={2} />
-          <Box xs={3} />
-          <Box xs={4} />
-          <Box xs={5} />
-          <Box xs={6} />
-          <Box xs={7} />
-          <Box xs={8} />
-          <Box xs={9} />
-          <Box xs={10} />
-          <Box xs={11} />
-          <Box xs={12} />
+          <Box xs="100px">xs="100px"</Box>
+          <Box xs="50%">xs="50%"</Box>
+          <Box xs="grow">xs="grow"</Box>
         </Container>
       </Section>
     </LayoutProvider>
@@ -61,22 +49,10 @@ storiesOf('Vertical Boxes', module)
   .add('Box Sizes (sm)', () => (
     <LayoutProvider debug={{ enabled: true }} gutter={10}>
       <Section>
-        <p>
-          These boxes have only have the sm property set.
-      </p>
         <Container direction="vertical">
-          <Box sm={1} />
-          <Box sm={2} />
-          <Box sm={3} />
-          <Box sm={4} />
-          <Box sm={5} />
-          <Box sm={6} />
-          <Box sm={7} />
-          <Box sm={8} />
-          <Box sm={9} />
-          <Box sm={10} />
-          <Box sm={11} />
-          <Box sm={12} />
+          <Box sm="100px">sm="100px"</Box>
+          <Box sm="50%">sm="50%"</Box>
+          <Box sm="grow">sm="grow"</Box>
         </Container>
       </Section>
     </LayoutProvider>
@@ -84,22 +60,10 @@ storiesOf('Vertical Boxes', module)
   .add('Box Sizes (md)', () => (
     <LayoutProvider debug={{ enabled: true }} gutter={10}>
       <Section>
-        <p>
-          These boxes have only have the md property set.
-        </p>
         <Container direction="vertical">
-          <Box md={1} />
-          <Box md={2} />
-          <Box md={3} />
-          <Box md={4} />
-          <Box md={5} />
-          <Box md={6} />
-          <Box md={7} />
-          <Box md={8} />
-          <Box md={9} />
-          <Box md={10} />
-          <Box md={11} />
-          <Box md={12} />
+          <Box md="100px">md="100px"</Box>
+          <Box md="50%">md="50%"</Box>
+          <Box md="grow">md="grow"</Box>
         </Container>
       </Section>
     </LayoutProvider>
@@ -107,22 +71,10 @@ storiesOf('Vertical Boxes', module)
   .add('Box Sizes (lg)', () => (
     <LayoutProvider debug={{ enabled: true }} gutter={10}>
       <Section>
-        <p>
-          These boxes have only have the lg property set.
-      </p>
         <Container direction="vertical">
-          <Box lg={1} />
-          <Box lg={2} />
-          <Box lg={3} />
-          <Box lg={4} />
-          <Box lg={5} />
-          <Box lg={6} />
-          <Box lg={7} />
-          <Box lg={8} />
-          <Box lg={9} />
-          <Box lg={10} />
-          <Box lg={11} />
-          <Box lg={12} />
+          <Box lg="100px">lg="100px"</Box>
+          <Box lg="50%">lg="50%"</Box>
+          <Box lg="grow">lg="grow"</Box>
         </Container>
       </Section>
     </LayoutProvider>
