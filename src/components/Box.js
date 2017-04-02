@@ -13,6 +13,7 @@ const compute = name =>
 
 const Box = styled.div`
   display: flex;
+  flex-direction: column;
   ${props => props.debug && (props.debug.enabled === true && "background: rgba(0, 0, 100, .15);")}
   ${props => props.debug && (props.debug.border ? `outline: ${props.debug.border};` : "outline: 1px solid #fff;")}   
   box-sizing: border-box;
