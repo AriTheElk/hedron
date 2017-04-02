@@ -12,6 +12,7 @@ const Page = styled.div`
       position: relative;
       ${props.width ? `width: ${props.width};` : "width: 960px;"}
     `}
+  ${props => props.height && `height: ${props.height};`}
   ${props => props.absolute && "position: absolute;"}
   ${props => props.top && `top: ${props.top};`}
   ${props => props.bottom && `bottom: ${props.bottom};`}
