@@ -9,6 +9,20 @@ injectGlobal`
   body {
     font-family: sans-serif;
   }
+  code.hljs {
+    border-radius: 4px;
+    padding: 15px 25px;
+  }
+  ul {
+    padding: 0;
+    list-style: none;
+    li {
+      margin-bottom: 8px;
+    }
+  }
+  a {
+    color: dodgerblue;
+  }
 `;
 
 storiesOf('Welcome', module)
