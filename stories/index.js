@@ -3,6 +3,7 @@ import { storiesOf } from '@kadira/storybook';
 import { Section, Container, Box, Hidden, LayoutProvider } from '../src';
 import Notification from './Notification';
 import Welcome from './Welcome';
+import VSCode from './Examples/VSCode';
 import { injectGlobal } from 'styled-components';
 
 injectGlobal`
@@ -13,6 +14,8 @@ injectGlobal`
   code.hljs {
     border-radius: 4px;
     padding: 15px 25px;
+    max-width: 100%;
+    overflow: scroll;
   }
   ul {
     padding: 0;
@@ -464,18 +467,5 @@ storiesOf('Layout Examples', module)
     </LayoutProvider>
   ))
   .add('VSCode Inspired', () => (
-    <LayoutProvider debug={{ enabled: true }} gutter={20}>
-      <Section>
-        <Container direction="vertical" vAlign="end" height="100vh">
-          <Box xs="100%">Header</Box>
-          <Box xs="grow" fluid>
-            <Container grow height="auto">
-              <Box xs="45px" />
-              <Box sm="grow" />
-            </Container>
-          </Box>
-          <Box xs="100%" style={{ marginTop: 'auto' }}>Footer</Box>
-        </Container>
-      </Section>
-    </LayoutProvider>
+    <VSCode />
   ));
