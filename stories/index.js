@@ -448,7 +448,7 @@ storiesOf('LayoutProvider', module)
           500, 768, and 1100.
         </p>
         <Container>
-          <Box>Header</Box>
+          <Box xs={12}>Header</Box>
         </Container>
         <Container>
           <Box sm={3}>Sidebar</Box>
@@ -461,7 +461,7 @@ storiesOf('LayoutProvider', module)
           </Box>
         </Container>
         <Container>
-          <Box>Footer</Box>
+          <Box xs={12}>Footer</Box>
         </Container>
       </Section>
     </LayoutProvider>
@@ -482,7 +482,7 @@ storiesOf('Layout Examples', module)
         </Container>
       </Section>
         <Container>
-          <Box>Header</Box>
+          <Box xs={12}>Header</Box>
         </Container>
         <Container>
           <Box sm={3}>Sidebar</Box>
@@ -495,7 +495,7 @@ storiesOf('Layout Examples', module)
           </Box>
         </Container>
         <Container>
-          <Box>Footer</Box>
+          <Box xs={12}>Footer</Box>
         </Container>
       </Section>
     </LayoutProvider>
