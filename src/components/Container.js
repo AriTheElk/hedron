@@ -2,6 +2,7 @@
 import React from "react";
 import styled from "styled-components";
 import { withLayout } from "./LayoutProvider";
+import { horizontalAlign } from '../utils/flex';
 import passOn from "../utils/passOn";
 
 const containerDirectionError = "Container direction must be `horizontal` or `vertical`";
@@ -20,11 +21,15 @@ const Wrapper = styled.div`
   flex-wrap: wrap;
   
   ${props => props.direction && `flex-direction: ${directionToFlex(props.direction)}`}
-
+  ${props => props.hAlign && horizontalAlign(props.hAlign, props.direction)}
   ${props => props.alignSelf ? `align-self: ${props.alignSelf};` : null}
   ${props => props.justifyContent ? `justify-content: ${props.justifyContent};` : null}
   ${props => props.order ? `order: ${props.order};` : null}
 `;
+
+Wrapper.defaultProps = {
+  direction: "horizontal"
+};
 
 const Container = ({ children, ...props }) => {
   return (

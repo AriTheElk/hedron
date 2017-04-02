@@ -1,5 +1,6 @@
 // @flow
 import { css } from "styled-components";
+import { flexCSS } from "../constants";
 
 const sizes = {
   sm: 500,
@@ -14,6 +15,12 @@ export const align = (rule: string, flow: string = "horizontal") =>
 // const alignRule = alignRules[rule];
 // return `${flexRule}: ${alignRule};`;
 
-export const verticalAlign = (rule: string) => {};
+export const verticalAlign = (rule: string, direction: string) => {
+  console.warn(rule, direction);
+};
 
-export const horizontalAlign = (rule: string) => {};
+export const horizontalAlign = (rule: string, direction: string) => {
+  if (direction === "horizontal") {
+    return `justify-content: ${flexCSS.align.values[rule]};`;
+  }
+};
