@@ -6,5 +6,5 @@
 // i.e. width: ${divvy(12, 4)};
 // This will generate a column 4 units wide.
 export default function(divisions: number = 12, span: number = 1) {
-  return (100 / divisions) * span;
+  return 100 / divisions * span;
 }

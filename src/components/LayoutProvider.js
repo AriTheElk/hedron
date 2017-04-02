@@ -1,10 +1,10 @@
 // @flow
 /* globals ReactClass */
-import React, { Component, PropTypes, Children } from 'react';
-import { defaultBreakpoints } from '../utils';
+import React, { Component, PropTypes, Children } from "react";
+import { defaultBreakpoints } from "../utils";
 
 const defaultDebug = {
-  enabled: false,
+  enabled: false
 };
 
 const defaultGutter = 20;
@@ -12,13 +12,13 @@ const defaultGutter = 20;
 const breakpointsShape = PropTypes.shape({
   sm: PropTypes.number,
   md: PropTypes.number,
-  lg: PropTypes.number,
+  lg: PropTypes.number
 });
 
 const debugShape = PropTypes.shape({
   enabled: PropTypes.bool,
   color: PropTypes.string,
-  border: PropTypes.string,
+  border: PropTypes.string
 });
 
 export default class LayoutProvider extends Component {
@@ -26,41 +26,45 @@ export default class LayoutProvider extends Component {
     children: PropTypes.node,
     breakpoints: breakpointsShape,
     gutter: PropTypes.number,
-    debug: debugShape,
+    debug: debugShape
   };
 
   static contextTypes = {
     breakpoints: breakpointsShape,
     gutter: PropTypes.number,
-    debug: debugShape,
+    debug: debugShape
   };
 
   static childContextTypes = {
     breakpoints: breakpointsShape,
     gutter: PropTypes.number,
-    debug: debugShape,
+    debug: debugShape
   };
 
   getChildContext() {
     const {
       breakpoints: propsBreakpoints = {},
       debug: propsDebug = {},
-      gutter: propsGutter = 20,
+      gutter: propsGutter = 20
     } = this.props;
     const {
       breakpoints: contextBreakpoints = {},
       debug: contextDebug = {},
-      gutter: contextGutter = 20,
+      gutter: contextGutter = 20
     } = this.context;
 
     return {
       breakpoints: {
-        ...defaultBreakpoints, ...contextBreakpoints, ...propsBreakpoints,
+        ...defaultBreakpoints,
+        ...contextBreakpoints,
+        ...propsBreakpoints
       },
       debug: {
-        ...defaultDebug, ...contextDebug, ...propsDebug,
+        ...defaultDebug,
+        ...contextDebug,
+        ...propsDebug
       },
-      gutter: propsGutter || contextGutter || defaultGutter,
+      gutter: propsGutter || contextGutter || defaultGutter
     };
   }
 
@@ -69,13 +73,16 @@ export default class LayoutProvider extends Component {
   }
 }
 
-export const withLayout = (WrappedComponent: ReactClass<mixed>) =>
+export const withLayout = (
+  WrappedComponent: ReactClass<mixed>
   // eslint-disable-next-line react/no-multi-comp
-  class Breakpoints extends Component { // eslint-disable-line  react/prefer-stateless-function
+) =>
+  class Breakpoints extends Component {
+    // eslint-disable-line  react/prefer-stateless-function
     static contextTypes = {
       breakpoints: breakpointsShape,
       debug: debugShape,
-      gutter: PropTypes.number,
+      gutter: PropTypes.number
     };
 
     render() {
@@ -87,6 +94,7 @@ export const withLayout = (WrappedComponent: ReactClass<mixed>) =>
           breakpoints={breakpoints}
           debug={debug}
           gutter={gutter}
-        />);
+        />
+      );
     }
   };
