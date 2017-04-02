@@ -8,13 +8,6 @@ const sizes = {
   lg: 1100
 };
 
-export const align = (rule: string, flow: string = "horizontal") =>
-  flow === "vertical" ? verticalAlign(rule, flow) : horizontalAlign(rule, flow);
-
-// const flexRule = cssAlignRules[flow];
-// const alignRule = alignRules[rule];
-// return `${flexRule}: ${alignRule};`;
-
 export const verticalAlign = (rule: string, direction: string) =>
   `${flexCSS.vAlign.directions[direction]}: ${flexCSS.vAlign.values[rule]};`;
 
