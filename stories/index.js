@@ -456,27 +456,33 @@ storiesOf('LayoutProvider', module)
 
 storiesOf('Layout Examples', module)
   .add('Notifications', () => (
-    <LayoutProvider debug={{ enabled: false }} gutter={20}>
-      <Section absolute top="0" bottom="0" right="0" width="250px">
+    <LayoutProvider debug={{ enabled: true }} gutter={20}>
+      <Section>
+        <Section absolute top="0" bottom="0" right="0" width="250px">
         <Container direction="vertical">
-          <Box>
-            <Notification>This is a notification</Notification>
+          {
+            [...Array(4)].map((e, i) =>
+              <Box key={i}>
+                <Notification>This is a notification</Notification>
+              </Box>)
+          }
+        </Container>
+      </Section>
+        <Container>
+          <Box>Header</Box>
+        </Container>
+        <Container>
+          <Box sm={3}>Sidebar</Box>
+          <Box sm={9} fluid>
+            <Container>
+              <Box md={6} lg={4}>A blog post</Box>
+              <Box md={6} lg={4}>Another blog post</Box>
+              <Box md={6} lg={4}>Yet another blog post</Box>
+            </Container>
           </Box>
-          <Box>
-            <Notification>This is a notification</Notification>
-          </Box>
-          <Box>
-            <Notification>This is a notification</Notification>
-          </Box>
-          <Box>
-            <Notification>This is a notification</Notification>
-          </Box>
-          <Box>
-            <Notification>This is a notification</Notification>
-          </Box>
-          <Box>
-            <Notification>This is a notification</Notification>
-          </Box>
+        </Container>
+        <Container>
+          <Box>Footer</Box>
         </Container>
       </Section>
     </LayoutProvider>
