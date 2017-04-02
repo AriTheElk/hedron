@@ -20,6 +20,7 @@ const Wrapper = styled.div`
   display: flex;
   max-width: 100%;
   min-height: 1px;
+  ${props => props.wrap && 'flex-wrap: wrap;'}
   ${props => props.grow && `flex-grow: 1;`}
   ${props => props.height && `height: ${props.height};`}
   ${props => props.direction && `flex-direction: ${directionToFlex(props.direction)}`}
