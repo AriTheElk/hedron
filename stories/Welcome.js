@@ -13,13 +13,13 @@ const Welcome = (props) => (
         </Box>
       </Container>
       <Container hAlign="center">
-        <Box>
+        <Box xs="50%" md="40%" lg="30%">
           <h2>Installation</h2>
           <Highlight className="bash">
             npm install --save-dev hedron
           </Highlight>
         </Box>
-        <Box>
+        <Box xs="50%" md="40%" lg="30%">
           <h2>Resources</h2>
           <ul>
             <li><a href="https://github.com/JSBros/hedron" target="_blank">Source Code</a></li>
