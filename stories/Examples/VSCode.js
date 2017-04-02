@@ -19,7 +19,7 @@ const Example = `<LayoutProvider debug={{ enabled: true }} gutter={20}>
 
 const VSCode = (props) =>
   <LayoutProvider debug={{ enabled: true }} gutter={20}>
-    <Section>
+    <Section fluid>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/atelier-estuary-dark.min.css" />
       <Container direction="vertical" height="100vh">
         <Box xs="100%">Header</Box>
