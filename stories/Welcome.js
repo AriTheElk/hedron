@@ -8,8 +8,8 @@ const Welcome = (props) => (
     <Section>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/atelier-estuary-dark.min.css" />
       <Container hAlign="center">
-        <Box>
-          <img src="http://i.imgur.com/gjGjVOh.png" alt="hedron logo" />
+        <Box flex="none">
+          <img src="http://i.imgur.com/1f9IIN8.png" alt="hedron logo" />
         </Box>
       </Container>
       <Container hAlign="center">
