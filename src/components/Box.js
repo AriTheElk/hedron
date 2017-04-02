@@ -12,7 +12,7 @@ const compute = name =>
     `)(props.divisions, props[name], props[`${name}Shift`]));
 
 const Box = styled.div`
-  display: block;
+  display: flex;
   ${props => props.debug && (props.debug.enabled === true && "background: rgba(0, 0, 100, .15);")}
   ${props => props.debug && (props.debug.border ? `outline: ${props.debug.border};` : "outline: 1px solid #fff;")}   
   box-sizing: border-box;
