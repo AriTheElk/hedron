@@ -1,4 +1,4 @@
-export const applyStyle = (prop, styles) => {
-  if (!prop) return;
+export const applyStyle = (condition, styles) => {
+  if (!condition) return;
   return styles.join(";");
 };
