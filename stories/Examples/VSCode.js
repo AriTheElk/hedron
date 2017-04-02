@@ -23,7 +23,7 @@ const VSCode = (props) =>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/atelier-estuary-dark.min.css" />
       <Container direction="vertical" height="100vh">
         <Box xs="100%">Header</Box>
-        <Box xs="grow" fluid>
+        <Box grow fluid>
           <Container grow>
             <Box xs="45px"></Box>
             <Box grow>
