@@ -444,20 +444,20 @@ storiesOf('Layout Examples', module)
         </Container>
       </Section>
         <Container>
-          <Box xs={12}>Header</Box>
+          <Box xs="100%">Header</Box>
         </Container>
         <Container>
-          <Box sm={3}>Sidebar</Box>
-          <Box sm={9} fluid>
+          <Box xs="grow" sm="25%">Sidebar</Box>
+          <Box sm="grow" fluid>
             <Container>
-              <Box md={6} lg={4}>A blog post</Box>
-              <Box md={6} lg={4}>Another blog post</Box>
-              <Box md={6} lg={4}>Yet another blog post</Box>
+              <Box sm="100%" md="50%" lg="grow">A blog post</Box>
+              <Box sm="100%" md="50%" lg="grow">Another blog post</Box>
+              <Box sm="100%" md="50%" lg="grow">Yet another blog post</Box>
             </Container>
           </Box>
         </Container>
         <Container>
-          <Box xs={12}>Footer</Box>
+          <Box xs="100%">Footer</Box>
         </Container>
       </Section>
     </LayoutProvider>
