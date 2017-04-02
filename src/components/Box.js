@@ -7,8 +7,8 @@ const compute = name =>
   breakpoint(name, (props, name) =>
     ((divisions, size = null, shift = null, gutter) =>
       `
-      ${size ? `width: ${divvy(divisions, size)}%;` : ""}
-      ${shift ? `margin-left: ${divvy(divisions, shift)}%;` : ""}
+      ${size ? `width: ${size};` : ""}
+      ${shift ? `margin-left: ${shift};` : ""}
     `)(props.divisions, props[name], props[`${name}Shift`]));
 
 const Box = styled.div`
