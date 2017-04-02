@@ -457,7 +457,7 @@ storiesOf('LayoutProvider', module)
 storiesOf('Layout Examples', module)
   .add('Notifications', () => (
     <LayoutProvider debug={{ enabled: false }} gutter={20}>
-      <Section>
+      <Section absolute top="0" bottom="0" right="0" width="250px">
         <Container direction="vertical">
           <Box>
             <Notification>This is a notification</Notification>

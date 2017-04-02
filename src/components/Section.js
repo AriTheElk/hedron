@@ -19,6 +19,13 @@ const Page = styled.div`
       }
     `
   }
+  ${props => props.absolute && 'position: absolute;'}
+  ${props => props.top && `top: ${props.top};`}
+  ${props => props.bottom && `bottom: ${props.bottom};`}
+  ${props => props.left && `left: ${props.left};`}
+  ${props => props.right && `right: ${props.right};`}
+  ${props => props.height && `height: ${props.height};`}
+  ${props => props.width && `width: ${props.width};`}
 `;
 
 export default withLayout(Page);
