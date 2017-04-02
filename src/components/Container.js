@@ -2,7 +2,7 @@
 import React from "react";
 import styled from "styled-components";
 import { withLayout } from "./LayoutProvider";
-import { horizontalAlign, verticalAlign } from '../utils/flex';
+import { horizontalAlign, verticalAlign } from "../utils/flex";
 import passOn from "../utils/passOn";
 
 const containerDirectionError = "Container direction must be `horizontal` or `vertical`";
