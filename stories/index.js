@@ -4,6 +4,7 @@ import { Section, Container, Box, Hidden, LayoutProvider } from '../src';
 import Notification from './Notification';
 import Welcome from './Welcome';
 import VSCode from './Examples/VSCode';
+import Notifications from './Examples/Notifications';
 import { injectGlobal } from 'styled-components';
 
 injectGlobal`
@@ -387,36 +388,7 @@ storiesOf('LayoutProvider', module)
 
 storiesOf('Layout Examples', module)
   .add('Notifications', () => (
-    <LayoutProvider debug={{ enabled: true }} gutter={20}>
-      <Section>
-        <Section absolute top="0" bottom="0" right="0" width="250px">
-          <Container direction="vertical">
-            {
-              [...Array(4)].map((e, i) =>
-                <Box key={i}>
-                  <Notification>This is a notification</Notification>
-                </Box>)
-            }
-          </Container>
-        </Section>
-        <Container>
-          <Box xs="100%">Header</Box>
-        </Container>
-        <Container>
-          <Box xs="grow" sm="25%">Sidebar</Box>
-          <Box sm="grow" fluid>
-            <Container>
-              <Box sm="100%" md="50%" lg="grow">A blog post</Box>
-              <Box sm="100%" md="50%" lg="grow">Another blog post</Box>
-              <Box sm="100%" md="50%" lg="grow">Yet another blog post</Box>
-            </Container>
-          </Box>
-        </Container>
-        <Container>
-          <Box xs="100%">Footer</Box>
-        </Container>
-      </Section>
-    </LayoutProvider>
+    <Notifications />
   ))
   .add('VSCode Inspired', () => (
     <VSCode />
