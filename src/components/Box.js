@@ -17,7 +17,8 @@ const Box = styled.div`
   flex: ${props => props.flex ? props.flex : "1 1 auto"};
   overflow: scroll;
   ${props => props.debug && (props.debug.enabled === true && "background: rgba(0, 0, 100, .15);")}
-  ${props => props.debug && (props.debug.border ? `outline: ${props.debug.border};` : "outline: 1px solid #fff;")}   
+  ${props => props.debug &&
+    (props.debug.enabled && (props.debug.border ? `outline: ${props.debug.border};` : "outline: 1px solid #fff;"))})
   box-sizing: border-box;
   ${props => props.grow && `flex-grow: ${props.grow === true ? "1" : props.grow};`}
   ${props => props.gutter && !props.fluid ? `padding: ${props.gutter}px ${props.gutter / 2}px;` : ""}
