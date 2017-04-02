@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@kadira/storybook';
-import { Section, Container, Box, Hidden, BreakpointProvider, LayoutProvider } from '../src';
+import { Section, Container, Box, Hidden, LayoutProvider } from '../src';
 import Notification from './Notification';
 
 storiesOf('Vertical Boxes', module)
@@ -386,130 +386,44 @@ storiesOf('Horizontal Boxes', module)
 
 storiesOf('Hidden', module)
   .add('xs', () => (
-    <Section debug>
-      <p>
-        This row is hidden on xs
+    <LayoutProvider debug={{ enabled: true }}>
+      <Section debug>
+        <p>
+          This row is hidden on xs
       </p>
-      <Hidden xs><Container><Box /></Container></Hidden>
-    </Section>
+        <Hidden xs><Container><Box /></Container></Hidden>
+      </Section>
+    </LayoutProvider>
   ))
   .add('sm', () => (
-    <Section debug>
-      <p>
-        This row is hidden on sm
+    <LayoutProvider debug={{ enabled: true }}>
+      <Section debug>
+        <p>
+          This row is hidden on sm
       </p>
-      <Hidden sm><Container><Box /></Container></Hidden>
-    </Section>
+        <Hidden sm><Container><Box /></Container></Hidden>
+      </Section>
+    </LayoutProvider>
   ))
   .add('md', () => (
-    <Section debug>
-      <p>
-        This row is hidden on md
+    <LayoutProvider debug={{ enabled: true }}>
+      <Section debug>
+        <p>
+          This row is hidden on md
       </p>
-      <Hidden md><Container><Box /></Container></Hidden>
-    </Section>
+        <Hidden md><Container><Box /></Container></Hidden>
+      </Section>
+    </LayoutProvider>
   ))
   .add('lg', () => (
-    <Section debug>
-      <p>
-        This row is hidden on lg
+    <LayoutProvider debug={{ enabled: true }}>
+      <Section debug>
+        <p>
+          This row is hidden on lg
       </p>
-      <Hidden lg><Container><Box /></Container></Hidden>
-    </Section>
-  ));
-
-storiesOf('BreakpointProvider', module)
-  .add('Default breakpoints', () => (
-    <BreakpointProvider>
-      <Section debug>
-        <p>
-          This layout is using the default breakpoints:
-          500, 768, and 1100.
-        </p>
-        <Container>
-          <Box>Header</Box>
-        </Container>
-        <Container>
-          <Box sm={3}>Sidebar</Box>
-          <Box sm={9} fluid>
-            <Container>
-              <Box md={6} lg={4}>A blog post</Box>
-              <Box md={6} lg={4}>Another blog post</Box>
-              <Box md={6} lg={4}>Yet another blog post</Box>
-            </Container>
-          </Box>
-        </Container>
-        <Container>
-          <Box>Footer</Box>
-        </Container>
+        <Hidden lg><Container><Box /></Container></Hidden>
       </Section>
-    </BreakpointProvider>
-  ))
-  .add('Bootstrap 3', () => (
-    <BreakpointProvider breakpoints={{ sm: 576, md: 768, lg: 1200 }}>
-      <Section debug>
-        <p>
-          This layout utilizes similar breakpoints as bootstrap 3:
-          576, 768, and 1200.
-        </p>
-        <Container>
-          <Box>Header</Box>
-        </Container>
-        <Container>
-          <Box sm={3}>Sidebar</Box>
-          <Box sm={9} fluid>
-            <Container>
-              <Box md={6} lg={4}>A blog post</Box>
-              <Box md={6} lg={4}>Another blog post</Box>
-              <Box md={6} lg={4}>Yet another blog post</Box>
-            </Container>
-          </Box>
-        </Container>
-        <Container>
-          <Box>Footer</Box>
-        </Container>
-      </Section>
-    </BreakpointProvider>
-  ))
-  .add('Nested Breakpoints', () => (
-    <BreakpointProvider breakpoints={{ sm: 576, md: 768, lg: 1200 }}>
-      <Section debug>
-        <p>
-          This layout has multiple nested breakpoints.
-          When specific sizes are omitted from the breakpoints object,
-          it will inherit the missing sizes from the parent BreakpointProvider.
-          If there is no parent BreakpointProvider, it will inherit from the
-          default breakpoints.
-        </p>
-        <p>
-          Both of the below "blog post" sections have the exact same code,
-          but the first one has a custom BreakpointProvider on the lg size.
-        </p>
-        <Container>
-          <Box>Header</Box>
-        </Container>
-        <Container>
-          <Box sm={3}>Sidebar</Box>
-          <Box sm={9} fluid>
-            <BreakpointProvider breakpoints={{ lg: 850 }}>
-              <Container>
-                <Box md={6} lg={4}>A blog post</Box>
-                <Box md={6} lg={4}>Another blog post</Box>
-                <Box md={6} lg={4}>Yet another blog post</Box>
-              </Container>
-            </BreakpointProvider>
-            <Container>
-              <Box md={6} lg={4}>A blog post</Box>
-              <Box md={6} lg={4}>Another blog post</Box>
-              <Box md={6} lg={4}>Yet another blog post</Box>
-            </Container>
-          </Box>
-        </Container>
-        <Container>
-          <Box>Footer</Box>
-        </Container>
-      </Section>
-    </BreakpointProvider>
+    </LayoutProvider>
   ));
 
 storiesOf('LayoutProvider', module)
