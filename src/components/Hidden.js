@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import styled from 'styled-components';
-import { withBreakpoints } from './BreakpointProvider';
+import { withLayout } from './LayoutProvider';
 import { divvy, breakpoint } from '../utils';
 
 const compute = name =>
@@ -16,4 +16,4 @@ const Hidden = styled.div`
   ${compute('lg')}
 `;
 
-export default withBreakpoints(Hidden);
+export default withLayout(Hidden);
