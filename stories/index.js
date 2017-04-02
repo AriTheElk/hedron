@@ -434,15 +434,15 @@ storiesOf('Layout Examples', module)
     <LayoutProvider debug={{ enabled: true }} gutter={20}>
       <Section>
         <Section absolute top="0" bottom="0" right="0" width="250px">
-        <Container direction="vertical">
-          {
-            [...Array(4)].map((e, i) =>
-              <Box key={i}>
-                <Notification>This is a notification</Notification>
-              </Box>)
-          }
-        </Container>
-      </Section>
+          <Container direction="vertical">
+            {
+              [...Array(4)].map((e, i) =>
+                <Box key={i}>
+                  <Notification>This is a notification</Notification>
+                </Box>)
+            }
+          </Container>
+        </Section>
         <Container>
           <Box xs="100%">Header</Box>
         </Container>
@@ -458,6 +458,22 @@ storiesOf('Layout Examples', module)
         </Container>
         <Container>
           <Box xs="100%">Footer</Box>
+        </Container>
+      </Section>
+    </LayoutProvider>
+  ))
+  .add('VSCode Inspired', () => (
+    <LayoutProvider debug={{ enabled: true }} gutter={20}>
+      <Section>
+        <Container direction="vertical" vAlign="end" height="100vh">
+          <Box xs="100%">Header</Box>
+          <Box xs="grow" fluid>
+            <Container grow height="auto">
+              <Box xs="45px" />
+              <Box sm="grow" />
+            </Container>
+          </Box>
+          <Box xs="100%" style={{ marginTop: 'auto' }}>Footer</Box>
         </Container>
       </Section>
     </LayoutProvider>
