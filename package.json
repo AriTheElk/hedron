@@ -9,7 +9,7 @@
     "url": "https://github.com/garetmckinley"
   },
   "scripts": {
-    "prebuild": "rm -rf dist",
+    "prebuild": "rm -rf dist ; rm -rf lib",
     "build": "npm run build:lib && npm run build:dist",
     "build:lib": "babel src --out-dir lib",
     "build:dist": "rollup -c && rollup -c --environment PRODUCTION",
