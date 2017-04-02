@@ -12,9 +12,9 @@ const compute = name =>
     `)(props.divisions, props[name], props[`${name}Shift`]));
 
 const Box = styled.div`
-  display: flex;
+  display: ${props => props.noFlex ? 'block' : 'flex'};
   flex-direction: column;
-  flex: 1 1 auto;
+  flex: ${props => props.flex ? props.flex : '1 1 auto'};
   overflow: scroll;
   ${props => props.debug && (props.debug.enabled === true && "background: rgba(0, 0, 100, .15);")}
   ${props => props.debug && (props.debug.border ? `outline: ${props.debug.border};` : "outline: 1px solid #fff;")}   
