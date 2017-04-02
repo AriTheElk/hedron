@@ -15,12 +15,8 @@ export const align = (rule: string, flow: string = "horizontal") =>
 // const alignRule = alignRules[rule];
 // return `${flexRule}: ${alignRule};`;
 
-export const verticalAlign = (rule: string, direction: string) => {
-  console.warn(rule, direction);
-};
+export const verticalAlign = (rule: string, direction: string) =>
+  `${flexCSS.vAlign.directions[direction]}: ${flexCSS.vAlign.values[rule]};`;
 
-export const horizontalAlign = (rule: string, direction: string) => {
-  if (direction === "horizontal") {
-    return `justify-content: ${flexCSS.align.values[rule]};`;
-  }
-};
+export const horizontalAlign = (rule: string, direction: string) =>
+  `${flexCSS.hAlign.directions[direction]}: ${flexCSS.hAlign.values[rule]};`;
