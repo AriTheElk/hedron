@@ -18,8 +18,8 @@ const directionToFlex = direction => {
 
 const Wrapper = styled.div`
   display: flex;
-  flex-wrap: wrap;
-  flex-grow: 1;
+  max-width: 100%;
+  ${props => props.grow && `flex-grow: 1;`}
   ${props => props.height && `height: ${props.height};`}
   ${props => props.direction && `flex-direction: ${directionToFlex(props.direction)}`}
   ${props => props.hAlign && horizontalAlign(props.hAlign, props.direction)}
