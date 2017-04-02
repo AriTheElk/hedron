@@ -26,7 +26,7 @@ const VSCode = (props) =>
         <Box xs="grow" fluid>
           <Container grow>
             <Box xs="45px"></Box>
-            <Box xs="grow">
+            <Box grow>
               <h2>Here's the source code for this layout</h2>
               <Highlight className="xml">{Example}</Highlight>
             </Box>
