@@ -3,7 +3,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import Hidden from './Hidden';
-import { withBreakpoints } from './BreakpointProvider';
 import { withLayout } from './LayoutProvider';
 
 const Page = styled.div`
