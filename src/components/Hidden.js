@@ -3,7 +3,7 @@
 import React from "react";
 import styled from "styled-components";
 import { withLayout } from "./LayoutProvider";
-import { divvy, breakpoint } from "../utils";
+import { breakpoint } from "../utils";
 
 const compute = name =>
   breakpoint(
