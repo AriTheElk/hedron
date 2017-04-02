@@ -13,7 +13,7 @@ export const flexCSS = {
       end: "flex-end",
       center: "center",
       stretch: "stretch",
-      spaced: "space-between"
+      spaced: "space-around"
     }
   },
   vAlign: {
@@ -26,7 +26,7 @@ export const flexCSS = {
       end: "flex-end",
       center: "center",
       stretch: "stretch",
-      spaced: "space-between"
+      spaced: "space-around"
     }
   }
 };
