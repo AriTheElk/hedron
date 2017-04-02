@@ -16,7 +16,7 @@ const Box = styled.div`
   box-sizing: border-box;
   display: ${props => props.noFlex ? "block" : "flex"};
   flex-direction: column;
-  overflow: scroll;
+  overflow: auto;
   ${props => applyStyle(props.flex, [`flex: ${props.flex}`])};
   ${props => applyStyle(props.debug && props.debug.enabled, ['background: rgba(0, 0, 100, .15)', 'outline: 1px solid #fff'])};
   ${props => applyStyle(props.grow, [`flex-grow: ${props.grow === true ? "1" : props.grow}`])};
