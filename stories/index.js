@@ -2,6 +2,19 @@ import React from 'react';
 import { storiesOf } from '@kadira/storybook';
 import { Section, Container, Box, Hidden, LayoutProvider } from '../src';
 import Notification from './Notification';
+import Welcome from './Welcome';
+import { injectGlobal } from 'styled-components';
+
+injectGlobal`
+  body {
+    font-family: sans-serif;
+  }
+`;
+
+storiesOf('Welcome', module)
+  .add('Box Sizes (xs)', () => (
+    <Welcome />
+  ));
 
 storiesOf('Vertical Boxes', module)
   .add('Box Sizes (xs)', () => (
