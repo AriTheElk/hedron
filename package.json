@@ -20,7 +20,7 @@
     "test": "jest",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "postinstall": "opencollective postinstall"
+    "format": "prettier --write \"src/**/*.js\""
   },
   "bugs": {
     "url": "https://github.com/garetmckinley/hedron/issues"
@@ -49,6 +49,7 @@
     "babel-preset-stage-2": "^6.18.0",
     "eslint": "^3.9.1",
     "eslint-config-airbnb": "^12.0.0",
+    "eslint-config-prettier": "^1.5.0",
     "eslint-plugin-flowtype-errors": "^1.5.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^2.2.3",
