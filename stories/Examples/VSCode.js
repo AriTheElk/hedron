@@ -4,15 +4,15 @@ import { LayoutProvider, Section, Container, Box, Hidden } from '../../src';
 
 const Example = `<LayoutProvider debug={{ enabled: true }} gutter={20}>
   <Section>
-    <Container direction="vertical" vAlign="end" height="100vh">
+    <Container direction="vertical" height="100vh">
       <Box xs="100%">Header</Box>
       <Box xs="grow" fluid>
-        <Container grow height="auto">
+        <Container grow>
           <Box xs="45px" />
-          <Box sm="grow" />
+          <Box xs="grow" />
         </Container>
       </Box>
-      <Box xs="100%" style={{ marginTop: 'auto' }}>Footer</Box>
+      <Box xs="100%">Footer</Box>
     </Container>
   </Section>
 </LayoutProvider>`;
@@ -32,7 +32,7 @@ const VSCode = (props) =>
             </Box>
           </Container>
         </Box>
-        <Box xs="100%" style={{ marginTop: 'auto' }}>Footer</Box>
+        <Box xs="100%">Footer</Box>
       </Container>
     </Section>
   </LayoutProvider>
