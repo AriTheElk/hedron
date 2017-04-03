@@ -16,7 +16,7 @@ const Welcome = (props) => (
         <Box xs="100%" sm="40%" lg="30%">
           <h2>Installation</h2>
           <Highlight className="bash">
-            npm install --save-dev hedron
+            npm install --save-dev hedron@next
           </Highlight>
         </Box>
         <Box xs="100%" sm="40%" lg="30%">
