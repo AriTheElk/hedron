@@ -6,29 +6,24 @@ import Notification from '../Notification';
 const Example = `<LayoutProvider debug={{ enabled: true }} gutter={20}>
   <Section>
     <Section absolute top="0" bottom="0" right="0" width="250px">
-      <Container direction="vertical">
-        <Box>
-          <div>This is a notification</div>
+      <Container>
+        <Box grow={1}>Header</Box>
+      </Container>
+      <Container>
+        <Box width="25%">Sidebar</Box>
+        <Box grow={{ sm: true }} fluid>
+          <Container direction="horizontal" wrap>
+            <Box width={{ xs: "100%", md: "50%" }} grow={{ lg: 1 }}>Lorem ipsum dolor sit amet</Box>
+            <Box width={{ xs: "100%", md: "50%" }} grow={{ lg: 1 }}>Lorem ipsum dolor sit amet</Box>
+            <Box width={{ xs: "100%", md: "50%" }} grow={{ lg: 1 }}>Lorem ipsum dolor sit amet</Box>
+            <Box width={{ xs: "100%", md: "50%" }} grow={{ lg: 1 }}>Lorem ipsum dolor sit amet</Box>
+          </Container>
         </Box>
       </Container>
+      <Container>
+        <Box grow={1}>Footer</Box>
+      </Container>
     </Section>
-    <Container>
-      <Box xs="100%">Header</Box>
-    </Container>
-    <Container>
-      <Box xs="grow" sm="25%">Sidebar</Box>
-      <Box sm="grow" fluid>
-        <Container direction="horizontal" wrap>
-          <Box xs="100%" md="50%" lg="grow">Lorem ipsum dolor sit amet</Box>
-          <Box xs="100%" md="50%" lg="grow">Lorem ipsum dolor sit amet</Box>
-          <Box xs="100%" md="50%" lg="grow">Lorem ipsum dolor sit amet</Box>
-          <Box xs="100%" md="50%" lg="grow">Lorem ipsum dolor sit amet</Box>
-        </Container>
-      </Box>
-    </Container>
-    <Container>
-      <Box xs="100%">Footer</Box>
-    </Container>
   </Section>
 </LayoutProvider>`;
 
@@ -47,21 +42,21 @@ const VSCode = (props) =>
         </Container>
       </Section>
       <Container>
-        <Box xs="100%">Header</Box>
+        <Box grow={1}>Header</Box>
       </Container>
       <Container>
-        <Box xs="grow" sm="25%">Sidebar</Box>
-        <Box sm="grow" fluid>
+        <Box width="25%">Sidebar</Box>
+        <Box grow={{ sm: true }} fluid>
           <Container direction="horizontal" wrap>
-            <Box xs="100%" md="50%" lg="grow">Lorem ipsum dolor sit amet</Box>
-            <Box xs="100%" md="50%" lg="grow">Lorem ipsum dolor sit amet</Box>
-            <Box xs="100%" md="50%" lg="grow">Lorem ipsum dolor sit amet</Box>
-            <Box xs="100%" md="50%" lg="grow">Lorem ipsum dolor sit amet</Box>
+            <Box width={{ xs: "100%", md: "50%" }} grow={{ lg: 1 }}>Lorem ipsum dolor sit amet</Box>
+            <Box width={{ xs: "100%", md: "50%" }} grow={{ lg: 1 }}>Lorem ipsum dolor sit amet</Box>
+            <Box width={{ xs: "100%", md: "50%" }} grow={{ lg: 1 }}>Lorem ipsum dolor sit amet</Box>
+            <Box width={{ xs: "100%", md: "50%" }} grow={{ lg: 1 }}>Lorem ipsum dolor sit amet</Box>
           </Container>
         </Box>
       </Container>
       <Container>
-        <Box xs="100%">Footer</Box>
+        <Box grow={1}>Footer</Box>
       </Container>
       <Section>
         <Highlight>{Example}</Highlight>
