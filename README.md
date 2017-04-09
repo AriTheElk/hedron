@@ -114,6 +114,9 @@ Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds
 This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification.
 Contributions of any kind are welcome!
 
+## Sponsors
+[![sponsored by timber](https://res.cloudinary.com/timber/image/upload/v1490556810/pricing/sponsorship.png)](http://timber.io/?utm_source=github&utm_medium=docs&utm_campaign=hedron)
+
 ## License
 
 Hedron is under the [MIT](LICENSE) License.
