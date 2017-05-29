@@ -64,8 +64,8 @@ if (prod) plugins.push(uglify())
 export default {
   entry: 'src/index.js',
   exports: 'named',
-  external: ['react'],
-  globals: { react: 'React' },
+  external: ['react', 'styled-components'],
+  globals: { react: 'React', 'styled-components': 'styled' },
   moduleName: 'hedron',
   plugins,
   targets,
