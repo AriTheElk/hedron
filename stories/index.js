@@ -5,6 +5,7 @@ import Notification from './Notification';
 import Welcome from './Welcome';
 import VSCode from './Examples/VSCode';
 import Notifications from './Examples/Notifications';
+import Sidebar from './Examples/Sidebar';
 import { injectGlobal } from 'styled-components';
 import Highlight from 'react-highlight'
 
@@ -198,4 +199,7 @@ storiesOf('Layout Examples', module)
   ))
   .add('VSCode Inspired', () => (
     <VSCode />
+  ))
+  .add('Sidebar', () => (
+    <Sidebar/>
   ));
