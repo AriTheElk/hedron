@@ -1,18 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 import Highlight from 'react-highlight';
-import { LayoutProvider, Section, Container, Box } from '../src';
+import { LayoutProvider, Section, Flex, Box } from '../src';
 
 const Welcome = (props) => (
   <LayoutProvider debug={{ enabled: false }}>
     <Section>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/atelier-estuary-dark.min.css" />
-      <Container hAlign="center">
+      <Flex hAlign="center">
         <Box flex="none">
           <img src="http://i.imgur.com/1f9IIN8.png" alt="hedron logo" />
         </Box>
-      </Container>
-      <Container hAlign="center" wrap>
+      </Flex>
+      <Flex hAlign="center" wrap>
         <Box width={{ xs: "100%", sm: "40%", md: "30%" }}>
           <h2>Installation</h2>
           <Highlight className="bash">
@@ -27,7 +27,7 @@ const Welcome = (props) => (
             <li><a href="https://github.com/JSBros/hedron/issues" target="_blank">Issue Tracker</a></li>
           </ul>
         </Box>
-      </Container>
+      </Flex>
     </Section>
   </LayoutProvider>
 );
