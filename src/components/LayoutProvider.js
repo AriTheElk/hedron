@@ -7,7 +7,7 @@ const defaultDebug = {
   enabled: false
 };
 
-const defaultGutter = 20;
+const defaultGutter = "20px";
 
 const breakpointsShape = PropTypes.shape({
   sm: PropTypes.number,
@@ -25,19 +25,19 @@ export default class LayoutProvider extends Component {
   static propTypes = {
     children: PropTypes.node,
     breakpoints: breakpointsShape,
-    gutter: PropTypes.number,
+    gutter: PropTypes.string,
     debug: debugShape
   };
 
   static contextTypes = {
     breakpoints: breakpointsShape,
-    gutter: PropTypes.number,
+    gutter: PropTypes.string,
     debug: debugShape
   };
 
   static childContextTypes = {
     breakpoints: breakpointsShape,
-    gutter: PropTypes.number,
+    gutter: PropTypes.string,
     debug: debugShape
   };
 
@@ -45,12 +45,12 @@ export default class LayoutProvider extends Component {
     const {
       breakpoints: propsBreakpoints = {},
       debug: propsDebug = {},
-      gutter: propsGutter = 20
+      gutter: propsGutter = "20px"
     } = this.props;
     const {
       breakpoints: contextBreakpoints = {},
       debug: contextDebug = {},
-      gutter: contextGutter = 20
+      gutter: contextGutter = "20px"
     } = this.context;
 
     return {

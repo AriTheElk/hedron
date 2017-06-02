@@ -1,65 +1,69 @@
 import React from 'react';
 import Highlight from 'react-highlight';
-import { LayoutProvider, Section, Container, Box, Hidden } from '../../src';
+import { LayoutProvider, Section, Flex, Box, Hidden } from '../../src';
 import Notification from '../Notification';
 
-const Example = `<LayoutProvider debug={{ enabled: true }} gutter={20}>
+const Example = `<LayoutProvider debug={{ enabled: true }} gutter="20px">
   <Section>
     <Section absolute top="0" bottom="0" right="0" width="250px">
-      <Container>
+      <Flex>
         <Box grow={1}>Header</Box>
-      </Container>
-      <Container>
+      </Flex>
+      <Flex>
         <Box width="25%">Sidebar</Box>
         <Box grow={{ sm: true }} fluid>
-          <Container direction="horizontal" wrap>
+          <Flex direction="horizontal" wrap>
             <Box width={{ xs: "100%", md: "50%" }} grow={{ lg: 1 }}>Lorem ipsum dolor sit amet</Box>
             <Box width={{ xs: "100%", md: "50%" }} grow={{ lg: 1 }}>Lorem ipsum dolor sit amet</Box>
             <Box width={{ xs: "100%", md: "50%" }} grow={{ lg: 1 }}>Lorem ipsum dolor sit amet</Box>
             <Box width={{ xs: "100%", md: "50%" }} grow={{ lg: 1 }}>Lorem ipsum dolor sit amet</Box>
-          </Container>
+          </Flex>
         </Box>
-      </Container>
-      <Container>
+      </Flex>
+      <Flex>
         <Box grow={1}>Footer</Box>
-      </Container>
+      </Flex>
     </Section>
   </Section>
 </LayoutProvider>`;
 
 const VSCode = (props) =>
-  <LayoutProvider debug={{ enabled: true }} gutter={20}>
+  <LayoutProvider debug={{ enabled: true }} gutter="20px">
     <Section>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/atelier-estuary-dark.min.css" />
       <Section absolute top="0" bottom="0" right="0" width="250px">
-        <Container direction="vertical">
+        <Flex direction="vertical">
           {
             [...Array(3)].map((e, i) =>
               <Box key={i}>
                 <Notification>This is a notification</Notification>
               </Box>)
           }
-        </Container>
+        </Flex>
       </Section>
-      <Container>
+      <Flex>
         <Box grow={1}>Header</Box>
-      </Container>
-      <Container>
+      </Flex>
+      <Flex>
         <Box width="25%">Sidebar</Box>
         <Box grow={{ sm: true }} fluid>
-          <Container direction="horizontal" wrap>
+          <Flex direction="horizontal" wrap>
             <Box width={{ xs: "100%", md: "50%" }} grow={{ lg: 1 }}>Lorem ipsum dolor sit amet</Box>
             <Box width={{ xs: "100%", md: "50%" }} grow={{ lg: 1 }}>Lorem ipsum dolor sit amet</Box>
             <Box width={{ xs: "100%", md: "50%" }} grow={{ lg: 1 }}>Lorem ipsum dolor sit amet</Box>
             <Box width={{ xs: "100%", md: "50%" }} grow={{ lg: 1 }}>Lorem ipsum dolor sit amet</Box>
-          </Container>
+          </Flex>
         </Box>
-      </Container>
-      <Container>
+      </Flex>
+      <Flex>
         <Box grow={1}>Footer</Box>
-      </Container>
-      <Section>
-        <Highlight>{Example}</Highlight>
+      </Flex>
+      <Section fluid>
+        <Flex>
+          <Box>
+            <Highlight>{Example}</Highlight>
+          </Box>
+        </Flex>
       </Section>
     </Section>
   </LayoutProvider>

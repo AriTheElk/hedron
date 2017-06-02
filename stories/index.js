@@ -1,9 +1,10 @@
 import React from 'react';
 import { storiesOf, linkTo } from '@kadira/storybook';
-import { Section, Container, Box, Hidden, LayoutProvider } from '../src';
+import { Section, Flex, Box, Hidden, LayoutProvider } from '../src';
 import Notification from './Notification';
 import Welcome from './Welcome';
 import VSCode from './Examples/VSCode';
+import Twitter from './Examples/Twitter';
 import Notifications from './Examples/Notifications';
 import { injectGlobal } from 'styled-components';
 import Highlight from 'react-highlight'
@@ -31,120 +32,207 @@ injectGlobal`
   a {
     color: dodgerblue;
   }
+  pre {
+    margin: 0;
+  }
 `;
+
+const getRandomIntInclusive = (min, max) => {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
 storiesOf('General', module)
   .add('Welcome', () => (
     <Welcome />
   ));
 
+storiesOf('Flex', module)
+  .add('direction', () => (
+    <LayoutProvider debug={{ enabled: false }} gutter="10px">
+      <Section>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/atelier-estuary-dark.min.css" />
+        <h2>Changing directions</h2>
+        <h4>By default, hedron uses Flex aligns children horizontally.</h4>
+        <Highlight>{`<Flex>...</Flex>`}</Highlight>
+        <Section>
+          <Flex>
+            <Box grow><Highlight></Highlight></Box>
+            <Box grow><Highlight></Highlight></Box>
+            <Box grow><Highlight></Highlight></Box>
+          </Flex>
+        </Section>
+        <h4>If you want to be explicit, you can manually set it</h4>
+        <Highlight>{`<Flex direction="horizontal">...</Flex>`}</Highlight>
+        <Section>
+          <Flex direction="horizontal">
+            <Box grow><Highlight></Highlight></Box>
+            <Box grow><Highlight></Highlight></Box>
+            <Box grow><Highlight></Highlight></Box>
+          </Flex>
+        </Section>
+        <h4>Or you can align children vertically</h4>
+        <Highlight>{`<Flex direction="vertical">...</Flex>`}</Highlight>
+        <Section>
+          <Flex direction="vertical">
+            <Box grow><Highlight></Highlight></Box>
+            <Box grow><Highlight></Highlight></Box>
+            <Box grow><Highlight></Highlight></Box>
+          </Flex>
+        </Section>
+        <h4>You can also change direction based on breakpoints</h4>
+        <Highlight>{`<Flex direction={{ xs: 'vertical', md: 'horizontal' }}>...</Flex>`}</Highlight>
+        <Section>
+          <Flex direction={{ xs: 'vertical', md: 'horizontal' }}>
+            <Box grow><Highlight></Highlight></Box>
+            <Box grow><Highlight></Highlight></Box>
+            <Box grow><Highlight></Highlight></Box>
+          </Flex>
+        </Section>
+      </Section>
+    </LayoutProvider>
+  ))
+  .add('wrap', () => (
+    <LayoutProvider debug={{ enabled: false }} gutter="10px">
+      <Section>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/atelier-estuary-dark.min.css" />
+        <h2>Wrapping boxes</h2>
+        <h4>Setting wrap causes children to wrap around when there's not enough space</h4>
+        <Highlight>{`<Flex wrap>...</Flex>`}</Highlight>
+        <Section>
+          <Flex wrap>
+            <Box width="25%"><Highlight>{`width="25%"`}</Highlight></Box>
+            <Box width="25%"><Highlight>{`width="25%"`}</Highlight></Box>
+            <Box width="25%"><Highlight>{`width="25%"`}</Highlight></Box>
+            <Box width="25%"><Highlight>{`width="25%"`}</Highlight></Box>
+            <Box width="25%"><Highlight>{`width="25%"`}</Highlight></Box>
+            <Box width="25%"><Highlight>{`width="25%"`}</Highlight></Box>
+          </Flex>
+        </Section>
+        <h4>You can also set your container to wrap at specific breakpoints</h4>
+        <Highlight>{`<Flex wrap={{ xs: true, sm: false }}>...</Flex>`}</Highlight>
+        <Section>
+          <Flex wrap={{ xs: true, sm: false }}>
+            <Box width="25%"><Highlight>{`width="25%"`}</Highlight></Box>
+            <Box width="25%"><Highlight>{`width="25%"`}</Highlight></Box>
+            <Box width="25%"><Highlight>{`width="25%"`}</Highlight></Box>
+            <Box width="25%"><Highlight>{`width="25%"`}</Highlight></Box>
+            <Box width="25%"><Highlight>{`width="25%"`}</Highlight></Box>
+            <Box width="25%"><Highlight>{`width="25%"`}</Highlight></Box>
+          </Flex>
+        </Section>
+      </Section>
+    </LayoutProvider>
+  ));
+
 storiesOf('Box', module)
   .add('grow', () => (
-    <LayoutProvider debug={{ enabled: false }} gutter={10}>
+    <LayoutProvider debug={{ enabled: false }} gutter="10px">
       <Section>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/atelier-estuary-dark.min.css" />
         <h2>Using grow</h2>
         <h4>Grow tells boxes to take up all remaining whitespace</h4>
         <Section>
-          <Container direction="vertical">
-            <Box grow={1}><Highlight>{`grow={1}`}</Highlight></Box>
-          </Container>
+          <Flex direction="vertical">
+            <Box grow><Highlight>{`grow`}</Highlight></Box>
+          </Flex>
         </Section>
         <h4>If there's multiple growing boxes, the grid is divided equally</h4>
         <Section>
-          <Container direction="horizontal">
-            <Box grow={1}><Highlight>{`grow={1}`}</Highlight></Box>
-            <Box grow={1}><Highlight>{`grow={1}`}</Highlight></Box>
-            <Box grow={1}><Highlight>{`grow={1}`}</Highlight></Box>
-            <Box grow={1}><Highlight>{`grow={1}`}</Highlight></Box>
-            <Box grow={1}><Highlight>{`grow={1}`}</Highlight></Box>
-          </Container>
+          <Flex direction="horizontal">
+            <Box grow><Highlight>{`grow`}</Highlight></Box>
+            <Box grow><Highlight>{`grow`}</Highlight></Box>
+            <Box grow><Highlight>{`grow`}</Highlight></Box>
+            <Box grow><Highlight>{`grow`}</Highlight></Box>
+            <Box grow><Highlight>{`grow`}</Highlight></Box>
+          </Flex>
         </Section>
         <h4>If some have fixed widths, the growing boxes will take that into consideration</h4>
         <Section>
-          <Container direction="horizontal">
+          <Flex direction="horizontal">
             <Box width="150px"><Highlight>{`width="150px"`}</Highlight></Box>
-            <Box grow={1}><Highlight>{`grow={1}`}</Highlight></Box>
+            <Box grow><Highlight>{`grow`}</Highlight></Box>
             <Box width="40%"><Highlight>{`width="40%"`}</Highlight></Box>
-            <Box grow={1}><Highlight>{`grow={1}`}</Highlight></Box>
-          </Container>
+            <Box grow><Highlight>{`grow`}</Highlight></Box>
+          </Flex>
         </Section>
-        <h4>This works great combined with the <Link to={['Container', 'wrap']}>wrap</Link> property</h4>
+        <h4>This works great combined with the <Link to={['Flex', 'wrap']}>wrap</Link> property</h4>
         <Section>
-          <Container direction="horizontal" wrap>
-            <Box width="20%"><Highlight>{`width="20%"`}</Highlight></Box>
-            <Box grow={1}><Highlight>{`grow={1}`}</Highlight></Box>
-            <Box width="40%"><Highlight>{`width="40%"`}</Highlight></Box>
-            <Box grow={1}><Highlight>{`grow={1}`}</Highlight></Box>
-            <Box width="20%"><Highlight>{`width="20%"`}</Highlight></Box>
-            <Box grow={1}><Highlight>{`grow={1}`}</Highlight></Box>
-            <Box width="40%"><Highlight>{`width="40%"`}</Highlight></Box>
-            <Box grow={1}><Highlight>{`grow={1}`}</Highlight></Box>
-            <Box width="20%"><Highlight>{`width="20%"`}</Highlight></Box>
-            <Box grow={1}><Highlight>{`grow={1}`}</Highlight></Box>
-            <Box width="40%"><Highlight>{`width="40%"`}</Highlight></Box>
-            <Box grow={1}><Highlight>{`grow={1}`}</Highlight></Box>
-          </Container>
+          <Flex direction="horizontal" wrap>
+            <Box width={`${getRandomIntInclusive(10, 60)}%`}><Highlight>{`width="20%"`}</Highlight></Box>
+            <Box grow><Highlight>{`grow`}</Highlight></Box>
+            <Box width={`${getRandomIntInclusive(10, 60)}%`}><Highlight>{`width="40%"`}</Highlight></Box>
+            <Box grow><Highlight>{`grow`}</Highlight></Box>
+            <Box width={`${getRandomIntInclusive(10, 60)}%`}><Highlight>{`width="20%"`}</Highlight></Box>
+            <Box grow><Highlight>{`grow`}</Highlight></Box>
+            <Box width={`${getRandomIntInclusive(10, 60)}%`}><Highlight>{`width="40%"`}</Highlight></Box>
+            <Box grow><Highlight>{`grow`}</Highlight></Box>
+            <Box width={`${getRandomIntInclusive(10, 60)}%`}><Highlight>{`width="20%"`}</Highlight></Box>
+            <Box grow><Highlight>{`grow`}</Highlight></Box>
+            <Box width={`${getRandomIntInclusive(10, 60)}%`}><Highlight>{`width="40%"`}</Highlight></Box>
+            <Box grow><Highlight>{`grow`}</Highlight></Box>
+          </Flex>
         </Section>
       </Section>
     </LayoutProvider>
   ))
   .add('shift', () => (
-    <LayoutProvider debug={{ enabled: false }} gutter={10}>
+    <LayoutProvider debug={{ enabled: false }} gutter="10px">
       <Section>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/atelier-estuary-dark.min.css" />
         <h2>Using shift</h2>
         <h4>Shift adds a left margin on boxes</h4>
         <Section>
-          <Container direction="vertical">
+          <Flex direction="vertical">
             <Box shift="100px"><Highlight>{`shift="100px"`}</Highlight></Box>
-          </Container>
+          </Flex>
         </Section>
         <h4>Use auto to shift all the way to the right</h4>
         <Section>
-          <Container direction="vertical">
+          <Flex direction="vertical">
             <Box shift="auto"><Highlight>{`shift="auto"`}</Highlight></Box>
-          </Container>
+          </Flex>
         </Section>
         <h4>You can change the shift on a specific breakpoint</h4>
         <Section>
-          <Container direction="vertical">
+          <Flex direction="vertical">
             <Box shift={{ md: "50%" }}><Highlight>{`shift={{ md: "50%" }}"`}</Highlight></Box>
-          </Container>
+          </Flex>
         </Section>
         <h4>This can be combined with other boxes</h4>
         <Section>
-          <Container direction="horizontal">
+          <Flex direction="horizontal">
             <Box width="150px"><Highlight>{`width="150px"`}</Highlight></Box>
             <Box width="25%"><Highlight>{`width="25%"`}</Highlight></Box>
             <Box shift={{ md: "auto" }}><Highlight>{`shift={{ md: "auto" }}`}</Highlight></Box>
-          </Container>
+          </Flex>
         </Section>
       </Section>
     </LayoutProvider>
   ))
   .add('width', () => (
-    <LayoutProvider debug={{ enabled: false }} gutter={10}>
+    <LayoutProvider debug={{ enabled: false }} gutter="10px">
       <Section>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/atelier-estuary-dark.min.css" />
         <h2>Setting widths</h2>
         <h4>You can define it as a percentage</h4>
         <Section>
-          <Container direction="vertical">
+          <Flex direction="vertical">
             <Box width="100%"><Highlight>{`width="100%"`}</Highlight></Box>
-          </Container>
+          </Flex>
         </Section>
         <h4>Or as pixels</h4>
         <Section>
-          <Container direction="vertical">
+          <Flex direction="vertical">
             <Box width="250px"><Highlight>{`width="250px"`}</Highlight></Box>
-          </Container>
+          </Flex>
         </Section>
         <h4>You can also pass an object, if you want to affect specific breakpoints</h4>
         <Section>
-          <Container direction="vertical">
+          <Flex direction="vertical">
             <Box width={{ xs: "100%", sm: "85%", md: "75%", lg: "520px" }}><Highlight>{`width={{ xs: "100%", sm: "50%", md: "25%", lg: "520px" }}`}</Highlight></Box>
-          </Container>
+          </Flex>
         </Section>
       </Section>
     </LayoutProvider>
@@ -157,7 +245,7 @@ storiesOf('Hidden', module)
         <p>
           This row is hidden on xs
       </p>
-        <Hidden xs><Container><Box /></Container></Hidden>
+        <Hidden xs><Flex><Box /></Flex></Hidden>
       </Section>
     </LayoutProvider>
   ))
@@ -167,7 +255,7 @@ storiesOf('Hidden', module)
         <p>
           This row is hidden on sm
       </p>
-        <Hidden sm><Container><Box /></Container></Hidden>
+        <Hidden sm><Flex><Box /></Flex></Hidden>
       </Section>
     </LayoutProvider>
   ))
@@ -177,7 +265,7 @@ storiesOf('Hidden', module)
         <p>
           This row is hidden on md
       </p>
-        <Hidden md><Container><Box /></Container></Hidden>
+        <Hidden md><Flex><Box /></Flex></Hidden>
       </Section>
     </LayoutProvider>
   ))
@@ -187,7 +275,7 @@ storiesOf('Hidden', module)
         <p>
           This row is hidden on lg
       </p>
-        <Hidden lg><Container><Box /></Container></Hidden>
+        <Hidden lg><Flex><Box /></Flex></Hidden>
       </Section>
     </LayoutProvider>
   ));
@@ -195,6 +283,9 @@ storiesOf('Hidden', module)
 storiesOf('Layout Examples', module)
   .add('Notifications', () => (
     <Notifications />
+  ))
+  .add('Twitter', () => (
+    <Twitter />
   ))
   .add('VSCode Inspired', () => (
     <VSCode />
