@@ -1,6 +1,6 @@
 {
   "name": "hedron",
-  "version": "1.0.0-beta.3",
+  "version": "1.0.0-beta.4",
   "description": "A no-frills flexbox grid system for React.",
   "main": "dist/hedron.js",
   "author": {
@@ -69,13 +69,12 @@
     "rollup-plugin-json": "^2.0.2",
     "rollup-plugin-node-resolve": "^2.0.0",
     "rollup-plugin-replace": "^1.1.1",
-    "rollup-plugin-uglify": "^1.0.1"
-  },
-  "dependencies": {
+    "rollup-plugin-uglify": "^1.0.1",
     "styled-components": "^1.0.10"
   },
   "peerDependencies": {
-    "react": "^15.0.0"
+    "react": "^15.0.0",
+    "styled-components": "^1.0.10 || ^2.0.0"
   },
   "jest": {
     "testPathDirs": [
