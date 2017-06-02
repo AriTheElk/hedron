@@ -26,8 +26,8 @@ const compute = name =>
     applyBreakpointStyle('flex', props.flex, name),
     applyBreakpointStyle('flex-wrap', props.wrap, name, { on: 'wrap', off: 'nowrap' }),
     applyBreakpointStyle('flex-direction', props.direction, name, { modifier: v => directionToFlex(v) }),
-    applyBreakpointStyle('margin-left', props.gutter, name, { modifier: v => `-${v}` }),
-    applyBreakpointStyle('margin-right', props.gutter, name, { modifier: v => `-${v}` })
+    // applyBreakpointStyle('margin-left', props.gutter, name, { modifier: v => `-${v/2}px` }),
+    // applyBreakpointStyle('margin-right', props.gutter, name, { modifier: v => `-${v/2}px` })
   ]);
 
 const Wrapper = styled.div`

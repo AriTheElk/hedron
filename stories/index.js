@@ -20,7 +20,7 @@ injectGlobal`
     border-radius: 4px;
     padding: 15px 25px;
     max-width: 100%;
-    overflow: scroll;
+    overflow: auto;
   }
   ul {
     padding: 0;

@@ -82,7 +82,7 @@ export const withLayout = (
     static contextTypes = {
       breakpoints: breakpointsShape,
       debug: debugShape,
-      gutter: PropTypes.number
+      gutter: PropTypes.string
     };
 
     render() {
