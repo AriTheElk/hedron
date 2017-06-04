@@ -8,7 +8,7 @@ $$ |  $$ |$$   ____|$$ |  $$ |$$ |      $$ |  $$ |$$ |  $$ |
 $$ |  $$ |\$$$$$$$\ \$$$$$$$ |$$ |      \$$$$$$  |$$ |  $$ |
 \__|  \__| \_______| \_______|\__|       \______/ \__|  \__|                                                                                                                                
 ```
-[![Travis](https://img.shields.io/travis/JSBros/hedron.svg?style=flat-square)](https://travis-ci.org/JSBros/hedron) [![npm](https://img.shields.io/npm/dt/hedron.svg?style=flat-square)](https://www.npmjs.com/package/hedron) [![David](https://img.shields.io/david/jsbros/hedron.svg?style=flat-square)](https://github.com/JSBros/hedron/issues) [![Slack Status](https://slackin-xtuseyimsc.now.sh/badge.svg)](https://slackin-xtuseyimsc.now.sh/)
+[![Backers on Open Collective](https://opencollective.com/hedron/backers/badge.svg)](#backers) [![Sponsors on Open Collective](https://opencollective.com/hedron/sponsors/badge.svg)](#sponsors) [![Travis](https://img.shields.io/travis/JSBros/hedron.svg?style=flat-square)](https://travis-ci.org/JSBros/hedron) [![npm](https://img.shields.io/npm/dt/hedron.svg?style=flat-square)](https://www.npmjs.com/package/hedron) [![David](https://img.shields.io/david/jsbros/hedron.svg?style=flat-square)](https://github.com/JSBros/hedron/issues) [![Slack Status](https://slackin-xtuseyimsc.now.sh/badge.svg)](https://slackin-xtuseyimsc.now.sh/)
 
 [View a landing page built with Hedron](https://jsbros.github.io/uigradients/).
 
@@ -116,6 +116,60 @@ Contributions of any kind are welcome!
 
 ## Sponsors
 [![sponsored by timber](https://res.cloudinary.com/timber/image/upload/v1490556810/pricing/sponsorship.png)](http://timber.io/?utm_source=github&utm_medium=docs&utm_campaign=hedron)
+
+
+## Backers
+
+Support us with a monthly donation and help us continue our activities. [[Become a backer](https://opencollective.com/hedron#backer)]
+
+<a href="https://opencollective.com/hedron/backer/0/website" target="_blank"><img src="https://opencollective.com/hedron/backer/0/avatar.svg"></a>
+<a href="https://opencollective.com/hedron/backer/1/website" target="_blank"><img src="https://opencollective.com/hedron/backer/1/avatar.svg"></a>
+<a href="https://opencollective.com/hedron/backer/2/website" target="_blank"><img src="https://opencollective.com/hedron/backer/2/avatar.svg"></a>
+<a href="https://opencollective.com/hedron/backer/3/website" target="_blank"><img src="https://opencollective.com/hedron/backer/3/avatar.svg"></a>
+<a href="https://opencollective.com/hedron/backer/4/website" target="_blank"><img src="https://opencollective.com/hedron/backer/4/avatar.svg"></a>
+<a href="https://opencollective.com/hedron/backer/5/website" target="_blank"><img src="https://opencollective.com/hedron/backer/5/avatar.svg"></a>
+<a href="https://opencollective.com/hedron/backer/6/website" target="_blank"><img src="https://opencollective.com/hedron/backer/6/avatar.svg"></a>
+<a href="https://opencollective.com/hedron/backer/7/website" target="_blank"><img src="https://opencollective.com/hedron/backer/7/avatar.svg"></a>
+<a href="https://opencollective.com/hedron/backer/8/website" target="_blank"><img src="https://opencollective.com/hedron/backer/8/avatar.svg"></a>
+<a href="https://opencollective.com/hedron/backer/9/website" target="_blank"><img src="https://opencollective.com/hedron/backer/9/avatar.svg"></a>
+<a href="https://opencollective.com/hedron/backer/10/website" target="_blank"><img src="https://opencollective.com/hedron/backer/10/avatar.svg"></a>
+<a href="https://opencollective.com/hedron/backer/11/website" target="_blank"><img src="https://opencollective.com/hedron/backer/11/avatar.svg"></a>
+<a href="https://opencollective.com/hedron/backer/12/website" target="_blank"><img src="https://opencollective.com/hedron/backer/12/avatar.svg"></a>
+<a href="https://opencollective.com/hedron/backer/13/website" target="_blank"><img src="https://opencollective.com/hedron/backer/13/avatar.svg"></a>
+<a href="https://opencollective.com/hedron/backer/14/website" target="_blank"><img src="https://opencollective.com/hedron/backer/14/avatar.svg"></a>
+<a href="https://opencollective.com/hedron/backer/15/website" target="_blank"><img src="https://opencollective.com/hedron/backer/15/avatar.svg"></a>
+<a href="https://opencollective.com/hedron/backer/16/website" target="_blank"><img src="https://opencollective.com/hedron/backer/16/avatar.svg"></a>
+<a href="https://opencollective.com/hedron/backer/17/website" target="_blank"><img src="https://opencollective.com/hedron/backer/17/avatar.svg"></a>
+<a href="https://opencollective.com/hedron/backer/18/website" target="_blank"><img src="https://opencollective.com/hedron/backer/18/avatar.svg"></a>
+<a href="https://opencollective.com/hedron/backer/19/website" target="_blank"><img src="https://opencollective.com/hedron/backer/19/avatar.svg"></a>
+<a href="https://opencollective.com/hedron/backer/20/website" target="_blank"><img src="https://opencollective.com/hedron/backer/20/avatar.svg"></a>
+<a href="https://opencollective.com/hedron/backer/21/website" target="_blank"><img src="https://opencollective.com/hedron/backer/21/avatar.svg"></a>
+<a href="https://opencollective.com/hedron/backer/22/website" target="_blank"><img src="https://opencollective.com/hedron/backer/22/avatar.svg"></a>
+<a href="https://opencollective.com/hedron/backer/23/website" target="_blank"><img src="https://opencollective.com/hedron/backer/23/avatar.svg"></a>
+<a href="https://opencollective.com/hedron/backer/24/website" target="_blank"><img src="https://opencollective.com/hedron/backer/24/avatar.svg"></a>
+<a href="https://opencollective.com/hedron/backer/25/website" target="_blank"><img src="https://opencollective.com/hedron/backer/25/avatar.svg"></a>
+<a href="https://opencollective.com/hedron/backer/26/website" target="_blank"><img src="https://opencollective.com/hedron/backer/26/avatar.svg"></a>
+<a href="https://opencollective.com/hedron/backer/27/website" target="_blank"><img src="https://opencollective.com/hedron/backer/27/avatar.svg"></a>
+<a href="https://opencollective.com/hedron/backer/28/website" target="_blank"><img src="https://opencollective.com/hedron/backer/28/avatar.svg"></a>
+<a href="https://opencollective.com/hedron/backer/29/website" target="_blank"><img src="https://opencollective.com/hedron/backer/29/avatar.svg"></a>
+
+
+## Sponsors
+
+Become a sponsor and get your logo on our README on Github with a link to your site. [[Become a sponsor](https://opencollective.com/hedron#sponsor)]
+
+<a href="https://opencollective.com/hedron/sponsor/0/website" target="_blank"><img src="https://opencollective.com/hedron/sponsor/0/avatar.svg"></a>
+<a href="https://opencollective.com/hedron/sponsor/1/website" target="_blank"><img src="https://opencollective.com/hedron/sponsor/1/avatar.svg"></a>
+<a href="https://opencollective.com/hedron/sponsor/2/website" target="_blank"><img src="https://opencollective.com/hedron/sponsor/2/avatar.svg"></a>
+<a href="https://opencollective.com/hedron/sponsor/3/website" target="_blank"><img src="https://opencollective.com/hedron/sponsor/3/avatar.svg"></a>
+<a href="https://opencollective.com/hedron/sponsor/4/website" target="_blank"><img src="https://opencollective.com/hedron/sponsor/4/avatar.svg"></a>
+<a href="https://opencollective.com/hedron/sponsor/5/website" target="_blank"><img src="https://opencollective.com/hedron/sponsor/5/avatar.svg"></a>
+<a href="https://opencollective.com/hedron/sponsor/6/website" target="_blank"><img src="https://opencollective.com/hedron/sponsor/6/avatar.svg"></a>
+<a href="https://opencollective.com/hedron/sponsor/7/website" target="_blank"><img src="https://opencollective.com/hedron/sponsor/7/avatar.svg"></a>
+<a href="https://opencollective.com/hedron/sponsor/8/website" target="_blank"><img src="https://opencollective.com/hedron/sponsor/8/avatar.svg"></a>
+<a href="https://opencollective.com/hedron/sponsor/9/website" target="_blank"><img src="https://opencollective.com/hedron/sponsor/9/avatar.svg"></a>
+
+
 
 ## License
 
