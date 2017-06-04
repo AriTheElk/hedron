@@ -31,9 +31,9 @@ const compute = name =>
 
 const Box = styled.div`
   box-sizing: border-box;
-  display: ${props => props.noFlex ? "block" : "flex"};
+  display: ${props => props.block ? "block" : "flex"};
   flex-direction: column;
-  overflow: auto;
+  overflow: ${props => props.overflow ? props.overflow : "auto"};
   ${props => applyStyle(props.debug && props.debug.enabled, ['background: rgba(0, 0, 100, .15)', 'outline: 1px solid #fff'])};
   ${compute("xs")}
   ${compute("sm")}

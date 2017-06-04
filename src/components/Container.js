@@ -32,8 +32,8 @@ const compute = name =>
 
 const Wrapper = styled.div`
   display: flex;
-  ${props => props.hAlign && horizontalAlign(props.hAlign, props.direction)}
-  ${props => props.vAlign && verticalAlign(props.vAlign, props.direction)}
+  ${props => props.alignX && horizontalAlign(props.alignX, props.direction)}
+  ${props => props.alignY && verticalAlign(props.alignY, props.direction)}
   ${compute("xs")}
   ${compute("sm")}
   ${compute("md")}
