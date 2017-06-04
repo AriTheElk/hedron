@@ -5,7 +5,7 @@ import styled from "styled-components";
 import Hidden from "./Hidden";
 import { withLayout } from "./LayoutProvider";
 
-const Page = styled.div`
+const Section = styled.div`
   ${props => props.fluid ? "width: 100%;" : `
       margin: 0 auto;
       max-width: 100%;
@@ -22,4 +22,4 @@ const Page = styled.div`
   ${props => props.width && `width: ${props.width};`}
 `;
 
-export default withLayout(Page);
+export default withLayout(Section);
