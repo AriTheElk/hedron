@@ -3,6 +3,7 @@ import React from "react";
 import styled from "styled-components";
 import { withLayout } from "./LayoutProvider";
 import { horizontalAlign, verticalAlign } from "../utils/flex";
+import { breakpoint, applyBreakpointStyle } from "../utils";
 import passOn from "../utils/passOn";
 
 const containerDirectionError = "Container direction must be `horizontal` or `vertical`";
@@ -16,16 +17,27 @@ const directionToFlex = direction => {
   throw Error(containerDirectionError);
 };
 
+const compute = name =>
+  breakpoint(name, (props, name) => [
+    applyBreakpointStyle('width', props.width, name),
+    applyBreakpointStyle('height', props.height, name),
+    applyBreakpointStyle('flex-grow', props.grow, name, { on: 1, off: 0 }),
+    applyBreakpointStyle('flex-shrink', props.shrink, name, { on: 1, off: 0 }),
+    applyBreakpointStyle('flex', props.flex, name),
+    applyBreakpointStyle('flex-wrap', props.wrap, name, { on: 'wrap', off: 'nowrap' }),
+    applyBreakpointStyle('flex-direction', props.direction, name, { modifier: v => directionToFlex(v) }),
+    // applyBreakpointStyle('margin-left', props.gutter, name, { modifier: v => `-${v/2}px` }),
+    // applyBreakpointStyle('margin-right', props.gutter, name, { modifier: v => `-${v/2}px` })
+  ]);
+
 const Wrapper = styled.div`
   display: flex;
-  max-width: 100%;
-  min-height: 1px;
-  ${props => props.wrap && "flex-wrap: wrap;"}
-  ${props => props.grow && `flex-grow: 1;`}
-  ${props => props.height && `height: ${props.height};`}
-  ${props => props.direction && `flex-direction: ${directionToFlex(props.direction)}`}
   ${props => props.hAlign && horizontalAlign(props.hAlign, props.direction)}
   ${props => props.vAlign && verticalAlign(props.vAlign, props.direction)}
+  ${compute("xs")}
+  ${compute("sm")}
+  ${compute("md")}
+  ${compute("lg")}
 `;
 
 Wrapper.defaultProps = {

@@ -3,7 +3,7 @@ import Highlight from 'react-highlight';
 import { LayoutProvider, Section, Container, Box, Hidden } from '../../src';
 import Notification from '../Notification';
 
-const Example = `<LayoutProvider debug={{ enabled: true }} gutter={20}>
+const Example = `<LayoutProvider debug={{ enabled: true }} gutter="20px">
   <Section>
     <Section absolute top="0" bottom="0" right="0" width="250px">
       <Container>
@@ -28,7 +28,7 @@ const Example = `<LayoutProvider debug={{ enabled: true }} gutter={20}>
 </LayoutProvider>`;
 
 const VSCode = (props) =>
-  <LayoutProvider debug={{ enabled: true }} gutter={20}>
+  <LayoutProvider debug={{ enabled: true }} gutter="20px">
     <Section>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/atelier-estuary-dark.min.css" />
       <Section absolute top="0" bottom="0" right="0" width="250px">
@@ -58,8 +58,12 @@ const VSCode = (props) =>
       <Container>
         <Box grow={1}>Footer</Box>
       </Container>
-      <Section>
-        <Highlight>{Example}</Highlight>
+      <Section fluid>
+        <Container>
+          <Box>
+            <Highlight>{Example}</Highlight>
+          </Box>
+        </Container>
       </Section>
     </Section>
   </LayoutProvider>
