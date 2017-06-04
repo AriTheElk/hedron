@@ -6,6 +6,7 @@ import Welcome from './Welcome';
 import VSCode from './Examples/VSCode';
 import Notifications from './Examples/Notifications';
 import Sidebar from './Examples/Sidebar';
+import FlexibleGrid from './Examples/FlexibleGrid';
 import { injectGlobal } from 'styled-components';
 import Highlight from 'react-highlight'
 
@@ -202,4 +203,7 @@ storiesOf('Layout Examples', module)
   ))
   .add('Sidebar', () => (
     <Sidebar/>
+  ))
+  .add('Flexible Grid', () => (
+    <FlexibleGrid />
   ));

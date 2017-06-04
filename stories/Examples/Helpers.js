@@ -10,6 +10,7 @@ injectGlobal`
 
 const StyledContainer = styled(Container)`
     border: solid 10px ${props => props.borderColor};
+    background-color: ${props => props.bg}
 `;
 
 const StyledBox = styled(Box)`

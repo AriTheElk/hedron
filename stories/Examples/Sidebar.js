@@ -1,8 +1,8 @@
 import React from "react";
-import { LayoutProvider, Section, Container, Box } from "../../src";
+import { LayoutProvider, Section, Container } from "../../src";
 import styled, { injectGlobal } from "styled-components";
-import Browser from "./Browser";
 import { StyledContainer, StyledBox } from "./Helpers";
+import Browser from "./Browser";
 
 const Sidebar = () => {
   return (
