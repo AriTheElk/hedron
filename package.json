@@ -19,7 +19,8 @@
     "pretest": "npm run lint && npm run flow",
     "test": "jest",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "postinstall": "opencollective postinstall"
   },
   "bugs": {
     "url": "https://github.com/garetmckinley/hedron/issues"
@@ -68,6 +69,7 @@
     "styled-components": "1.1.3"
   },
   "dependencies": {
+    "opencollective": "^1.0.3",
     "prop-types": "^15.5.8"
   },
   "peerDependencies": {
@@ -78,5 +80,10 @@
     "testPathDirs": [
       "src"
     ]
+  },
+  "collective": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/hedron",
+    "logo": "https://opencollective.com/opencollective/logo.txt"
   }
 }
