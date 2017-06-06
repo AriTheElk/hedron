@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { withLayout } from "./LayoutProvider";
 import { breakpoint, applyBreakpointStyle } from "../utils";
 import { applyStyle } from '../utils/styles';
+import hexToRgb from '../utils/hexToRgb';
 
 const applyWidth = (rule, value, defaultValue = '') => {
   switch (typeof value) {
@@ -16,6 +17,28 @@ const applyWidth = (rule, value, defaultValue = '') => {
     return defaultValue;
   }
 }
+
+const debugStyles = {
+  outline: '1px solid #fff',
+  background: 'rgba(0, 0, 100, .15)'
+};
+
+const toRgba = (rbg) => {
+  const result = [];
+
+  rbg.map((n) => result.push(String(n)));
+  result.push('.15');
+
+  return result.join(',');
+}
+const getDebugStyles = (props) => {
+  const outline = props.debug.outline ? props.debug.outline : debugStyles.outline;
+  const background = /^#/.test(props.debug.fill) ? `rgba(${toRgba(hexToRgb(props.debug.fill))})` : debugStyles.background;
+
+  console.log(background);
+
+  return [`background: ${background}`, `outline: ${outline}`];
+};
 
 const compute = name =>
   breakpoint(name, (props, name) => [
@@ -34,7 +57,8 @@ const Box = styled.div`
   display: ${props => props.block ? "block" : "flex"};
   flex-direction: column;
   overflow: ${props => props.overflow ? props.overflow : "auto"};
-  ${props => applyStyle(props.debug && props.debug.enabled, ['background: rgba(0, 0, 100, .15)', 'outline: 1px solid #fff'])};
+  ${props => applyStyle(props.debug && props.debug.enabled, getDebugStyles(props))};
+
   ${compute("xs")}
   ${compute("sm")}
   ${compute("md")}
