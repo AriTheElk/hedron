@@ -35,8 +35,6 @@ const getDebugStyles = (props) => {
   const outline = props.debug.outline ? props.debug.outline : debugStyles.outline;
   const background = /^#/.test(props.debug.fill) ? `rgba(${toRgba(hexToRgb(props.debug.fill))})` : debugStyles.background;
 
-  console.log(background);
-
   return [`background: ${background}`, `outline: ${outline}`];
 };
 
