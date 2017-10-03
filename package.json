@@ -11,7 +11,7 @@
   "scripts": {
     "build": "npm run build:lib && npm run build:dist",
     "build:lib": "babel src --out-dir lib",
-    "build:dist": "rollup -c && rollup -c --environment PRODUCTION",
+    "build:dist": "node node_modules/rollup/bin/rollup -c && node node_modules/rollup/bin/rollup -c --environment PRODUCTION",
     "clean": "rm -rf dist/*",
     "lint": "eslint src",
     "lint:fix": "eslint --fix src",
