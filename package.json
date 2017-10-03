@@ -20,7 +20,7 @@
     "test": "jest",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "postinstall": "opencollective postinstall"
+    "postinstall": "npm run build && opencollective postinstall"
   },
   "bugs": {
     "url": "https://github.com/garetmckinley/hedron/issues"
