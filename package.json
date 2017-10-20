@@ -74,6 +74,7 @@
   },
   "peerDependencies": {
     "react": "^15.0.0",
+    "prop-types": "^15.6.0",
     "styled-components": "^1.0.10 || ^2.0.0"
   },
   "jest": {
