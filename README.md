@@ -2,7 +2,7 @@
 $$\   $$\                 $$\                               
 $$ |  $$ |                $$ |                              
 $$ |  $$ | $$$$$$\   $$$$$$$ | $$$$$$\   $$$$$$\  $$$$$$$\  
-$$$$$$$$ |$$  __$$\ $$  __$$ |$$  __$$\ $$  __$$\ $$  __$$\ 
+$$$$$$$$ |$$  __$$\ $$  __$$ |$$  __$$\ $$  __$$\ $$  __$$\
 $$  __$$ |$$$$$$$$ |$$ /  $$ |$$ |  \__|$$ /  $$ |$$ |  $$ |
 $$ |  $$ |$$   ____|$$ |  $$ |$$ |      $$ |  $$ |$$ |  $$ |
 $$ |  $$ |\$$$$$$$\ \$$$$$$$ |$$ |      \$$$$$$  |$$ |  $$ |
@@ -25,8 +25,6 @@ or better yet
 #### [View the Documentation →](https://github.com/JSBros/hedron/wiki/Grid-System)
 
 ## Example Usage
-
-[View interactive example on webpackbin](http://www.webpackbin.com/V1zqQ_gZf)
 
 ``` jsx
 import React, { Component } from 'react';
@@ -172,4 +170,3 @@ Become a sponsor and get your logo on our README on Github with a link to your s
 ## License
 
 Hedron is under the [MIT](LICENSE) License.
-
