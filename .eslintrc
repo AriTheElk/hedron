@@ -13,7 +13,7 @@
     "consistent-return": 0,
     "import/extensions": 0,
     "import/no-extraneous-dependencies": ["error", {
-      "devDependencies": ["**/*.test.js", "**/*.spec.js"]
+      "devDependencies": ["**/*.test.js", "**/*.spec.js", "stories/*.js"]
     }],
     "import/no-unresolved": 0,
     "max-len": [2, 80, 4, {"ignoreUrls": true, "ignoreComments": true}],
