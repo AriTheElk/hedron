@@ -82,7 +82,13 @@ export const withBreakpoints = WrappedComponent =>
       const props = { breakpoints, debug };
 
       // Hacky method of ignoring some components when applying padding
-      if (![Bounds.displayName].includes(WrappedComponent.displayName)) {
+      if (
+        WrappedComponent.render
+          ? ![Bounds.render.prototype].includes(
+              WrappedComponent.render.prototype
+            )
+          : ![Bounds.prototype].includes(WrappedComponent.prototype)
+      ) {
         props.padding = padding;
       }
 
