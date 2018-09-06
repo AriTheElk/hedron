@@ -32,32 +32,6 @@ export const generateStyles = props => [
 ];
 
 /**
- * Injects our custom reset css styles into the html head
- *
- * @param {Object} props - custom configuration properties
- * @param {Object} props.body - configuration for the html body
- * @param {string} props.body.margin - margin to apply to the html body
- * @param {string} props.body.background - background to apply to the html body
- * @param {string} props.font - default font family to use
- */
-export const resetCSS = ({ body = {}, font } = {}) => injectGlobal`
-  html {
-    line-height: 1.15;
-    text-size-adjust: 100%;
-  }
-  body {
-    margin: ${body.margin ? body.margin : "0"};
-    ${body.background && `background: ${body.background};`}
-    ${font && `font-family: ${font};`}
-  }
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-`;
-
-/**
  * This will parse a breakpoint string (i.e. -500) and return
  * the operation needed to generate a media query
  * @param {string} breakpoint
