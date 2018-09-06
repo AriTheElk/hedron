@@ -2,7 +2,7 @@
   <img src="http://i.imgur.com/1f9IIN8.png">
 </p>
 
-[![Travis](https://img.shields.io/travis/garetmckinley/hedron.svg?style=flat-square)](https://travis-ci.org/garetmckinley/hedron) [![npm](https://img.shields.io/npm/dt/hedron.svg?style=flat-square)](https://www.npmjs.com/package/hedron) [![David](https://img.shields.io/david/garetmckinley/hedron.svg?style=flat-square)](https://github.com/garetmckinley/hedron/issues) [![Slack Status](https://slackin-xtuseyimsc.now.sh/badge.svg)](https://slackin-xtuseyimsc.now.sh/)
+[![Travis](https://img.shields.io/travis/garetmckinley/hedron.svg?style=flat-square)](https://travis-ci.org/garetmckinley/hedron) [![npm](https://img.shields.io/npm/dt/hedron.svg?style=flat-square)](https://www.npmjs.com/package/hedron) [![David](https://img.shields.io/david/garetmckinley/hedron.svg?style=flat-square)](https://github.com/garetmckinley/hedron/issues) [![Spectrum Chat](https://camo.githubusercontent.com/3cc3d27f23a2c3948de24fc02c58bc576655d621/68747470733a2f2f77697468737065637472756d2e6769746875622e696f2f62616467652f62616467652e737667)](https://spectrum.chat/hedron)
 
 ## Quick Jump
 
@@ -10,7 +10,7 @@
 2. [Requirements](#requirements)
 3. [Installation](#installation)
 4. [Usage](#usage)
-5. [Upgrading from Previous Versions][#upgrading]
+5. [Upgrading from Pre-1.0](#upgrading)
 6. [Documentation](#documentation)
    1. [`Grid.Provider`](#gridprovider)
    2. [`Grid.Bounds`](#gridbounds)
