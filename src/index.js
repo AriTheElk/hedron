@@ -1,14 +1,5 @@
-// @flow
-import Column from './components/Column';
-import Row from './components/Row';
-import Page from './components/Page';
-import Hidden from './components/Hidden';
-import BreakpointProvider, {
-  withBreakpoints,
-} from './components/BreakpointProvider';
-import * as utils from './utils';
+import Bounds from "./components/Bounds";
+import Box from "./components/Box";
+import Provider from "./components/Provider";
 
-export {
-  Column, Page, Row, Hidden,
-  BreakpointProvider, withBreakpoints, utils,
-};
+export default { Provider, Bounds, Box };

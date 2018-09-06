@@ -1,6 +1,6 @@
 {
   "parser": "babel-eslint",
-  "extends": "eslint-config-airbnb",
+  "extends": "prettier",
   "env": {
     "browser": true,
     "mocha": true,
@@ -8,15 +8,16 @@
     "jest": true
   },
   "rules": {
-    "arrow-body-style": ["error", "as-needed", { "requireReturnForObjectLiteral": true }],
+    "arrow-body-style": [
+      "error",
+      "as-needed",
+      { "requireReturnForObjectLiteral": true }
+    ],
     "comma-dangle": ["error", "always-multiline"],
     "consistent-return": 0,
     "import/extensions": 0,
-    "import/no-extraneous-dependencies": ["error", {
-      "devDependencies": ["**/*.test.js", "**/*.spec.js"]
-    }],
     "import/no-unresolved": 0,
-    "max-len": [2, 80, 4, {"ignoreUrls": true, "ignoreComments": true}],
+    "max-len": [2, 80, 4, { "ignoreUrls": true, "ignoreComments": true }],
     "no-case-declarations": 0,
     "no-confusing-arrow": 0,
     "no-return-assign": 0,
