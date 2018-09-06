@@ -4,8 +4,6 @@
 
 [![Travis](https://img.shields.io/travis/JSBros/hedron.svg?style=flat-square)](https://travis-ci.org/JSBros/hedron) [![npm](https://img.shields.io/npm/dt/hedron.svg?style=flat-square)](https://www.npmjs.com/package/hedron) [![David](https://img.shields.io/david/jsbros/hedron.svg?style=flat-square)](https://github.com/JSBros/hedron/issues) [![Slack Status](https://slackin-xtuseyimsc.now.sh/badge.svg)](https://slackin-xtuseyimsc.now.sh/)
 
-[![Backers on Open Collective](https://opencollective.com/hedron/backers/badge.svg)](#backers) [![Sponsors on Open Collective](https://opencollective.com/hedron/sponsors/badge.svg)](#sponsors) [![Travis](https://img.shields.io/travis/JSBros/hedron.svg?style=flat-square)](https://travis-ci.org/JSBros/hedron) [![npm](https://img.shields.io/npm/dt/hedron.svg?style=flat-square)](https://www.npmjs.com/package/hedron) [![David](https://img.shields.io/david/jsbros/hedron.svg?style=flat-square)](https://github.com/JSBros/hedron/issues) [![Slack Status](https://slackin-xtuseyimsc.now.sh/badge.svg)](https://slackin-xtuseyimsc.now.sh/)
-
 ## Quick Jump
 
 1. [Features](#features)
@@ -25,23 +23,22 @@
 
 ## Requirements
 
-The follow dependencies must be installed in your project in order for Tetrahedron Grid to work.
+The follow dependencies must be installed in your project in order for hedron to work.
 
 - [`styled-components`](https://github.com/styled-components/styled-components) 1.1.3 and up
-- [`@tetrahedron/core`](https://github.com/tetrahedron/core) 0.1.0 and up
 
 ## Installation
 
 #### Using yarn
 
 ```bash
-yarn add @tetrahedron/grid
+yarn add hedron
 ```
 
 #### Using npm
 
 ```bash
-npm install @tetrahedron/grid
+npm install hedron
 ```
 
 ## Usage
@@ -51,7 +48,7 @@ npm install @tetrahedron/grid
 ```jsx
 import React from "react";
 import ReactDOM from "react-dom";
-import Grid from "@tetrahedron/grid";
+import Grid from "hedron";
 
 const App = () => (
   <Grid.Bounds direction="vertical">
@@ -71,12 +68,12 @@ To make your layout responsive, use the `Grid.Provider` to define breakpoints. Y
 ```jsx
 import React from "react";
 import ReactDOM from "react-dom";
-import Grid from "@tetrahedron/grid";
+import Grid from "hedron";
 
 const App = () => (
   <Grid.Provider
     padding="20px"
-    breakpoints={{ sm: [0, 500], md: [501, 750], lg: [751, 1200] }}
+    breakpoints={{ sm: "-500", md: "501-750", lg: "+750" }}
   >
     <Grid.Bounds direction="vertical">
       <Grid.Box sm={{ hidden: true }}>
@@ -98,16 +95,19 @@ If you want to be more verbose with your naming convention, that's perfectly fin
 ```jsx
 import React from "react";
 import ReactDOM from "react-dom";
-import Grid from "@tetrahedron/grid";
+import Grid from "hedron";
 
 const App = () => (
   <Grid.Provider
-    breakpoints={{ mobile: [0, 500], tablet: [501, 750], laptop: [751, 1200] }}
+    breakpoints={{ mobile: "-500", tablet: "501-750", wide: "+750" }}
   >
     <Grid.Bounds direction="vertical">
-      <Grid.Box>Header</Grid.Box>
+      <Grid.Box mobile={{ hidden: true }}>Header</Grid.Box>
       <Grid.Box>Content</Grid.Box>
-      <Grid.Box>Footer</Grid.Box>
+      <Grid.Bounds direction="vertical" wide={{ direction: "horizontal" }}>
+        <Grid.Box>These boxes render side by side on wide screens</Grid.Box>
+        <Grid.Box>These boxes render side by side on wide screens</Grid.Box>
+      </Grid.Bounds>
     </Grid.Bounds>
   </Grid.Provider>
 );
