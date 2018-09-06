@@ -1,4 +1,4 @@
-import { css, injectGlobal } from "styled-components";
+import { css } from "styled-components";
 
 export const drawDebug = () => [
   "background: rgba(0, 255, 255, 0.1);",

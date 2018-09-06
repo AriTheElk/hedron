@@ -1,5 +1,5 @@
 import React from "react";
-import { injectGlobal } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { linkTo } from "@storybook/addon-links";
@@ -9,7 +9,7 @@ import Grid from "../src/index";
 import Logo from "./assets/logo.png";
 import { Button, Welcome } from "@storybook/react/demo";
 
-injectGlobal`
+createGlobalStyle`
   body {
     font-family: sans-serif;
   }

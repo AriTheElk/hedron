@@ -3,7 +3,6 @@
     [
       "styled-components",
       {
-        "ssr": true,
         "preprocess": true,
         "minify": true
       }
