@@ -64,7 +64,7 @@ storiesOf("Examples", module)
       <Grid.Provider
         debug
         padding="20px"
-        breakpoints={{ sm: [0, 500], md: [501, 750], lg: [751, 1200] }}
+        breakpoints={{ sm: "-500", md: "501-750", lg: "+750" }}
       >
         <Grid.Bounds direction="vertical">
           <Grid.Box sm={{ padding: "40px" }}>

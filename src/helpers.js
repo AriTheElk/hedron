@@ -57,6 +57,55 @@ export const resetCSS = ({ body = {}, font } = {}) => injectGlobal`
   }
 `;
 
+/**
+ * This will parse a breakpoint string (i.e. -500) and return
+ * the operation needed to generate a media query
+ * @param {string} breakpoint
+ */
+const parseBreakpoint = breakpoint => {
+  switch (breakpoint.charAt(0)) {
+    // less than
+    case "-":
+      return { lt: breakpoint.substring(1) };
+      break;
+    // more than
+    case "+":
+      return { gt: breakpoint.substring(1) };
+      break;
+    // range
+    default:
+      const range = breakpoint.split("-");
+      if (range.length !== 2) {
+        console.error(
+          "Invalid breakpoint range. The proper syntax for a range is: min-max"
+        );
+      }
+      return { range };
+  }
+};
+
+/**
+ * Generates a media query from a breakpoint operation
+ *
+ * @param {Object} operation
+ */
+const media = operation => {
+  if (operation.lt) {
+    return `@media (max-width: ${operation.lt}px)`;
+  } else if (operation.gt) {
+    return `@media (min-width: ${operation.gt}px)`;
+  } else if (operation.range) {
+    return `@media (min-width: ${operation.range[0]}px) and (max-width: ${
+      operation.range[1]
+    }px)`;
+  }
+};
+
+/**
+ * Generates valid CSS media queries from a component's props
+ *
+ * @param {Object} props
+ */
 export const breakpoints = props => {
   if (!props.breakpoints) return null;
 
@@ -64,10 +113,9 @@ export const breakpoints = props => {
     id =>
       props[id] && [
         css`
-          @media (min-width: ${props.breakpoints[
-              id
-            ][0]}px) and (max-width: ${props.breakpoints[id][1]}px) {
+          ${media(parseBreakpoint(props.breakpoints[id]))} {
             ${generateStyles(props[id])};
+            ${flex(props[id])};
           }
         `,
       ]
