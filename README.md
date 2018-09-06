@@ -2,7 +2,7 @@
   <img src="http://i.imgur.com/1f9IIN8.png">
 </p>
 
-[![Travis](https://img.shields.io/travis/JSBros/hedron.svg?style=flat-square)](https://travis-ci.org/JSBros/hedron) [![npm](https://img.shields.io/npm/dt/hedron.svg?style=flat-square)](https://www.npmjs.com/package/hedron) [![David](https://img.shields.io/david/jsbros/hedron.svg?style=flat-square)](https://github.com/JSBros/hedron/issues) [![Slack Status](https://slackin-xtuseyimsc.now.sh/badge.svg)](https://slackin-xtuseyimsc.now.sh/)
+[![Travis](https://img.shields.io/travis/garetmckinley/hedron.svg?style=flat-square)](https://travis-ci.org/garetmckinley/hedron) [![npm](https://img.shields.io/npm/dt/hedron.svg?style=flat-square)](https://www.npmjs.com/package/hedron) [![David](https://img.shields.io/david/garetmckinley/hedron.svg?style=flat-square)](https://github.com/garetmckinley/hedron/issues) [![Slack Status](https://slackin-xtuseyimsc.now.sh/badge.svg)](https://slackin-xtuseyimsc.now.sh/)
 
 ## Quick Jump
 
