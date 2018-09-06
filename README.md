@@ -10,7 +10,8 @@
 2. [Requirements](#requirements)
 3. [Installation](#installation)
 4. [Usage](#usage)
-5. [Documentation](#documentation)
+5. [Upgrading from Previous Versions][#upgrading]
+6. [Documentation](#documentation)
    1. [`Grid.Provider`](#gridprovider)
    2. [`Grid.Bounds`](#gridbounds)
    3. [`Grid.Box`](#gridbox)
@@ -116,6 +117,17 @@ ReactDOM.render(<App />, document.getElementById("root"));
 ```
 
 You don't need to fill all screen sizes either, if you only need elements to change on a single resolution, just add a single breakpoint! To learn more about breakpoints, check out the documentation for [`Grid.Provider`](#gridprovider).
+
+## Upgrading
+
+Unfortunately, there's no simple way to upgrade from the pre 1.0.0 version, but here's a few tips to make your life easier if you decide to upgrade (which we recommend doing!)
+
+- The `Page` and `Section` components have been retired. In an effort to simplify, there are only two main components now with one `Provider` that helps configure the global grid.
+- `Row` has been replaced by [`Grid.Bounds`](#gridbounds). This change was made because `Row` implies that it can only go in one direction, while `Grid.Bounds` is capable of arranging children either horizontally or vertically.
+- `Column` has been replaced by [`Grid.Box`](#gridbox). Again, this change was made because `Column` implies it only goes in one direction.
+- `BreakpointProvider` has been replaced by [`Grid.Provider`](#gridprovider). It was changed because it's can set more than just breakpoints.
+
+**Also:** There are no longer default breakpoints. You must define breakpoints yourself via [`Grid.Provider`](#gridprovider). You can also _finally_ set custom breakpoints, as many as you want!
 
 ## Documentation
 
