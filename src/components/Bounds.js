@@ -10,7 +10,7 @@ import Base from "./Base";
  * The only components that should be a direct children of `Bounds`
  * are `Box` or `Bounds`.
  */
-const Bounds = styled(Base("div"))`
+export const Bounds = styled(Base("div"))`
   box-sizing: border-box;
   display: flex;
   ${props => props.debug && drawDebug()};
