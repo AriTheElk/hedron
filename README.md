@@ -33,13 +33,13 @@ The follow dependencies must be installed in your project in order for hedron to
 #### Using yarn
 
 ```bash
-yarn add hedron
+yarn add hedron@next
 ```
 
 #### Using npm
 
 ```bash
-npm install hedron
+npm install hedron@next
 ```
 
 ## Usage
