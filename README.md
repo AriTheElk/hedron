@@ -211,9 +211,9 @@ Although you can name breakpoints whatever you want, there are a few names that 
 
 ## Credits
 
-Tetrahedron Grid is a project by [Garet McKinley](https://github.com/garetmckinley)
+Hedron was created by [Garet McKinley](https://github.com/garetmckinley) with the help of [multiple others](https://github.com/garetmckinley/hedron/blob/master/AUTHORS)
 
-Want to help? Join our [Spectrum.chat community](https://spectrum.chat/tetrahedron) to get started!
+Want to help? Join our [Spectrum.chat community](https://spectrum.chat/hedron) to get started!
 
 ## Backers
 
