@@ -5,7 +5,7 @@ import { flex, drawDebug, breakpoints } from "../helpers";
 import { withBreakpoints } from "./Provider";
 import Base from "./Base";
 
-const Box = styled(Base("div"))`
+export const Box = styled(Base("div"))`
   ${props => props.fluid && "padding: 0;"} box-sizing: border-box;
   ${props => props.debug && drawDebug()};
   ${props => flex(props)};

@@ -1,6 +1,8 @@
 import React, { Component, Children } from "react";
 import PropTypes from "prop-types";
 
+import { Bounds } from "./Bounds";
+
 const defaultBreakpoints = {
   sm: [0, 500],
   md: [501, 768],
@@ -64,10 +66,13 @@ export const withBreakpoints = WrappedComponent =>
       debug: PropTypes.bool,
     };
 
+    // inherit displayName from source component
     static displayName = WrappedComponent.displayName || WrappedComponent.name;
 
+    // inherit propTypes from source component
     static propTypes = WrappedComponent.propTypes;
 
+    // inherit defaultProps from source component
     static defaultProps = WrappedComponent.defaultProps;
 
     render() {
@@ -76,8 +81,10 @@ export const withBreakpoints = WrappedComponent =>
 
       const props = { breakpoints, debug };
 
-      // Hacky method of ignoring Bounds components when applying padding
-      if (WrappedComponent.displayName !== "Bounds") props.padding = padding;
+      // Hacky method of ignoring some components when applying padding
+      if (![Bounds.prototype].includes(WrappedComponent.prototype)) {
+        props.padding = padding;
+      }
 
       return <WrappedComponent {...this.props} {...props} />;
     }
