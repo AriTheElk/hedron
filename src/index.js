@@ -1,9 +1,5 @@
-// @flow
-import Section from "./components/Section";
-import Container from "./components/Container";
+import Bounds from "./components/Bounds";
 import Box from "./components/Box";
-import Hidden from "./components/Hidden";
-import LayoutProvider, { withLayout } from "./components/LayoutProvider";
-import * as utils from "./utils";
+import Provider from "./components/Provider";
 
-export { Section, Container, Box, Hidden, LayoutProvider, withLayout, utils };
+export default { Provider, Bounds, Box };

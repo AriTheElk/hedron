@@ -1,90 +1,78 @@
 {
   "name": "hedron",
-  "version": "1.0.0-beta.7",
+  "version": "0.7.1",
   "description": "A no-frills flexbox grid system for React.",
   "main": "dist/hedron.js",
   "author": {
     "name": "Garet McKinley",
-    "email": "gem@jsb.ro",
+    "email": "self@garet.io",
     "url": "https://github.com/garetmckinley"
   },
   "scripts": {
-    "prebuild": "rm -rf dist ; rm -rf lib",
     "build": "npm run build:lib && npm run build:dist",
     "build:lib": "babel src --out-dir lib",
     "build:dist": "rollup -c && rollup -c --environment PRODUCTION",
-    "clean": "rm -rf dist/*",
+    "clean": "rm -rf dist && rm -rf lib",
     "lint": "eslint src",
     "lint:fix": "eslint --fix src",
-    "flow": "flow",
-    "pretest": "npm run lint && npm run flow",
-    "test": "jest",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "format": "prettier --write \"src/**/*.js\""
+    "build-storybook": "build-storybook"
   },
   "bugs": {
     "url": "https://github.com/garetmckinley/hedron/issues"
   },
-  "homepage": "http://jsb.ro/hedron",
+  "homepage": "https://github.com/garetmckinley/hedron",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/garetmckinley/hedron.git"
   },
   "license": "MIT",
   "devDependencies": {
-    "@kadira/storybook": "^2.21.0",
+    "@storybook/addon-actions": "^3.4.10",
+    "@storybook/addon-info": "^3.4.10",
+    "@storybook/addon-links": "^3.4.10",
+    "@storybook/addon-notes": "^3.4.10",
+    "@storybook/addon-options": "^3.4.10",
+    "@storybook/addons": "^3.4.10",
+    "@storybook/react": "^3.4.10",
     "babel-cli": "^6.18.0",
     "babel-core": "^6.18.2",
-    "babel-eslint": "^7.1.0",
-    "babel-jest": "^18.0.0",
-    "babel-loader": "^6.2.7",
+    "babel-eslint": "^8.2.6",
+    "babel-jest": "^23.4.2",
+    "babel-loader": "^7.1.5",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-array-includes": "^2.0.3",
     "babel-plugin-external-helpers": "^6.18.0",
-    "babel-plugin-flow-react-proptypes": "^0.18.2",
+    "babel-plugin-styled-components": "^1.6.3",
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-es2015-rollup": "^3.0.0",
     "babel-preset-latest": "^6.16.0",
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-2": "^6.18.0",
-    "eslint": "^3.9.1",
-    "eslint-config-airbnb": "^12.0.0",
-    "eslint-config-prettier": "^1.5.0",
-    "eslint-plugin-flowtype-errors": "^1.5.0",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^2.2.3",
-    "eslint-plugin-react": "^6.5.0",
-    "flow-bin": "^0.37.0",
-    "jest": "^18.0.0",
-    "prettier": "^0.22.0",
-    "react": "^15.0.0",
-    "react-dom": "^15.0.0",
-    "react-highlight": "^0.9.0",
-    "react-test-renderer": "^15.0.0",
-    "rollup": "^0.36.3",
-    "rollup-plugin-babel": "^2.6.1",
-    "rollup-plugin-commonjs": "^5.0.5",
-    "rollup-plugin-inject": "^2.0.0",
-    "rollup-plugin-json": "^2.0.2",
-    "rollup-plugin-node-resolve": "^2.0.0",
-    "rollup-plugin-replace": "^1.1.1",
-    "rollup-plugin-uglify": "^1.0.1",
-    "styled-components": "^1.0.10"
+    "babel-runtime": "^6.26.0",
+    "eslint": "^5.4.0",
+    "eslint-config-prettier": "^3.0.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "rollup": "^0.65.0",
+    "rollup-plugin-babel": "^3.0.7",
+    "rollup-plugin-commonjs": "^9.1.6",
+    "rollup-plugin-filesize": "^4.0.1",
+    "rollup-plugin-inject": "^2.2.0",
+    "rollup-plugin-json": "^3.0.0",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-replace": "^2.0.0",
+    "rollup-plugin-uglify": "^4.0.0",
+    "styled-components": "^3.4.5"
+  },
+  "dependencies": {
+    "prop-types": "^15.0.0"
   },
   "peerDependencies": {
     "react": "^15.0.0",
-    "prop-types": "^15.6.0",
-    "styled-components": "^1.0.10 || ^2.0.0"
-  },
-  "jest": {
-    "testPathDirs": [
-      "src"
-    ]
-  },
-  "collective": {
-    "type": "opencollective",
-    "url": "https://opencollective.com/hedron",
-    "logo": "https://opencollective.com/opencollective/logo.txt"
+    "styled-components": "1.1.3 || ^2.0.0 || ^3.0.0"
   }
 }
