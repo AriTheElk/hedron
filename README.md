@@ -137,8 +137,11 @@ Unfortunately, there's no simple way to upgrade from the pre 1.0.0 version, but 
 
 - `padding`: `string` - structure: `20px`
   - Default padding to use for child `Grid.Box` components
-- `breakpoints`: `{ key: [int, int] }` - structure: `{ name: [min, max]}`
-  - Breakpoints for setting resolution-specific properties on child `Grid.Box` components
+- `breakpoints`: `{ key: string }` - structure: `{ name: query }`
+  - Breakpoints for setting resolution-specific properties on child `Grid.Box` components. Here's a basic outline for writing breakpoint queries:
+    - `-500` means that the breakpoint will trigger at 500px and smaller
+    - `250-800` means that the breakpoint will trigger between 250px and 800px
+    - `+900` means that the breakpoint will trigger at 900px and larger
 
 <details><summary><strong>Defining Breakpoints</strong></summary><p>
 
