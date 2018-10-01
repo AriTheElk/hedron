@@ -41,7 +41,7 @@
     "babel-eslint": "^10.0.0",
     "babel-jest": "^23.4.2",
     "babel-loader": "^8.0.2",
-    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-add-module-exports": "^1.0.0",
     "babel-plugin-array-includes": "^2.0.3",
     "babel-plugin-external-helpers": "^6.18.0",
     "babel-plugin-styled-components": "^1.6.3",
