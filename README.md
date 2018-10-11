@@ -205,8 +205,6 @@ Although you can name breakpoints whatever you want, there are a few names that 
 
 - `debug` : `boolean`
   - Outlines the grid system so you can visualize the layout
-- `debug` : `boolean`
-  - Outlines the grid system so you can visualize the layout
 - `flex`: `string` - structure: `grow shrink basis`
   - Controls the CSS `flex` property
 - `fill`: `boolean`
