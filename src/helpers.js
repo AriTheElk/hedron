@@ -1,3 +1,4 @@
+import React from "react";
 import { css } from "styled-components";
 
 export const drawDebug = () => [
@@ -155,3 +156,6 @@ export const flex = ({
 
   return props;
 };
+
+// eslint-disable-next-line max-len
+export const stripBoolean = (Element) => ({ debug, fluid, fill, wrap, ...props }) => <Element {...props} />
