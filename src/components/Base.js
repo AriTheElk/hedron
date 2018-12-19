@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-import { generateStyles } from "../helpers";
+import { stripBoolean, generateStyles } from "../helpers";
 
-const Base = element => styled(element)(generateStyles);
+const Base = element => styled(stripBoolean(element))(generateStyles);
 
 Base.propTypes = {
   // Positioning
