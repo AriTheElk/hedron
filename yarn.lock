@@ -220,20 +220,20 @@
     react-inspector "^2.2.2"
     uuid "^3.2.1"
 
-"@storybook/addon-info@^3.4.10":
-  version "3.4.11"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-info/-/addon-info-3.4.11.tgz#eb4eafb2ec5a580acdaeacab0065ee8463eddefd"
+"@storybook/addon-info@^4.1.11":
+  version "4.1.11"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-info/-/addon-info-4.1.11.tgz#b2ea3a4fb4cad208f9d6075737b5bfe8636e28f9"
   dependencies:
-    "@storybook/client-logger" "3.4.11"
-    "@storybook/components" "3.4.11"
-    babel-runtime "^6.26.0"
-    glamor "^2.20.40"
-    glamorous "^4.12.1"
+    "@storybook/addons" "4.1.11"
+    "@storybook/client-logger" "4.1.11"
+    "@storybook/components" "4.1.11"
+    core-js "^2.5.7"
     global "^4.3.2"
-    marksy "^6.0.3"
+    marksy "^6.1.0"
     nested-object-assign "^1.0.1"
-    prop-types "^15.6.1"
+    prop-types "^15.6.2"
     react-addons-create-fragment "^15.5.3"
+    react-lifecycles-compat "^3.0.4"
     util-deprecate "^1.0.2"
 
 "@storybook/addon-links@3.4.11", "@storybook/addon-links@^3.4.10":
@@ -293,6 +293,10 @@
 "@storybook/client-logger@3.4.11":
   version "3.4.11"
   resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-3.4.11.tgz#b592ea227f9f330f50925f7c1c266cc658cbc704"
+
+"@storybook/client-logger@4.1.11":
+  version "4.1.11"
+  resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-4.1.11.tgz#2b1e34e892045199592fdb01656e5dcdcd1999d7"
 
 "@storybook/components@3.4.11":
   version "3.4.11"
@@ -5293,7 +5297,7 @@ marked@^0.5.2:
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/marked/-/marked-0.5.2.tgz#3efdb27b1fd0ecec4f5aba362bddcd18120e5ba9"
 
-marksy@^6.0.3:
+marksy@^6.1.0:
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/marksy/-/marksy-6.1.0.tgz#36482148a1115cc78570855f7ebd744bb453d5cc"
   dependencies:
