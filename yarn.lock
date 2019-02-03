@@ -255,7 +255,7 @@
     react-lifecycles-compat "^3.0.4"
     util-deprecate "^1.0.2"
 
-"@storybook/addon-links@3.4.11", "@storybook/addon-links@^3.4.10":
+"@storybook/addon-links@3.4.11":
   version "3.4.11"
   resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-3.4.11.tgz#097b4fcf4b3af3903762ac0d7e65c5d37d14af88"
   dependencies:
@@ -263,6 +263,17 @@
     babel-runtime "^6.26.0"
     global "^4.3.2"
     prop-types "^15.6.1"
+
+"@storybook/addon-links@^4.1.11":
+  version "4.1.11"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-4.1.11.tgz#50e782eba46de3aac91f05a26ca92e2a5d13aa19"
+  dependencies:
+    "@storybook/addons" "4.1.11"
+    "@storybook/components" "4.1.11"
+    "@storybook/core-events" "4.1.11"
+    core-js "^2.5.7"
+    global "^4.3.2"
+    prop-types "^15.6.2"
 
 "@storybook/addon-notes@^4.1.11":
   version "4.1.11"
