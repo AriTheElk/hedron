@@ -29,7 +29,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@storybook/addon-actions": "^3.4.10",
+    "@storybook/addon-actions": "^4.1.11",
     "@storybook/addon-info": "^4.1.11",
     "@storybook/addon-links": "^3.4.10",
     "@storybook/addon-notes": "^4.1.11",
