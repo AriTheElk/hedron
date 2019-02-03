@@ -274,11 +274,13 @@
     marked "^0.5.2"
     prop-types "^15.6.2"
 
-"@storybook/addon-options@^3.4.10":
-  version "3.4.11"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-options/-/addon-options-3.4.11.tgz#6f27f223cad466dc1079045f5af01c99f94f65d0"
+"@storybook/addon-options@^4.1.11":
+  version "4.1.11"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-options/-/addon-options-4.1.11.tgz#88da466fa1a220126094de5198c6d2d69ea4e0e0"
   dependencies:
-    babel-runtime "^6.26.0"
+    "@storybook/addons" "4.1.11"
+    core-js "^2.5.7"
+    util-deprecate "^1.0.2"
 
 "@storybook/addons@3.4.11", "@storybook/addons@^3.4.10":
   version "3.4.11"
