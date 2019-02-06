@@ -3,6 +3,7 @@
   "version": "1.0.0-beta.12",
   "description": "A no-frills flexbox grid system for React.",
   "main": "dist/hedron.js",
+  "types": "dist/index.d.ts",
   "author": {
     "name": "Garet McKinley",
     "email": "self@garet.io",
@@ -59,8 +60,10 @@
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "rollup": "^0.66.2",
+    "rollup-copy-plugin": "^0.1.0",
     "rollup-plugin-babel": "^3.0.7",
     "rollup-plugin-commonjs": "^9.1.6",
+    "rollup-plugin-copy": "^0.2.3",
     "rollup-plugin-filesize": "^5.0.1",
     "rollup-plugin-inject": "^2.2.0",
     "rollup-plugin-json": "^3.0.0",
