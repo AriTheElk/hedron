@@ -60,7 +60,6 @@
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "rollup": "^0.66.2",
-    "rollup-copy-plugin": "^0.1.0",
     "rollup-plugin-babel": "^3.0.7",
     "rollup-plugin-commonjs": "^9.1.6",
     "rollup-plugin-copy": "^0.2.3",
