@@ -211,15 +211,15 @@ Although you can name breakpoints whatever you want, there are a few names that 
 
 `Grid.Bounds` also inherits all properties that [`Stylable`](https://github.com/tetrahedron/core#stylable) has.
 
-`Grid.Bounds` accepts alias's for the width property.
+`Grid.Bounds` accepts aliases for the width property.
 
-Available alias's are:
+Available aliases are:
 
 - `half` - `50%`
 - `quarter` - `25%`
 - `third` - `33.3333333%`
 - `twoThirds` - `66.666666%`
-- `twoQuarters` - `75%`
+- `threeQuarters` - `75%`
 
 ```jsx
 <Grid.Bounds sm={{ width: "half", height: "200px" }}>
@@ -251,15 +251,15 @@ Available alias's are:
 `Grid.Box` also inherits all properties that [`Stylable`](https://github.com/tetrahedron/core#stylable) has.
 
 
-`Grid.Box` accepts alias's for the width property.
+`Grid.Box` accepts aliases for the width property.
 
-Available alias's are:
+Available aliases are:
 
 - `half` - `50%`
 - `quarter` - `25%`
 - `third` - `33.3333333%`
 - `twoThirds` - `66.666666%`
-- `twoQuarters` - `75%`
+- `threeQuarters` - `75%`
 
 ```jsx
 <Grid.Box sm={{ width: "half", height: "200px" }}>

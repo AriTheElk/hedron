@@ -104,7 +104,7 @@ storiesOf("Examples", module)
             <Grid.Box>
               These boxes render side by side on large screens
             </Grid.Box>
-            <Grid.Box lg={{ width: "twoQuarters", height: "200px" }}>
+            <Grid.Box lg={{ width: "threeQuarters", height: "200px" }}>
               These boxes render side by side on large screens
             </Grid.Box>
           </Grid.Bounds>
