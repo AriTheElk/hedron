@@ -23,7 +23,7 @@ const processAlias = (alias) => {
       return '33.3333333%'
       break;
     case 'twoThirds':
-      return '66.666666'
+      return '66.666666%'
       break;
     case 'twoQuarters':
       return '75%'

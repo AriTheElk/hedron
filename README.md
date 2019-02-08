@@ -6,15 +6,27 @@
 
 ## Quick Jump
 
-1. [Features](#features)
-2. [Requirements](#requirements)
-3. [Installation](#installation)
-4. [Usage](#usage)
-5. [Upgrading from Pre-1.0](#upgrading)
-6. [Documentation](#documentation)
-   1. [`Grid.Provider`](#gridprovider)
-   2. [`Grid.Bounds`](#gridbounds)
-   3. [`Grid.Box`](#gridbox)
+- [Quick Jump](#quick-jump)
+- [Features](#features)
+- [Requirements](#requirements)
+- [Installation](#installation)
+    - [Using yarn](#using-yarn)
+    - [Using npm](#using-npm)
+- [Usage](#usage)
+    - [Basic Example](#basic-example)
+    - [Responsive Example](#responsive-example)
+- [Upgrading](#upgrading)
+- [Documentation](#documentation)
+  - [`Grid.Provider`](#gridprovider)
+    - [Props](#props)
+  - [`Grid.Bounds`](#gridbounds)
+    - [Props](#props-1)
+  - [`Grid.Box`](#gridbox)
+    - [Props](#props-2)
+- [Contributors](#contributors)
+- [Backers](#backers)
+- [Sponsors](#sponsors)
+- [License](#license)
 
 ## Features
 
@@ -199,6 +211,22 @@ Although you can name breakpoints whatever you want, there are a few names that 
 
 `Grid.Bounds` also inherits all properties that [`Stylable`](https://github.com/tetrahedron/core#stylable) has.
 
+`Grid.Bounds` accepts alias's for the width property.
+
+Available alias's are:
+
+- `half` - `50%`
+- `quarter` - `25%`
+- `third` - `33.3333333%`
+- `twoThirds` - `66.666666%`
+- `twoQuarters` - `75%`
+
+```jsx
+<Grid.Bounds sm={{ width: "half", height: "200px" }}>
+  This box gains height on small devices
+</Grid.Bounds>
+```
+
 ### `Grid.Box`
 
 #### Props
@@ -221,6 +249,23 @@ Although you can name breakpoints whatever you want, there are a few names that 
   - Shifts the box to the bottom of the parent `Bounds`
 
 `Grid.Box` also inherits all properties that [`Stylable`](https://github.com/tetrahedron/core#stylable) has.
+
+
+`Grid.Box` accepts alias's for the width property.
+
+Available alias's are:
+
+- `half` - `50%`
+- `quarter` - `25%`
+- `third` - `33.3333333%`
+- `twoThirds` - `66.666666%`
+- `twoQuarters` - `75%`
+
+```jsx
+<Grid.Box sm={{ width: "half", height: "200px" }}>
+  This box gains height on small devices
+</Grid.Box>
+```
 
 ## Contributors
 
