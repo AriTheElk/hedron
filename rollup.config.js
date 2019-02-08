@@ -7,6 +7,7 @@ import nodeResolve from "rollup-plugin-node-resolve";
 import replace from "rollup-plugin-replace";
 import { uglify } from "rollup-plugin-uglify";
 import filesize from "rollup-plugin-filesize";
+import copy from 'rollup-plugin-copy';
 
 const processShim = "\0process-shim";
 
@@ -49,6 +50,10 @@ const plugins = [
   replace({
     "process.env.NODE_ENV": JSON.stringify(prod ? "production" : "development"),
   }),
+  copy({
+    "src/index.d.ts": "dist/index.d.ts",
+    verbose: true
+})
 ];
 
 if (prod) plugins.push(uglify());
