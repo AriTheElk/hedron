@@ -84,4 +84,31 @@ storiesOf("Examples", module)
         </Grid.Bounds>
       </Grid.Provider>
     ))
-  );
+  )
+  .add(
+    "Basic with alias",
+    withInfo(config)(() => (
+      <Grid.Provider
+        debug
+        padding="20px"
+        breakpoints={{ sm: "-500", md: "501-750", lg: "+1000" }}
+      >
+        <Grid.Bounds direction="vertical">
+          <Grid.Box sm={{ padding: "40px" }}>
+            This box gains padding on small devices
+          </Grid.Box>
+          <Grid.Box sm={{ width: "half", height: "200px" }}>
+            This box gains height on small devices
+          </Grid.Box>
+          <Grid.Bounds direction="vertical" lg={{ direction: "horizontal", width: "half" }}>
+            <Grid.Box>
+              These boxes render side by side on large screens
+            </Grid.Box>
+            <Grid.Box lg={{ width: "twoQuarters", height: "200px" }}>
+              These boxes render side by side on large screens
+            </Grid.Box>
+          </Grid.Bounds>
+        </Grid.Bounds>
+      </Grid.Provider>
+    ))
+  )
