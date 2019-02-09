@@ -1,0 +1,25 @@
+{
+  "projectName": "hedron",
+  "projectOwner": "garetmckinley",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "contributors": [
+    {
+      "login": "garetmckinley",
+      "name": "Garet McKinley",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/1624279?v=4",
+      "profile": "https://garet.io",
+      "contributions": [
+        "code",
+        "doc",
+        "review"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}
