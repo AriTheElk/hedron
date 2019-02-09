@@ -29,7 +29,8 @@ const processAlias = (alias) => {
       return '75%'
       break;
     default:
-      return alias
+      console.error(`Unknown alias "${alias}"`);
+      return;
   }
 }
 
