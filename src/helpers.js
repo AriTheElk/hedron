@@ -7,6 +7,34 @@ export const drawDebug = () => [
 ];
 
 /**
+ * Returns % width based on alias. Returns
+ * string with if alias is not passed
+ * @param {string} alias
+ */
+const processAlias = (alias) => {
+  switch(alias) {
+    case 'half':
+      return '50%'
+      break;
+    case 'quarter':
+      return '25%'
+      break;
+    case 'third':
+      return '33.3333333%'
+      break;
+    case 'twoThirds':
+      return '66.666666%'
+      break;
+    case 'threeQuarters':
+      return '75%'
+      break;
+    default:
+      console.error(`Unknown alias "${alias}"`);
+      return;
+  }
+}
+
+/**
  * Returns an array of valid css declarations generated
  * from the react props supplied.
  *
@@ -15,7 +43,7 @@ export const drawDebug = () => [
 export const generateStyles = props => [
   props.padding && `padding: ${props.padding};`,
   props.margin && `margin: ${props.margin};`,
-  props.width && `width: ${props.width};`,
+  props.width && `width: ${processAlias(props.width)};`,
   props.height && `height: ${props.height};`,
   props.visibility && `visibility: ${props.visibility};`,
   props.display && `display: ${props.display};`,
