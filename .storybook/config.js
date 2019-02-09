@@ -1,7 +1,7 @@
 import { configure } from "@storybook/react";
-import { setOptions } from "@storybook/addon-options";
+import { withOptions } from "@storybook/addon-options";
 
-setOptions({
+withOptions({
   name: "Hedron",
 });
 
