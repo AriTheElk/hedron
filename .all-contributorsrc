@@ -47,6 +47,15 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "Stanback",
+      "name": "Brian Stanback",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/233396?v=4",
+      "profile": "https://dealspotr.com/",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7
