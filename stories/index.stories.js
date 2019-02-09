@@ -100,7 +100,10 @@ storiesOf("Examples", module)
           <Grid.Box sm={{ width: "half", height: "200px" }}>
             This box gains height on small devices
           </Grid.Box>
-          <Grid.Bounds direction="vertical" lg={{ direction: "horizontal", width: "half" }}>
+          <Grid.Bounds
+            direction="vertical"
+            lg={{ direction: "horizontal", width: "half" }}
+          >
             <Grid.Box>
               These boxes render side by side on large screens
             </Grid.Box>
@@ -112,3 +115,22 @@ storiesOf("Examples", module)
       </Grid.Provider>
     ))
   )
+  .add(
+    "Aligning",
+    withInfo(config)(() => (
+      <Grid.Provider
+        debug
+        padding="20px"
+        breakpoints={{ sm: "-500", md: "501-750", lg: "+750" }}
+      >
+        <Grid.Bounds direction="vertical" height="500px">
+          <Grid.Bounds direction="vertical" height="50%" halign="center">
+            <Grid.Box width="50%">This box is centered horizontally</Grid.Box>
+          </Grid.Bounds>
+          <Grid.Bounds direction="vertical" height="50%" valign="center">
+            <Grid.Box width="50%">This box is centered vertically</Grid.Box>
+          </Grid.Bounds>
+        </Grid.Bounds>
+      </Grid.Provider>
+    ))
+  );
