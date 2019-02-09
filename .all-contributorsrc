@@ -65,6 +65,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "jim-at-jibba",
+      "name": "James G. Best",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/7897877?v=4",
+      "profile": "http://justjibba.net",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7
