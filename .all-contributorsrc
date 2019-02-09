@@ -19,6 +19,15 @@
         "doc",
         "review"
       ]
+    },
+    {
+      "login": "matthamil",
+      "name": "Matt Hamil",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/11802078?v=4",
+      "profile": "http://internetofmatt.com",
+      "contributions": [
+        "question"
+      ]
     }
   ],
   "contributorsPerLine": 7

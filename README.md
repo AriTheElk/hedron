@@ -1,5 +1,5 @@
 <p align="center">
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
   <img src="http://i.imgur.com/1f9IIN8.png">
 </p>
 
@@ -272,7 +272,7 @@ Available aliases are:
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-<table><tr><td align="center"><a href="https://garet.io"><img src="https://avatars0.githubusercontent.com/u/1624279?v=4" width="100px;" alt="Garet McKinley"/><br /><sub><b>Garet McKinley</b></sub></a><br /><a href="https://github.com/garetmckinley/hedron/commits?author=garetmckinley" title="Code">💻</a> <a href="https://github.com/garetmckinley/hedron/commits?author=garetmckinley" title="Documentation">📖</a> <a href="#review-garetmckinley" title="Reviewed Pull Requests">👀</a></td></tr></table>
+<table><tr><td align="center"><a href="https://garet.io"><img src="https://avatars0.githubusercontent.com/u/1624279?v=4" width="100px;" alt="Garet McKinley"/><br /><sub><b>Garet McKinley</b></sub></a><br /><a href="https://github.com/garetmckinley/hedron/commits?author=garetmckinley" title="Code">💻</a> <a href="https://github.com/garetmckinley/hedron/commits?author=garetmckinley" title="Documentation">📖</a> <a href="#review-garetmckinley" title="Reviewed Pull Requests">👀</a></td><td align="center"><a href="http://internetofmatt.com"><img src="https://avatars3.githubusercontent.com/u/11802078?v=4" width="100px;" alt="Matt Hamil"/><br /><sub><b>Matt Hamil</b></sub></a><br /><a href="#question-matthamil" title="Answering Questions">💬</a></td></tr></table>
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#-all-contributors-)):
 
