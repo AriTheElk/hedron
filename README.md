@@ -1,4 +1,5 @@
 <p align="center">
+[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors)
   <img src="http://i.imgur.com/1f9IIN8.png">
 </p>
 
@@ -6,15 +7,27 @@
 
 ## Quick Jump
 
-1. [Features](#features)
-2. [Requirements](#requirements)
-3. [Installation](#installation)
-4. [Usage](#usage)
-5. [Upgrading from Pre-1.0](#upgrading)
-6. [Documentation](#documentation)
-   1. [`Grid.Provider`](#gridprovider)
-   2. [`Grid.Bounds`](#gridbounds)
-   3. [`Grid.Box`](#gridbox)
+- [Quick Jump](#quick-jump)
+- [Features](#features)
+- [Requirements](#requirements)
+- [Installation](#installation)
+    - [Using yarn](#using-yarn)
+    - [Using npm](#using-npm)
+- [Usage](#usage)
+    - [Basic Example](#basic-example)
+    - [Responsive Example](#responsive-example)
+- [Upgrading](#upgrading)
+- [Documentation](#documentation)
+  - [`Grid.Provider`](#gridprovider)
+    - [Props](#props)
+  - [`Grid.Bounds`](#gridbounds)
+    - [Props](#props-1)
+  - [`Grid.Box`](#gridbox)
+    - [Props](#props-2)
+- [Contributors](#contributors)
+- [Backers](#backers)
+- [Sponsors](#sponsors)
+- [License](#license)
 
 ## Features
 
@@ -199,6 +212,22 @@ Although you can name breakpoints whatever you want, there are a few names that 
 
 `Grid.Bounds` also inherits all properties that [`Stylable`](https://github.com/tetrahedron/core#stylable) has.
 
+`Grid.Bounds` accepts aliases for the width property.
+
+Available aliases are:
+
+- `half` - `50%`
+- `quarter` - `25%`
+- `third` - `33.3333333%`
+- `twoThirds` - `66.666666%`
+- `threeQuarters` - `75%`
+
+```jsx
+<Grid.Bounds sm={{ width: "half", height: "200px" }}>
+  This box gains height on small devices
+</Grid.Bounds>
+```
+
 ### `Grid.Box`
 
 #### Props
@@ -222,16 +251,31 @@ Although you can name breakpoints whatever you want, there are a few names that 
 
 `Grid.Box` also inherits all properties that [`Stylable`](https://github.com/tetrahedron/core#stylable) has.
 
+
+`Grid.Box` accepts aliases for the width property.
+
+Available aliases are:
+
+- `half` - `50%`
+- `quarter` - `25%`
+- `third` - `33.3333333%`
+- `twoThirds` - `66.666666%`
+- `threeQuarters` - `75%`
+
+```jsx
+<Grid.Box sm={{ width: "half", height: "200px" }}>
+  This box gains height on small devices
+</Grid.Box>
+```
+
 ## Contributors
 
 Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#-all-contributors-)):
 
+
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-
-| [<img src="https://avatars.githubusercontent.com/u/1624279?v=3" width="100px;"/><br /><sub>Garet McKinley</sub>](https://github.com/garetmckinley)<br />[💻](https://github.com/garetmckinley/hedron/commits?author=garetmckinley) 💡 ⚠️ 👀 | [<img src="https://avatars.githubusercontent.com/u/11802078?v=3" width="100px;"/><br /><sub>Matt Hamil</sub>](https://github.com/matthamil)<br /> 💬 | [<img src="https://avatars.githubusercontent.com/u/77391?v=3" width="100px;"/><br /><sub>Mikko Matilainen</sub>](https://github.com/mikkom)<br />[💻](https://github.com/garetmckinley/hedron/commits?author=mikkom) | [<img src="https://avatars.githubusercontent.com/u/16616772?v=3" width="100px;"/><br /><sub>Nathaniel Piché</sub>](https://github.com/nathanielpiche)<br />[💻](https://github.com/garetmckinley/hedron/commits?author=nathanielpiche) 📖 | [<img src="https://avatars.githubusercontent.com/u/233396?v=3" width="100px;"/><br /><sub>Brian Stanback</sub>](https://github.com/Stanback)<br />[💻](https://github.com/garetmckinley/hedron/commits?author=Stanback) | [<img src="https://avatars.githubusercontent.com/u/571265?v=3" width="100px;"/><br /><sub>Stephen Mathieson</sub>](https://github.com/stephenmathieson)<br />[💻](https://github.com/garetmckinley/hedron/commits?author=stephenmathieson) |
-| :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-
-
+<!-- prettier-ignore -->
+<table><tr><td align="center"><a href="https://garet.io"><img src="https://avatars0.githubusercontent.com/u/1624279?v=4" width="100px;" alt="Garet McKinley"/><br /><sub><b>Garet McKinley</b></sub></a><br /><a href="https://github.com/garetmckinley/hedron/commits?author=garetmckinley" title="Code">💻</a> <a href="https://github.com/garetmckinley/hedron/commits?author=garetmckinley" title="Documentation">📖</a> <a href="#review-garetmckinley" title="Reviewed Pull Requests">👀</a></td><td align="center"><a href="http://internetofmatt.com"><img src="https://avatars3.githubusercontent.com/u/11802078?v=4" width="100px;" alt="Matt Hamil"/><br /><sub><b>Matt Hamil</b></sub></a><br /><a href="#question-matthamil" title="Answering Questions">💬</a></td><td align="center"><a href="https://github.com/mikkom"><img src="https://avatars3.githubusercontent.com/u/77391?v=4" width="100px;" alt="Mikko Matilainen"/><br /><sub><b>Mikko Matilainen</b></sub></a><br /><a href="https://github.com/garetmckinley/hedron/commits?author=mikkom" title="Code">💻</a></td><td align="center"><a href="https://github.com/nathanielpiche"><img src="https://avatars1.githubusercontent.com/u/16616772?v=4" width="100px;" alt="Nathaniel Piché"/><br /><sub><b>Nathaniel Piché</b></sub></a><br /><a href="https://github.com/garetmckinley/hedron/commits?author=nathanielpiche" title="Code">💻</a> <a href="https://github.com/garetmckinley/hedron/commits?author=nathanielpiche" title="Documentation">📖</a></td><td align="center"><a href="https://dealspotr.com/"><img src="https://avatars1.githubusercontent.com/u/233396?v=4" width="100px;" alt="Brian Stanback"/><br /><sub><b>Brian Stanback</b></sub></a><br /><a href="https://github.com/garetmckinley/hedron/commits?author=Stanback" title="Code">💻</a></td><td align="center"><a href="https://github.com/stephenmathieson"><img src="https://avatars0.githubusercontent.com/u/571265?v=4" width="100px;" alt="Stephen Mathieson"/><br /><sub><b>Stephen Mathieson</b></sub></a><br /><a href="https://github.com/garetmckinley/hedron/commits?author=stephenmathieson" title="Code">💻</a></td><td align="center"><a href="http://justjibba.net"><img src="https://avatars1.githubusercontent.com/u/7897877?v=4" width="100px;" alt="James G. Best"/><br /><sub><b>James G. Best</b></sub></a><br /><a href="https://github.com/garetmckinley/hedron/commits?author=jim-at-jibba" title="Code">💻</a></td></tr></table>
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind are welcome!

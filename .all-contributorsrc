@@ -1,0 +1,80 @@
+{
+  "projectName": "hedron",
+  "projectOwner": "garetmckinley",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "contributors": [
+    {
+      "login": "garetmckinley",
+      "name": "Garet McKinley",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/1624279?v=4",
+      "profile": "https://garet.io",
+      "contributions": [
+        "code",
+        "doc",
+        "review"
+      ]
+    },
+    {
+      "login": "matthamil",
+      "name": "Matt Hamil",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/11802078?v=4",
+      "profile": "http://internetofmatt.com",
+      "contributions": [
+        "question"
+      ]
+    },
+    {
+      "login": "mikkom",
+      "name": "Mikko Matilainen",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/77391?v=4",
+      "profile": "https://github.com/mikkom",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "nathanielpiche",
+      "name": "Nathaniel Piché",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/16616772?v=4",
+      "profile": "https://github.com/nathanielpiche",
+      "contributions": [
+        "code",
+        "doc"
+      ]
+    },
+    {
+      "login": "Stanback",
+      "name": "Brian Stanback",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/233396?v=4",
+      "profile": "https://dealspotr.com/",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "stephenmathieson",
+      "name": "Stephen Mathieson",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/571265?v=4",
+      "profile": "https://github.com/stephenmathieson",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "jim-at-jibba",
+      "name": "James G. Best",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/7897877?v=4",
+      "profile": "http://justjibba.net",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}
