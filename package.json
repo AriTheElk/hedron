@@ -34,7 +34,7 @@
     "@storybook/addon-info": "^4.1.11",
     "@storybook/addon-links": "^4.1.11",
     "@storybook/addon-notes": "^4.1.11",
-    "@storybook/addon-options": "^4.1.11",
+    "@storybook/addon-options": "^5.2.5",
     "@storybook/addons": "^3.4.10",
     "@storybook/react": "^3.4.10",
     "all-contributors-cli": "^6.1.1",
