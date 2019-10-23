@@ -24,7 +24,30 @@ export interface Styleable {
   /**
    * Display Property
    */
-  display?: string;
+  display?:
+    | "inline"
+    | "block"
+    | "contents"
+    | "flex"
+    | "grid"
+    | "inline-block"
+    | "none"
+    | "initial"
+    | "inherit"
+    | "inline-flex"
+    | "inline-grid"
+    | "inline-table"
+    | "list-item"
+    | "run-in"
+    | "table"
+    | "table-caption"
+    | "table-column-group"
+    | "table-header-group"
+    | "table-footer-group"
+    | "table-row-group"
+    | "table-cell"
+    | "table-column"
+    | "table-row";
   /**
    * Opacity Property
    */
@@ -45,14 +68,20 @@ export interface Styleable {
 
 export interface ProviderProps {
   /**
+   * Draws all child columns with "bounding boxes" for easy
+   * visualization of the grid. This enables debug mode for all the
+   * children of this component
+   * @default false
+   */
+  debug?: boolean;
+  /**
    * The amount of padding added
    */
   padding?: string;
   /**
    * Object specifying the breakpoints
-   * { mobile: "-500", tablet: "501-750", wide: "+750" }
    */
-  breakpoints?: any;
+  breakpoints?: { [key: string]: string };
 }
 
 export interface BoundsProps extends Styleable {
@@ -111,7 +140,7 @@ export interface BoxProps extends Styleable {
    */
   shiftRight?: boolean;
   /**
-   * Shifts the box to the ;eft of the parent Bounds
+   * Shifts the box to the left of the parent Bounds
    */
   shiftLeft?: boolean;
   /**
@@ -139,4 +168,3 @@ export class Bounds extends React.Component<
 export class Box extends React.Component<
   BoxProps & React.HTMLProps<HTMLElement>
 > {}
-
