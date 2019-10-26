@@ -1,9 +1,9 @@
 <p align="center">
-[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors)
-  <img src="http://i.imgur.com/1f9IIN8.png">
+  <img alt="hedron logo" src="https://raw.githubusercontent.com/garetmckinley/project-assets/master/hedron/hedron-header.svg?sanitize=true" id="dracula-invert">
 </p>
 
-[![Travis](https://img.shields.io/travis/garetmckinley/hedron.svg?style=flat-square)](https://travis-ci.org/garetmckinley/hedron) [![npm](https://img.shields.io/npm/dt/hedron.svg?style=flat-square)](https://www.npmjs.com/package/hedron) [![David](https://img.shields.io/david/garetmckinley/hedron.svg?style=flat-square)](https://github.com/garetmckinley/hedron/issues) [![Spectrum Chat](https://camo.githubusercontent.com/3cc3d27f23a2c3948de24fc02c58bc576655d621/68747470733a2f2f77697468737065637472756d2e6769746875622e696f2f62616467652f62616467652e737667)](https://spectrum.chat/hedron)
+
+[![Travis](https://img.shields.io/travis/garetmckinley/hedron.svg?style=flat-square)](https://travis-ci.org/garetmckinley/hedron) [![npm](https://img.shields.io/npm/dt/hedron.svg?style=flat-square)](https://www.npmjs.com/package/hedron) [![David](https://img.shields.io/david/garetmckinley/hedron.svg?style=flat-square)](https://github.com/garetmckinley/hedron/issues) [![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors) [![Spectrum Chat](https://camo.githubusercontent.com/3cc3d27f23a2c3948de24fc02c58bc576655d621/68747470733a2f2f77697468737065637472756d2e6769746875622e696f2f62616467652f62616467652e737667)](https://spectrum.chat/hedron)
 
 ## Quick Jump
 
@@ -336,3 +336,5 @@ Become a sponsor and get your logo on our README on Github with a link to your s
 ## License
 
 MIT
+
+<img src="https://raw.githubusercontent.com/syntra/assets/master/syntra-sponsorship.svg?sanitize=true"/>
