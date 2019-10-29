@@ -11,27 +11,55 @@ export const drawDebug = () => [
  * string with if alias is not passed
  * @param {string} alias
  */
-const processAlias = (alias) => {
-  switch(alias) {
-    case 'half':
-      return '50%'
+const processAlias = alias => {
+  switch (alias) {
+    case "half":
+      return "50%";
       break;
-    case 'quarter':
-      return '25%'
+    case "quarter":
+      return "25%";
       break;
-    case 'third':
-      return '33.3333333%'
+    case "third":
+      return "33.3333333%";
       break;
-    case 'twoThirds':
-      return '66.666666%'
+    case "twoThirds":
+      return "66.666666%";
       break;
-    case 'threeQuarters':
-      return '75%'
+    case "threeQuarters":
+      return "75%";
       break;
     default:
-      return alias
+      return alias;
   }
-}
+};
+
+const cssProperties = {
+  padding: data => `padding: ${data};`,
+  paddingLeft: data => `padding-left: ${data};`,
+  paddingRight: data => `padding-right: ${data};`,
+  paddingTop: data => `padding-top: ${data};`,
+  paddingBottom: data => `padding-bottom: ${data};`,
+  margin: data => `margin: ${data};`,
+  marginLeft: data => `margin-left: ${data};`,
+  marginRight: data => `margin-right: ${data};`,
+  marginTop: data => `margin-top: ${data};`,
+  marginBottom: data => `margin-bottom: ${data};`,
+  width: data => `width: ${processAlias(data)};`,
+  height: data => `height: ${processAlias(data)};`,
+  visibility: data => `visibility: ${data};`,
+  display: data => `display: ${data};`,
+  opacity: data => `opacity: ${data};`,
+  color: data => `color: ${data};`,
+  background: data => `background: ${data};`,
+  border: data => `border: ${data};`,
+  fontSize: data => `font-size: ${data};`,
+  fontWeight: data => `font-weight: ${data};`,
+  fontStyle: data => `font-style: ${data};`,
+  fontFamily: data => `font-family: ${data};`,
+  lineHeight: data => `line-height: ${data};`,
+  textTransform: data => `text-transform: ${data};`,
+  hidden: () => `display: none;`,
+};
 
 /**
  * Returns an array of valid css declarations generated
@@ -39,25 +67,15 @@ const processAlias = (alias) => {
  *
  * @param {array} props list of react props
  */
-export const generateStyles = props => [
-  props.padding && `padding: ${props.padding};`,
-  props.margin && `margin: ${props.margin};`,
-  props.width && `width: ${processAlias(props.width)};`,
-  props.height && `height: ${props.height};`,
-  props.visibility && `visibility: ${props.visibility};`,
-  props.display && `display: ${props.display};`,
-  props.opacity && `opacity: ${props.opacity};`,
-  props.color && `color: ${props.color};`,
-  props.background && `background: ${props.background};`,
-  props.border && `border: ${props.border};`,
-  props.fontSize && `font-size: ${props.fontSize};`,
-  props.fontWeight && `font-weight: ${props.fontWeight};`,
-  props.fontStyle && `font-style: ${props.fontStyle};`,
-  props.fontFamily && `font-family: ${props.fontFamily};`,
-  props.lineHeight && `line-height: ${props.lineHeight};`,
-  props.textTransform && `text-transform: ${props.textTransform};`,
-  props.hidden && `display: none;`,
-];
+export const generateStyles = props => {
+  const cssProps = [];
+  console.log(props);
+  Object.keys(props).map(prop => {
+    if (cssProperties[prop]) cssProps.push(cssProperties[prop](props[prop]));
+  });
+  console.log(cssProps);
+  return cssProps;
+};
 
 /**
  * This will parse a breakpoint string (i.e. -500) and return
@@ -185,4 +203,10 @@ export const flex = ({
 };
 
 // eslint-disable-next-line max-len
-export const stripBoolean = (Element) => ({ debug, fluid, fill, wrap, ...props }) => <Element {...props} />
+export const stripBoolean = Element => ({
+  debug,
+  fluid,
+  fill,
+  wrap,
+  ...props
+}) => <Element {...props} />;
