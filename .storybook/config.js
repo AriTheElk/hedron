@@ -1,4 +1,11 @@
-import { configure } from '@storybook/react';
+import { configure, addParameters } from "@storybook/react";
+// import { themes } from "@storybook/theming";
+import theme from "./theme";
 
-// automatically import all files ending in *.stories.js
-configure(require.context('../stories', true, /\.stories\.js$/), module);
+addParameters({
+  options: {
+    theme,
+  },
+});
+
+configure(require.context("../stories", true, /.(js|mdx)$/), module);
