@@ -57,9 +57,7 @@ export default class Provider extends Component {
 }
 
 export const withBreakpoints = WrappedComponent =>
-  // eslint-disable-next-line react/no-multi-comp
   class extends Component {
-    // eslint-disable-line  react/prefer-stateless-function
     static contextTypes = {
       breakpoints: PropTypes.object,
       padding: PropTypes.string,
