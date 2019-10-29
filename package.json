@@ -10,7 +10,8 @@
     "url": "https://github.com/garetmckinley"
   },
   "scripts": {
-    "build": "npm run build:lib && npm run build:dist",
+    "build": "npm run build:clean && npm run build:lib && npm run build:dist",
+    "build:clean": "rimraf dist/ lib/",
     "build:lib": "babel src --out-dir lib",
     "build:dist": "rollup -c && rollup -c --environment PRODUCTION",
     "clean": "rm -rf dist && rm -rf lib",
@@ -60,6 +61,7 @@
     "eslint-plugin-react": "^7.11.1",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
+    "rimraf": "^3.0.0",
     "rollup": "^0.66.2",
     "rollup-plugin-babel": "^3.0.7",
     "rollup-plugin-commonjs": "^9.1.6",
