@@ -69,11 +69,9 @@ const cssProperties = {
  */
 export const generateStyles = props => {
   const cssProps = [];
-  console.log(props);
   Object.keys(props).map(prop => {
     if (cssProperties[prop]) cssProps.push(cssProperties[prop](props[prop]));
   });
-  console.log(cssProps);
   return cssProps;
 };
 
